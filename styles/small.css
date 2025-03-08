@@ -1,122 +1,101 @@
-/* Mobile First Approach */
-:root {
-    --primary-color: #2A4365;
-    --secondary-color: #BEE3F8;
-    --accent-color: #3182CE;
-    --text-color: #1A202C;
-    --background-color: #F7FAFC;
-}
+/* small.css */
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400&display=swap');
 
 body {
-    font-family: 'Poppins', sans-serif;
-    line-height: 1.5;
-    color: var(--text-color);
-    background-color: var(--background-color);
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
     margin: 0;
     padding: 0;
 }
 
 header {
-    background-color: var(--primary-color);
+    background-color: #007BFF;
     color: white;
-    padding: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    padding: 10px;
+    text-align: center;
+    position: relative; /* Position for the hamburger menu */
 }
 
 #profile-img {
-    width: 60px;
-    height: 60px;
+    width: 80px; /* More reasonable size for profile image */
+    height: auto;
     border-radius: 50%;
-    margin-right: 1rem;
+    margin: 5px auto;
+}
+
+nav {
+    display: none; /* Initially hidden for mobile */
+    background-color: #007BFF;
+    flex-direction: column;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav li {
+    margin: 5px 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: block; /* Full width clickable area */
+}
+
+nav a:hover {
+    background-color: #0056b3; /* Darker on hover */
 }
 
 #hamburger-menu {
     background: none;
     border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
-    padding: 0.5rem;
 }
 
 .bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    margin: 4px 0;
-    transition: 0.3s;
+    width: 30px; /* Hamburger line width */
+    height: 4px; /* Hamburger line height */
+    background-color: white; /* Hamburger color */
+    margin: 3px 0; /* Space between bars */
 }
 
-#main-nav {
-    background-color: var(--primary-color);
-    display: none;
-}
-
-#main-nav.active {
-    display: block;
-}
-
-#main-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-#main-nav li {
-    padding: 0.5rem 1rem;
-}
-
-#main-nav a {
-    color: white;
-    text-decoration: none;
-    display: block;
-}
-
+/* Content styles */
 main {
-    padding: 1rem;
-    display: grid;
-    gap: 1.5rem;
+    padding: 10px;
+}
+
+#content-wrapper {
+    display: flex;
+    flex-direction: column; /* Stack on mobile */
 }
 
 aside {
-    background-color: white;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
 }
 
-#course-filters {
-    display: flex;
-    gap: 1rem;
-    margin: 1rem 0;
+#location img {
+    width: 100%; 
+    height: auto; /* Responsive image */
 }
 
-#course-filters button {
-    padding: 0.5rem 1rem;
-    background-color: var(--primary-color);
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-#cert-course-list {
-    display: grid;
-    gap: 1rem;
-}
-
-.course-card {
-    padding: 1rem;
-    background-color: var(--secondary-color);
-    border-left: 4px solid var(--accent-color);
-    border-radius: 4px;
-}
-
+/* Footer styles */
 footer {
-    background-color: var(--primary-color);
+    padding: 10px;
+    background-color: #007BFF;
     color: white;
     text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
 }

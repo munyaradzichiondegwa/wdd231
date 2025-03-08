@@ -1,5 +1,9 @@
-// Set copyright year
-document.getElementById('currentyear').textContent = new Date().getFullYear();
+// navigation.js
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburgerMenu = document.getElementById('hamburger-menu');
+    const nav = document.getElementById('main-nav');
 
-// Set last modified date
-document.getElementById('lastModified').textContent = `Last Updated: ${document.lastModified}`;
+    hamburgerMenu.addEventListener('click', () => {
+        nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+    });
+});

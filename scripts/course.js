@@ -1,40 +1,38 @@
-const certCourses = [
-    { name: 'CSE 110', credits: 2, completed: true },
-    { name: 'WDD 130', credits: 2, completed: true },
-    { name: 'CSE 111', credits: 2, completed: true },
-    { name: 'WDD 131', credits: 2, completed: true },
-    { name: 'CSE 220', credits: 2, completed: true },
-    { name: 'WDD 231', credits: 2, completed: false },
+// course.js
+const courses = [
+    { title: "CSE 110", completed: true, credits: 3 },
+    { title: "WDD 130", completed: true, credits: 3 },
+    { title: "CSE 111", completed: true, credits: 4 },
+    { title: "WDD 131", completed: true, credits: 3 },
+    { title: "CSE 210", completed: true, credits: 3 },
+    { title: "WDD 231", completed: false, credits: 3 },
 ];
 
-function renderCourses(filter = 'all') {
-    const container = document.getElementById('cert-course-list');
-    const filteredCourses = certCourses.filter(course => 
-        filter === 'all' ? true : course.name.startsWith(filter)
-    );
-
-    container.innerHTML = filteredCourses.map(course => `
-        <div class="course-card ${course.completed ? 'completed' : ''}">
-            <h3>${course.name}</h3>
-            <p>Credits: ${course.credits}</p>
-            <p>${course.completed ? '✅ Completed' : '⏳ In Progress'}</p>
-        </div>
-    `).join('');
-
-    // Update credit total
-    const totalCredits = filteredCourses.reduce((sum, course) => sum + course.credits, 0);
+// Dynamically display courses
+function displayCourses(filter) {
+    const courseList = document.getElementById('cert-course-list');
+    courseList.innerHTML = '';
+    const filteredCourses = filter === 'all' ? courses : courses.filter(course => course.title.includes(filter));
+    
+    filteredCourses.forEach(course => {
+        const courseDiv = document.createElement('div');
+        courseDiv.className = 'course-card';
+        courseDiv.style.borderLeftColor = course.completed ? 'green' : 'red';
+        courseDiv.textContent = `${course.title} - ${course.completed ? 'Completed' : 'Not Completed'}`;
+        courseList.appendChild(courseDiv);
+    });
+    
+    // Calculate total credits
+    const totalCredits = filteredCourses.reduce((acc, course) => acc + course.credits, 0);
     document.querySelector('.credits-summary').textContent = `Total Credits: ${totalCredits}`;
 }
 
-// Filter buttons
+// Course filter button event listeners
 document.querySelectorAll('#course-filters button').forEach(button => {
-    button.addEventListener('click', (e) => {
-        document.querySelectorAll('#course-filters button').forEach(btn => 
-            btn.classList.remove('active'));
-        e.target.classList.add('active');
-        renderCourses(e.target.dataset.filter);
+    button.addEventListener('click', () => {
+        displayCourses(button.dataset.filter);
     });
 });
 
-// Initial render
-renderCourses();
+// Initial load
+displayCourses('all');

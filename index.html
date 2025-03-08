@@ -12,13 +12,13 @@
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/date.js" defer></script>
     <script src="scripts/course.js" defer></script>
-    <script src="scripts/home.js" defer></script>
+    <script src="scripts/coursework.js" defer></script>
 </head>
 <body>
     <header>
-        <img src="images/profile.jpg" alt="Munyaradzi Chiondegwa" id="profile-img">
+        <img src="images/profile.jpg" alt="Munyaradzi Chiondegwa" id="profile-img" class="responsive-img">
         <span>Munyaradzi Chiondegwa</span>
-        <button id="hamburger-menu" aria-label="Open Menu">
+        <button id="hamburger-menu" aria-label="Open Menu" class="hamburger">
             <span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>
@@ -33,16 +33,18 @@
         </ul>
     </nav>
     <main>
-        <aside id="coursework">
-            <h2>Course Work</h2>
-            <div id="course-list"></div>
-        </aside>
-        <aside id="location">
-            <h2>Location</h2>
-            <p>Harare, Zimbabwe</p>
-            <img src="images/harare.jpg" alt="Harare Cityscape">
-        </aside>
-        <aside id="certificate">
+        <div id="content-wrapper">
+            <aside id="coursework">
+                <h2>Course Work</h2>
+                <div id="course-list"></div>
+            </aside>
+            <aside id="location">
+                <h2>Location</h2>
+                <p>Harare, Zimbabwe</p>
+                <img src="images/harare.jpg" alt="Harare Cityscape" class="responsive-img">
+            </aside>
+        </div>
+        <section id="certificate">
             <h2>Web and Computer Programming Certificate</h2>
             <div id="course-filters">
                 <button data-filter="all">All</button>
@@ -51,7 +53,7 @@
             </div>
             <div id="cert-course-list"></div>
             <div class="credits-summary"></div>
-        </aside>
+        </section>
     </main>
     <footer>
         <p>&copy; <span id="currentyear"></span> Munyaradzi Chiondegwa | Harare, Zimbabwe</p>

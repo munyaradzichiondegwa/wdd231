@@ -1,35 +1,49 @@
+/* large.css */
+
+/* Media Queries for larger screens */
 @media (min-width: 601px) {
-    #hamburger-menu {
-        display: none;
-    }
-
-    #main-nav {
-        display: block;
-        background-color: var(--primary-color);
-        padding: 0 1rem;
-    }
-
-    #main-nav ul {
+    header {
         display: flex;
-        justify-content: flex-end;
-        gap: 2rem;
+        justify-content: space-between; /* Space content */
+        align-items: center; /* Center items vertically */
     }
 
-    main {
-        grid-template-columns: 1fr 1fr;
-        max-width: 1200px;
-        margin: 0 auto;
+    nav {
+        display: flex; /* Show navigation in large screens */
+        flex-direction: row; /* Horizontal for larger screens */
+        justify-content: center; /* Center nav */
+        margin-top: 10px;
     }
 
-    #certificate {
-        grid-column: span 2;
+    nav ul {
+        display: flex; /* Horizontal list display */
     }
 
-    #cert-course-list {
-        grid-template-columns: repeat(3, 1fr);
+    nav li {
+        margin: 0 15px; /* Space between links */
     }
 
-    .course-card {
-        padding: 1.5rem;
+    nav a {
+        padding: 10px 20px; /* Horizontal clickable area */
+    }
+
+    #content-wrapper {
+        flex-direction: row; /* Side by side layout */
+        gap: 10px; /* Space between columns */
+    }
+
+    aside {
+        flex: 1; /* Equal width sides */
+        max-width: 300px; /* Prevent overflow */
+    }
+
+    #location img {
+        width: 100%; /* Full width of the container */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    /* Add hover effects for desktop */
+    nav a:hover {
+        background-color: #0056b3; /* Darker on hover */
     }
 }
