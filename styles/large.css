@@ -1,0 +1,35 @@
+@media (min-width: 601px) {
+    #hamburger-menu {
+        display: none;
+    }
+
+    #main-nav {
+        display: block;
+        background-color: var(--primary-color);
+        padding: 0 1rem;
+    }
+
+    #main-nav ul {
+        display: flex;
+        justify-content: flex-end;
+        gap: 2rem;
+    }
+
+    main {
+        grid-template-columns: 1fr 1fr;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    #certificate {
+        grid-column: span 2;
+    }
+
+    #cert-course-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .course-card {
+        padding: 1.5rem;
+    }
+}
