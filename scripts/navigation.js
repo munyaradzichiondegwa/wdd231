@@ -1,14 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
     const navList = document.querySelector('nav ul'); // Select the navigation list
+    const menuButton = document.getElementById("menu-toggle"); // Hamburger menu button
 
     // Array of navigation links
     let navLinks = [
         { name: "Home", url: "#", active: true },
         { name: "Chamber", url: "#" },
-        { name: "GitHub Profile", url: "https://github.com/yourprofile" },
-        { name: "LinkedIn", url: "https://linkedin.com/in/yourprofile" }
+        { name: "GitHub Profile", url: "https://github.com/munyaradzichiondegwa" },
+        { name: "LinkedIn", url: "https://www.linkedin.com/in/bloodshed-munyaradzi-chiondegwa-84798a2b7/" }
     ];
 
+    // Function to generate navigation links
     function generateNavLinks() {
         navList.innerHTML = ''; // Clear existing navigation links
 
@@ -23,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Function to update navigation dynamically
+    // Function to add a new navigation link dynamically
     function addNavLink(name, url, isActive = false) {
         navLinks.push({ name, url, active: isActive });
         generateNavLinks();
@@ -34,4 +36,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initial rendering of navigation links
     generateNavLinks();
+
+    // Toggle the menu on small screens when the hamburger icon is clicked
+    menuButton.addEventListener("click", () => {
+        navList.classList.toggle("show");
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const menuButton = document.getElementById("menu-toggle"); // Hamburger menu button
+    const navList = document.getElementById("nav-list"); // Navigation list
+
+    // Toggle the menu on small screens when the hamburger icon is clicked
+    menuButton.addEventListener("click", () => {
+        navList.classList.toggle("show");
+    });
 });

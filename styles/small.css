@@ -10,8 +10,10 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     color: var(--text-color);
+    background-color: #f4f4f4;
 }
 
+/* Header Styling */
 header {
     background-color: var(--primary-color);
     color: white;
@@ -49,8 +51,19 @@ nav ul li a {
     transition: color 0.3s;
 }
 
-nav ul li a:hover, nav ul li a.active {
+nav ul li a:hover,
+nav ul li a.active {
     color: yellow;
+}
+
+/* Hamburger Menu - Mobile View */
+#menu-toggle {
+    display: none;
+    font-size: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
 }
 
 /* Main Grid Layout */
@@ -62,7 +75,8 @@ nav ul li a:hover, nav ul li a.active {
 }
 
 /* Course Work Section */
-.course-work, .location {
+.course-work,
+.location {
     border: 1px solid var(--primary-color);
     padding: 1.5rem;
     background: white;
@@ -123,21 +137,9 @@ nav ul li a:hover, nav ul li a.active {
     transition: background-color 0.3s;
 }
 
-.filter-buttons button.active, .filter-buttons button:hover {
+.filter-buttons button.active,
+.filter-buttons button:hover {
     background-color: var(--primary-color);
-}
-
-/* Responsive Styles for Larger Screens */
-@media screen and (min-width: 768px) {
-    .main-grid {
-        grid-template-columns: 2fr 1fr;
-    }
-}
-
-@media screen and (min-width: 1200px) {
-    .main-grid {
-        grid-template-columns: 3fr 1fr;
-    }
 }
 
 /* Location Section Styling */
@@ -165,17 +167,8 @@ nav ul li a:hover, nav ul li a.active {
     max-width: 100%;
     height: auto;
 }
-/* General Styles */
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-}
 
-h1, h2 {
-    font-weight: 700;
-}
-
+/* General Styles for buttons */
 button {
     padding: 0.5rem 1rem;
     border: none;
@@ -189,15 +182,6 @@ button {
 
 button:hover {
     background-color: #6f3d1b;
-}
-
-/* Course Work Section */
-.course-work {
-    padding: 1.5rem;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-top: 1rem;
 }
 
 /* Course Grid */
@@ -251,26 +235,86 @@ button:hover {
     margin-bottom: 0;
 }
 
-/* Filter Buttons */
-.filter-buttons {
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 1rem;
+/* Hide the navigation menu on small screens */
+@media (max-width: 768px) {
+    #nav-list {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #fff;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 10px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    #nav-list.show {
+        display: flex;
+    }
+
+    /* Style for hamburger icon */
+    #menu-toggle {
+        display: block;
+        font-size: 30px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: white;
+    }
+
+    /* Style for when the menu is open */
+    #nav-list li {
+        margin: 10px 0;
+    }
+
+    #nav-list a {
+        font-size: 18px;
+    }
 }
 
-.filter-buttons button.active {
-    background-color: #6f3d1b;
+/* Normal navigation styling for larger screens */
+@media (min-width: 769px) {
+    #menu-toggle {
+        display: none;
+    }
 }
 
-.filter-buttons button {
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    border: none;
-    background-color: #8B4513;
-    color: white;
-    font-size: 16px;
-}
+/* Mobile-specific styles (below 768px) */
+@media (max-width: 768px) {
+    /* Hide the navigation list by default */
+    #nav-list {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #fff;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 10px;
+    }
 
-.filter-buttons button:hover {
-    background-color: #6f3d1b;
+    /* Show the navigation list when "show" class is added */
+    #nav-list.show {
+        display: flex;
+    }
+
+    /* Hamburger menu button styles */
+    #menu-toggle {
+        display: block;
+        font-size: 30px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: white;
+    }
+
+    /* Style for menu items when the menu is open */
+    #nav-list li {
+        margin: 10px 0;
+    }
+
+    #nav-list a {
+        font-size: 18px;
+    }
 }
