@@ -1,9 +1,16 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // Current Year
+document.addEventListener("DOMContentLoaded", () => {
+    // Get current year dynamically
+    const currentYearSpan = document.getElementById("currentYear");
     const currentYear = new Date().getFullYear();
-    
-    // Update footer with current year and last modified date
-    const footerParagraphs = document.querySelectorAll('footer p');
-    footerParagraphs[0].innerHTML = `©${currentYear} Rubia Magdelena Francesco | Madagascar`;
-    footerParagraphs[1].textContent = `Last Update: ${document.lastModified}`;
+    if (currentYearSpan) {
+        currentYearSpan.textContent = currentYear;
+    }
+
+    // Get last modified date dynamically
+    const lastModifiedSpan = document.getElementById("lastModified");
+    const lastModifiedDate = document.lastModified; // Returns last modified date of the document
+
+    if (lastModifiedSpan) {
+        lastModifiedSpan.textContent = `Last updated: ${lastModifiedDate}`;
+    }
 });

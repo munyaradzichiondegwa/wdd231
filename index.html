@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,9 +20,11 @@
 
     <!-- Scripts -->
     <script src="scripts/navigation.js" defer></script>
-    <script src="scripts/courses.js" defer></script>
+    <script src="scripts/course.js" defer></script>
+    <script src="scripts/location.js" defer></script>
     <script src="scripts/date.js" defer></script>
 </head>
+
 <body>
     <header>
         <img src="images/profile.jpg" alt="Munyaradzi Chiondegwa">
@@ -38,21 +41,22 @@
 
     <main>
         <h1>Home</h1>
-        
         <div class="main-grid">
-            <section class="course-work">
+            <aside class="course-work">
                 <h2>Course Work</h2>
-                <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                <ul id="course-list">
+                    <!-- Dynamic items will be inserted here -->
                 </ul>
-            </section>
+                <button id="add-item-btn">Add New Item</button>
+            </aside>
 
             <section class="location">
-                <h2>Harare, Zimbabwe</h2>
-                <img src="images/harare.jpg" alt="View from Harare Gardens">
-                <p>View from Harare Gardens</p>
+                <h2>Location</h2>
+                <div id="location-info">
+                    <p id="location-name">Harare, Zimbabwe</p>
+                    <img id="location-image" src="images/harare.jpg" alt="Location Image"
+                        style="width:100%; max-width: 400px;">
+                </div>
             </section>
         </div>
 
@@ -75,4 +79,5 @@
         <p id="lastModified"></p>
     </footer>
 </body>
+
 </html>
