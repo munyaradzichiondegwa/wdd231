@@ -3,60 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Course Home Page for Munyaradzi Chiondegwa">
+    <title>Munyaradzi Chiondegwa - WDD 231</title>
+    <meta name="description" content="Course home page for Web and Computer Programming Certificate">
     <meta name="author" content="Munyaradzi Chiondegwa">
-    <title>Munyaradzi Chiondegwa - Course Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/small.css" media="screen and (max-width: 600px)">
-    <link rel="stylesheet" href="styles/large.css" media="screen and (min-width: 601px)">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+
+    <!-- Scripts -->
     <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/courses.js" defer></script>
     <script src="scripts/date.js" defer></script>
-    <script src="scripts/course.js" defer></script>
-    <script src="scripts/coursework.js" defer></script>
 </head>
 <body>
     <header>
-        <img src="images/profile.jpg" alt="Munyaradzi Chiondegwa" id="profile-img" class="responsive-img">
+        <img src="images/profile.jpg" alt="Munyaradzi Chiondegwa">
         <span>Munyaradzi Chiondegwa</span>
-        <button id="hamburger-menu" aria-label="Open Menu" class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </button>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Chamber</a></li>
+                <li><a href="#">GitHub Profile</a></li>
+                <li><a href="#">LinkedIn</a></li>
+            </ul>
+        </nav>
     </header>
-    <nav id="main-nav">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="chamber.html">Chamber</a></li>
-            <li><a href="https://github.com/munyaradzichiondegwa">GitHub Profile</a></li>
-            <li><a href="https://www.linkedin.com/in/munyaradzichiondegwa">LinkedIn</a></li>
-        </ul>
-    </nav>
+
     <main>
-        <div id="content-wrapper">
-            <aside id="coursework">
+        <h1>Home</h1>
+        
+        <div class="main-grid">
+            <section class="course-work">
                 <h2>Course Work</h2>
-                <div id="course-list"></div>
-            </aside>
-            <aside id="location">
-                <h2>Location</h2>
-                <p>Harare, Zimbabwe</p>
-                <img src="images/harare.jpg" alt="Harare Cityscape" class="responsive-img">
-            </aside>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </section>
+
+            <section class="location">
+                <h2>Harare, Zimbabwe</h2>
+                <img src="images/harare.jpg" alt="View from Harare Gardens">
+                <p>View from Harare Gardens</p>
+            </section>
         </div>
-        <section id="certificate">
+
+        <div class="certificate-section">
             <h2>Web and Computer Programming Certificate</h2>
-            <div id="course-filters">
-                <button data-filter="all">All</button>
-                <button data-filter="CSE">CSE</button>
-                <button data-filter="WDD">WDD</button>
+            <div class="filter-buttons">
+                <button id="btn-all" class="active">All</button>
+                <button id="btn-cse">CSE</button>
+                <button id="btn-wdd">WDD</button>
             </div>
-            <div id="cert-course-list"></div>
-            <div class="credits-summary"></div>
-        </section>
+            <div id="courses-container" class="course-grid">
+                <!-- Courses will be dynamically loaded here -->
+            </div>
+            <p>Total Credits: <span id="total-credits">0</span></p>
+        </div>
     </main>
+
     <footer>
-        <p>&copy; <span id="currentyear"></span> Munyaradzi Chiondegwa | Harare, Zimbabwe</p>
+        <p>&copy; <span id="currentYear"></span> Munyaradzi Chiondegwa | Zimbabwe</p>
         <p id="lastModified"></p>
     </footer>
 </body>

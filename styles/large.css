@@ -1,49 +1,149 @@
-/* large.css */
-
-/* Media Queries for larger screens */
-@media (min-width: 601px) {
+/* styles/large.css */
+@media screen and (min-width: 768px) {
+    /* Header Adjustments */
     header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+    }
+
+    header img {
+        width: 100px;
+        margin-right: 1rem;
+        margin-bottom: 0;
+    }
+
+    header span {
+        flex-grow: 1;
+        font-size: 1.5rem;
+    }
+
+    /* Navigation */
+    nav ul {
+        justify-content: flex-end;
+        gap: 1.5rem;
+    }
+
+    nav ul li a {
+        transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+        color: #f0f0f0;
+        text-decoration: underline;
+    }
+
+    /* Main Grid Layout */
+    .main-grid {
+        grid-template-columns: 2fr 1fr;
+        gap: 2rem;
+    }
+
+    .course-work, .location {
+        padding: 1.5rem;
+    }
+
+    /* Course Grid */
+    .course-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+
+    .course-button {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .course-button:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Filter Buttons */
+    .filter-buttons {
+        gap: 1.5rem;
+    }
+
+    .filter-buttons button {
+        padding: 0.5rem 1.5rem;
+        font-size: 1rem;
+        transition: background-color 0.3s ease;
+    }
+
+    .filter-buttons button:hover {
+        background-color: var(--primary-color);
+        opacity: 0.9;
+    }
+
+    /* Responsive Typography */
+    body {
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    /* Footer */
+    footer {
         display: flex;
-        justify-content: space-between; /* Space content */
-        align-items: center; /* Center items vertically */
+        justify-content: center;
+        align-items: center;
+        padding: 1rem 2rem;
+    }
+
+    footer p {
+        margin: 0;
+    }
+}
+
+/* Extra Large Screen Adjustments */
+@media screen and (min-width: 1200px) {
+    body {
+        max-width: 1400px;
+        font-size: 18px;
+    }
+
+    .main-grid {
+        grid-template-columns: 3fr 1fr;
+    }
+
+    .course-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+}
+
+/* Print Styles */
+@media print {
+    body {
+        font-size: 12pt;
+        color: #000;
+        background: #fff;
+    }
+
+    header, footer {
+        background: none;
+        color: #000;
     }
 
     nav {
-        display: flex; /* Show navigation in large screens */
-        flex-direction: row; /* Horizontal for larger screens */
-        justify-content: center; /* Center nav */
-        margin-top: 10px;
+        display: none;
     }
 
-    nav ul {
-        display: flex; /* Horizontal list display */
-    }
-
-    nav li {
-        margin: 0 15px; /* Space between links */
-    }
-
-    nav a {
-        padding: 10px 20px; /* Horizontal clickable area */
-    }
-
-    #content-wrapper {
-        flex-direction: row; /* Side by side layout */
-        gap: 10px; /* Space between columns */
-    }
-
-    aside {
-        flex: 1; /* Equal width sides */
-        max-width: 300px; /* Prevent overflow */
-    }
-
-    #location img {
-        width: 100%; /* Full width of the container */
-        height: auto; /* Maintain aspect ratio */
-    }
-
-    /* Add hover effects for desktop */
-    nav a:hover {
-        background-color: #0056b3; /* Darker on hover */
+    .course-button {
+        border: 1px solid #000;
     }
 }

@@ -1,10 +1,4 @@
-html {
-    box-sizing: border-box;
-}
-*, *:before, *:after {
-    box-sizing: inherit;
-}
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
+/* Standard normalize CSS reset */
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0}
+img{max-width:100%;height:auto}

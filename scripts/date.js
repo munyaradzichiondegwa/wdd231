@@ -1,9 +1,9 @@
-// navigation.js
 document.addEventListener('DOMContentLoaded', () => {
-    const hamburgerMenu = document.getElementById('hamburger-menu');
-    const nav = document.getElementById('main-nav');
-
-    hamburgerMenu.addEventListener('click', () => {
-        nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
-    });
+    // Current Year
+    const currentYear = new Date().getFullYear();
+    
+    // Update footer with current year and last modified date
+    const footerParagraphs = document.querySelectorAll('footer p');
+    footerParagraphs[0].innerHTML = `©${currentYear} Rubia Magdelena Francesco | Madagascar`;
+    footerParagraphs[1].textContent = `Last Update: ${document.lastModified}`;
 });
