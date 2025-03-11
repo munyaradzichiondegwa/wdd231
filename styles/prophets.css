@@ -203,3 +203,29 @@ footer {
     background: var(--primary-color);
     border-radius: 5px;
 }
+
+.filter-buttons button {
+  background: linear-gradient(45deg, #0a9396, #94d2bd);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.filter-buttons button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.filter-buttons button:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.filter-buttons button.active {
+  background: linear-gradient(45deg, #005f73, #0a9396);
+}
