@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Latter-day Prophets</title>
-    <meta name="description" content="A list of the latter-day prophets of the Church of Jesus Christ of Latter-day Saints.">
-    <meta name="keywords" content="Latter-day Prophets, LDS Prophets, Presidents of the Church">
+    <meta name="description" content="Latter-day Prophets">
+    <meta name="keywords" content="Latter-day Prophets">
     <meta name="author" content="Munyaradzi Chiondegwa">
-    <link rel="favicon" href="images/favicon.ico">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles/prophets.css">
     <script src="scripts/prophets.js" defer></script>
     <script src="scripts/date.js" defer></script>
@@ -18,17 +18,22 @@
     <header>
         <h1>Latter-day Prophets</h1>
     </header>
-
-    <!-- The filter and search elements will be dynamically added by JavaScript -->
     <main>
-        <div id="cards"></div>
+        <div class="filter-buttons">
+            <button id="utah-btn">Born in Utah</button>
+            <button id="outside-us-btn">Born Outside US</button>
+            <button id="longevity-btn">Lived 95+ Years</button>
+            <button id="large-family-btn">10+ Children</button>
+            <button id="long-service-btn">15+ Years as President</button>
+            <button id="reset-btn">Reset Filters</button>
+        </div>
+        <div id="cards" class="cards"></div>
     </main>
-
     <footer>
         <p>&copy; <span id="currentYear"></span> Munyaradzi Chiondegwa | Latter-day Prophets</p>
         <p id="lastModified"></p>
     </footer>
-
+   
 </body>
 
 </html>
