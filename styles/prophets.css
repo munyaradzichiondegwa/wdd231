@@ -65,13 +65,6 @@ header {
     margin-bottom: 0.5rem;
 }
 
-footer {
-    background-color: #1a5f7a;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-}
-
 .card {
     display: flex;
     flex-direction: column;
@@ -102,3 +95,11 @@ footer {
     height: auto;
     border-radius: 8px;
 }
+
+footer {
+    background-color: #1a5f7a;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
