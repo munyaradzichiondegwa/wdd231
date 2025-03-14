@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harare Chamber of Commerce - Member Directory</title>
+    <meta name="description"
+        content="Discover Harare's vibrant business community through our comprehensive member directory">
+    <meta name="author" content="Munyaradzi Chiondegwa">
+    <meta property="og:title" content="Harare Chamber of Commerce - Member Directory">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://harare-chamber.org/directory">
+    <meta property="og:image" content="path/to/chamber-logo.png">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/directory.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="scripts/directory.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/harare-chamber-logo.png" alt="Harare Chamber Logo">
+            </div>
+            <div class="hamburger-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html" class="active">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="directory-header">
+            <h1>Harare Business Directory</h1>
+            <div class="view-toggle">
+                <button id="grid-view-btn">Grid View</button>
+                <button id="list-view-btn">List View</button>
+            </div>
+        </section>
+
+        <section id="members-container" class="members-grid">
+            <!-- Members will be dynamically populated here -->
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Harare Metropolitan Chamber of Commerce</h3>
+                <p>Address: Cnr First Street and Takawira Street, Harare, Zimbabwe</p>
+                <p>Phone: +263 4 772 123</p>
+                <p>Email: info@hararechamber.org</p>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> Harare Chamber of Commerce | Munyaradzi Chiondegwa | WDD231 Class Project | Last Modified: <span id="last-modified"></span>
+                </p>
+                <div class="social-icons">
+                    <a href="#" class="social-icon">Facebook</a>
+                    <a href="#" class="social-icon">LinkedIn</a>
+                    <a href="#" class="social-icon">X</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
+

@@ -1,0 +1,94 @@
+{
+    "members": [
+        {
+            "name": "TechInnovate Solutions",
+            "address": "123 Innovation Drive, Borrowdale, Harare",
+            "phone": "+263 4 111 2222",
+            "website": "https://techinnovate.co.zw",
+            "membershipLevel": 3,
+            "logoPath": "techinnovate-logo.png",
+            "description": "Leading software development and IT consulting firm in Harare"
+        },
+        {
+            "name": "Green Retail Enterprises",
+            "address": "45 Avondale Road, Harare",
+            "phone": "+263 4 333 4444",
+            "website": "https://greenretail.co.zw",
+            "membershipLevel": 2,
+            "logoPath": "greenretail-logo.png",
+            "description": "Sustainable retail solutions and eco-friendly product distribution"
+        },
+        {
+            "name": "Zimbabwe Manufacturing Co.",
+            "address": "78 Industrial Zone, Harare",
+            "phone": "+263 4 555 6666",
+            "website": "https://zim-manufacturing.co.zw",
+            "membershipLevel": 3,
+            "logoPath": "zim-manufacturing-logo.png",
+            "description": "Advanced manufacturing and industrial solutions"
+        },
+        {
+            "name": "Fintech Innovations Zimbabwe",
+            "address": "12 Financial District, Harare",
+            "phone": "+263 4 777 8888",
+            "website": "https://fintechzim.co.zw",
+            "membershipLevel": 3,
+            "logoPath": "fintech-innovations-logo.png",
+            "description": "Cutting-edge financial technology solutions"
+        },
+        {
+            "name": "Agri-Tech Solutions",
+            "address": "56 Agricultural Park, Harare",
+            "phone": "+263 4 999 0000",
+            "website": "https://agritech-zim.co.zw",
+            "membershipLevel": 2,
+            "logoPath": "agritech-logo.png",
+            "description": "Agricultural technology and innovation"
+        },
+        {
+            "name": "Zimbabwe Renewable Energy",
+            "address": "89 Green Energy Road, Harare",
+            "phone": "+263 4 222 3333",
+            "website": "https://zim-renewable.co.zw",
+            "membershipLevel": 3,
+            "logoPath": "renewable-energy-logo.png",
+            "description": "Sustainable energy solutions and consulting"
+        },
+        {
+            "name": "Digital Marketing Experts",
+            "address": "34 Media Street, Harare",
+            "phone": "+263 4 444 5555",
+            "website": "https://digital-marketing-zim.co.zw",
+            "membershipLevel": 1,
+            "logoPath": "digital-marketing-logo.png",
+            "description": "Comprehensive digital marketing strategies"
+        },
+        {
+            "name": "Harare Healthcare Innovations",
+            "address": "67 Medical District, Harare",
+            "phone": "+263 4 666 7777",
+            "website": "https://harare-healthcare.co.zw",
+            "membershipLevel": 2,
+            "logoPath": "healthcare-innovations-logo.png",
+            "description": "Medical technology and healthcare solutions"
+        },
+        {
+            "name": "Zimbabwe Education Tech",
+            "address": "45 Learning Avenue, Harare",
+            "phone": "+263 4 888 9999",
+            "website": "https://zim-edtech.co.zw",
+            "membershipLevel": 1,
+            "logoPath": "education-tech-logo.png",
+            "description": "Educational technology and e-learning platforms"
+        },
+        {
+            "name": "Logistics and Transport Solutions",
+            "address": "23 Transport Hub, Harare",
+            "phone": "+263 4 111 4444",
+            "website": "https://zim-logistics.co.zw",
+            "membershipLevel": 3,
+            "logoPath": "logistics-logo.png",
+            "description": "Advanced logistics and transportation services"
+        }
+    ]
+}
