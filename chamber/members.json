@@ -89,6 +89,177 @@
             "membershipLevel": 3,
             "logoPath": "logistics-logo.png",
             "description": "Advanced logistics and transportation services"
+        },
+        {
+            "name": "Harare Construction Innovations",
+            "address": "15 Builder's Lane, Msasa, Harare",
+            "phone": "+263 4 222 5678",
+            "website": "https://harare-construction.co.zw",
+            "membershipLevel": 2,
+            "logoPath": "construction-innovations-logo.png",
+            "description": "Advanced construction and infrastructure development"
+        },
+        {
+            "name": "Zimbabwe Hospitality Group",
+            "address": "42 Tourism Avenue, Borrowdale, Harare",
+            "phone": "+263 4 333 6789",
+            "website": "https://zim-hospitality.co.zw",
+            "membershipLevel": 3,
+            "logoPath": "hospitality-group-logo.png",
+            "description": "Leading hospitality and tourism services provider"
+        },
+        {
+            "name": "Green Power Solutions",
+            "address": "67 Eco Street, Highlands, Harare",
+            "phone": "+263 4 444 7890",
+            "website": "https://green-power-zim.co.zw",
+            "membershipLevel": 2,
+            "logoPath": "green-power-logo.png",
+            "description": "Innovative renewable energy solutions"
+        },
+        {
+            "name": "Zimbabwe Textile Manufacturing",
+            "address": "89 Fabric Road, Msasa Industrial, Harare",
+            "phone": "+263 4 555 8901",
+            "website": "https://zim-textiles.co.zw",
+            "membershipLevel": 3,
+            "logoPath": "textile-manufacturing-logo.png",
+            "description": "High-quality textile production and export"
+        },
+        {
+            "name": "Digital Security Experts",
+            "address": "12 Cyber Lane, Borrowdale, Harare",
+            "phone": "+263 4 666 9012",
+            "website": "https://digital-security-zim.co.zw",
+            "membershipLevel": 1,
+            "logoPath": "digital-security-logo.png",
+            "description": "Cybersecurity and digital protection services"
+        },
+        {
+            "name": "Harare Food Innovations",
+            "address": "34 Culinary Street, Avondale, Harare",
+            "phone": "+263 4 777 0123",
+            "website": "https://harare-food-innovations.co.zw",
+            "membershipLevel": 2,
+            "logoPath": "food-innovations-logo.png",
+            "description": "Innovative food processing and agricultural technology"
+        },
+        {
+            "name": "Zimbabwe Media Solutions",
+            "address": "56 Broadcast Avenue, Milton Park, Harare",
+            "phone": "+263 4 888 1234",
+            "website": "https://zim-media.co.zw",
+            "membershipLevel": 1,
+            "logoPath": "media-solutions-logo.png",
+            "description": "Comprehensive media and communication services"
+        },
+        {
+            "name": "Green Transportation Network",
+            "address": "78 Eco Transport Road, Msasa, Harare",
+            "phone": "+263 4 999 2345",
+            "website": "https://green-transport-zim.co.zw",
+            "membershipLevel": 3,
+            "logoPath": "green-transport-logo.png",
+            "description": "Sustainable urban transportation solutions"
+        },
+        {
+            "name": "Zimbabwe Pharmaceutical Innovations",
+            "address": "90 Medical Research Park, Highlands, Harare",
+            "phone": "+263 4 111 3456",
+            "website": "https://zim-pharma.co.zw",
+            "membershipLevel": 2,
+            "logoPath": "pharma-innovations-logo.png",
+            "description": "Advanced pharmaceutical research and development"
+        },
+        {
+            "name": "Digital Learning Platforms",
+            "address": "23 Education Hub, Borrowdale, Harare",
+            "phone": "+263 4 222 4567",
+            "website": "https://digital-learning-zim.co.zw",
+            "membershipLevel": 1,
+            "logoPath": "digital-learning-logo.png",
+            "description": "Innovative online education and training solutions"
+        },
+        {
+            "name": "Harare Creative Industries",
+            "address": "45 Arts Street, Avondale, Harare",
+            "phone": "+263 4 333 5678",
+            "website": "https://harare-creative.co.zw",
+            "membershipLevel": 2,
+            "logoPath": "creative-industries-logo.png",
+            "description": "Supporting creative and cultural entrepreneurship"
+        },
+        {
+            "name": "Zimbabwe Export Solutions",
+            "address": "67 Trade Avenue, Msasa, Harare",
+            "phone": "+263 4 444 6789",
+            "website": "https://zim-exports.co.zw",
+            "membershipLevel": 3,
+            "logoPath": "export-solutions-logo.png",
+            "description": "International trade and export management"
+        },
+        {
+            "name": "Green Agriculture Technologies",
+            "address": "89 Farm Innovation Road, Borrowdale, Harare",
+            "phone": "+263 4 555 7890",
+            "website": "https://green-agri-tech.co.zw",
+            "membershipLevel": 2,
+            "logoPath": "green-agri-tech-logo.png",
+            "description": "Sustainable agricultural technology solutions"
+        },
+        {
+            "name": "Zimbabwe Digital Consulting",
+            "address": "12 Tech Hub, Highlands, Harare",
+            "phone": "+263 4 666 8901",
+            "website": "https://zim-digital-consulting.co.zw",
+            "membershipLevel": 1,
+            "logoPath": "digital-consulting-logo.png",
+            "description": "Strategic digital transformation consulting"
+        },
+        {
+            "name": "Harare Event Management",
+            "address": "34 Event Plaza, Avondale, Harare",
+            "phone": "+263 4 777 9012",
+            "website": "https://harare-events.co.zw",
+            "membershipLevel": 2,
+            "logoPath": "event-management-logo.png",
+            "description": "Professional event planning and management"
+        },
+        {
+            "name": "Zimbabwe Financial Services",
+            "address": "56 Finance Street, Milton Park, Harare",
+            "phone": "+263 4 888 0123",
+            "website": "https://zim-financial-services.co.zw",
+            "membershipLevel": 3,
+            "logoPath": "financial-services-logo.png",
+            "description": "Comprehensive financial solutions and advisory"
+        },
+        {
+            "name": "Green Construction Materials",
+            "address": "78 Eco Build Road, Msasa, Harare",
+            "phone": "+263 4 999 1234",
+            "website": "https://green-construction-zim.co.zw",
+            "membershipLevel": 2,
+            "logoPath": "green-construction-logo.png",
+            "description": "Sustainable construction materials and solutions"
+        },
+        {
+            "name": "Zimbabwe Tourism Development",
+            "address": "90 Tourism Hub, Borrowdale, Harare",
+            "phone": "+263 4 111 2345",
+            "website": "https://zim-tourism.co.zw",
+            "membershipLevel": 3,
+            "logoPath": "tourism-development-logo.png",
+            "description": "Promoting and developing Zimbabwe's tourism sector"
+        },
+        {
+            "name": "Digital Healthcare Solutions",
+            "address": "23 Medical Tech Street, Highlands, Harare",
+            "phone": "+263 4 222 3456",
+            "website": "https://digital-healthcare-zim.co.zw",
+            "membershipLevel": 1,
+            "logoPath": "digital-healthcare-logo.png",
+            "description": "Innovative digital health technology solutions"
         }
     ]
 }
