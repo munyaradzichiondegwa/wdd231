@@ -1,0 +1,74 @@
+{
+  "members": [
+    {
+      "name": "TechHub Zimbabwe",
+      "address": "123 Innovation Street, Harare",
+      "phone": "+263 (4) 123-4567",
+      "website": "https://www.techhubzimbabwe.com",
+      "logoPath": "techhub.png",
+      "membershipLevel": 3,
+      "industryType": "tech",
+      "description": "Leading technology and digital solutions provider"
+    },
+    {
+      "name": "Green Agri Solutions",
+      "address": "45 Farmer's Avenue, Harare",
+      "phone": "+263 (4) 987-6543",
+      "website": "https://www.greenagrisolutions.co.zw",
+      "logoPath": "green-agri-logo.png",
+      "membershipLevel": 2,
+      "industryType": "services",
+      "description": "Sustainable agricultural consulting and technology"
+    },
+    {
+      "name": "Zim Financial Services",
+      "address": "789 Banking Road, Harare",
+      "phone": "+263 (4) 456-7890",
+      "website": "https://www.zimfinancial.com",
+      "logoPath": "zim-financial-logo.png",
+      "membershipLevel": 3,
+      "industryType": "services",
+      "description": "Comprehensive financial solutions and banking"
+    },
+    {
+      "name": "Sustainable Energy Zimbabwe",
+      "address": "22 Renewable Street, Harare",
+      "phone": "+263 (4) 234-5678",
+      "website": "https://www.sustainableenergyzw.com",
+      "logoPath": "sustainable-energy-logo.png",
+      "membershipLevel": 2,
+      "industryType": "tech",
+      "description": "Renewable energy solutions and consulting"
+    },
+    {
+      "name": "Zimbabwe Manufacturing Co.",
+      "address": "567 Industrial Zone, Harare",
+      "phone": "+263 (4) 876-5432",
+      "website": "https://www.zimbawemfg.co.zw",
+      "logoPath": "zimbabwe-mfg-logo.png",
+      "membershipLevel": 1,
+      "industryType": "manufacturing",
+      "description": "Industrial manufacturing and production services"
+    },
+    {
+      "name": "Digital Marketing Zimbabwe",
+      "address": "101 Media Street, Harare",
+      "phone": "+263 (4) 345-6789",
+      "website": "https://www.digitalmarketingzw.com",
+      "logoPath": "digital-marketing-logo.png",
+      "membershipLevel": 2,
+      "industryType": "tech",
+      "description": "Innovative digital marketing and branding solutions"
+    },
+    {
+      "name": "Zimbabwe Healthcare Solutions",
+      "address": "246 Medical Avenue, Harare",
+      "phone": "+263 (4) 654-3210",
+      "website": "https://www.zimhealthcare.co.zw",
+      "logoPath": "zim-healthcare-logo.png",
+      "membershipLevel": 3,
+      "industryType": "services",
+      "description": "Comprehensive healthcare technology and services"
+    }
+  ]
+}

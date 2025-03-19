@@ -1,159 +1,287 @@
-:root {
-    --primary-green: #2E8B57;
-    --golden-yellow: #FFD700;
-    --white: #FFFFFF;
-    --army-green: #4B5320;
-}
 
+/* Root Variables */
+:root {
+    /* Color Scheme from Design Brief */
+    --primary-color: #2E8B57;     /* Harare Green */
+    --secondary-color: #FFD700;   /* Golden Yellow */
+    --background-color: grey;  /* Darker Shade */
+    --accent-color: #4B5320;      /* Army Green */
+    --text-color: brown;
+
+    /* Typography */
+    --heading-font: 'Poppins', sans-serif;
+    --body-font: 'Open Sans', sans-serif;
+
+    /* Spacing */
+    --spacing-small: 0.5rem;
+    --spacing-medium: 1rem;
+    --spacing-large: 2rem;
+}
+/* Normalize CSS - Ensure consistency across browsers */
+@import url('normalize.css');
+
+/* General Styles */
 body {
     font-family: 'Open Sans', sans-serif;
-    background-color: var(--white);
-    color: #333;
-    line-height: 1.6;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
 }
 
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+    color: yellow;
+}
+
+/* Header */
 header {
-    background-color: var(--primary-green);
-    padding: 1rem;
+    background: green;
     color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    animation: slideDown 1s ease-in-out;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
 }
 
 nav ul {
-    display: flex;
-    justify-content: center;
     list-style: none;
+    display: flex;
+    gap: 15px;
     padding: 0;
 }
 
 nav ul li {
-    margin: 0 1rem;
+    display: inline;
 }
 
 nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover, .active {
+    background: yellow;
+    color: green;
+    border-radius: 5px;
+}
+
+/* HERO SECTION */
+.hero-section {
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1.5s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-section img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Animated Hero Text */
+.hero-section h1 {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: var(--background-color);
+    padding: var(--spacing-small) var(--spacing-medium);
+    font-size: 2rem;
+    opacity: 0;
+    animation: slideIn 1s ease-out 0.5s forwards;
+}
+
+/* Animated Button */
+.keynote-tickets {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: var(--spacing-small) var(--spacing-medium);
+    background: var(--secondary-color);
+    border: none;
+    color: var(--text-color);
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    opacity: 0;
+    animation: slideIn 1s ease-out 1s forwards;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* HOME SECTIONS */
+.home-sections {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-medium);
+    padding: var(--spacing-medium);
+    justify-content: center;
+}
+
+.home-sections section {
+    background: #2A2A2A;
+    padding: var(--spacing-medium);
+    flex: 1 1 300px;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+/* Staggered animations */
+.home-sections section:nth-child(1) { animation-delay: 0.2s; }
+.home-sections section:nth-child(2) { animation-delay: 0.4s; }
+.home-sections section:nth-child(3) { animation-delay: 0.6s; }
+
+/* DIRECTORY GRID */
+.members-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-medium);
+    padding: var(--spacing-medium);
+}
+
+/* DIRECTORY CARDS */
+.member-card {
+    background: lemonchiffon; 
+    color: var(--background-color);
+    padding: var(--spacing-medium);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+.member-card:hover {
+    transform: translateY(-5px);
+    background: green;
+    color: var(--text-color);
+}
+
+/* Footer */
+footer {
+    background: green;
+    color: white;
+    padding: 20px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.contact-info {
+    text-align: left;
+    flex: 1;
+}
+
+.social-links {
+    text-align: center;
+    flex: 1;
+}
+
+.social-links a {
+    margin: 0 10px;
     color: white;
     text-decoration: none;
     font-weight: bold;
 }
 
-.directory-header {
-    text-align: center;
-    padding: 2rem;
-    background-color: var(--golden-yellow);
+.project-info {
+    text-align: right;
+    flex: 1;
 }
 
-.view-toggle {
-    display: flex;
-    justify-content: center;
-    margin-top: 1rem;
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
-.view-toggle button {
-    margin: 0 0.5rem;
-    padding: 0.5rem 1rem;
-    background-color: var(--army-green);
-    color: white;
-    border: none;
-    cursor: pointer;
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
-#members-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 1rem;
-    padding: 2rem;
+@keyframes popIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
 }
 
-.member-card {
-    border: 1px solid var(--primary-green);
-    padding: 1rem;
-    text-align: center;
-    transition: transform 0.3s;
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
-.member-card:hover {
-    transform: scale(1.05);
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-50px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
-.members-list {
-    display: flex;
-    flex-direction: column;
+@keyframes zoomIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
 }
 
-.members-list .member-card {
-    flex-direction: row;
-    display: flex;
-    align-items: center;
-    margin-bottom: 1rem;
-}
-
-footer {
-    background-color: var(--army-green);
-    color: white;
-    padding: 2rem;
-    text-align: center;
-}
-
-@media screen and (max-width: 768px) {
-    nav ul {
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-content {
         flex-direction: column;
-        align-items: center;
-    }
-    
-    nav ul li {
-        margin: 0.5rem 0;
-    }
-}
-
-/* ... previous CSS ... */
-
-@media screen and (max-width: 768px) {
-    nav {
-        position: relative;
-    }
-
-    .hamburger-menu {
-        display: block;
-        position: absolute;
-        top: 15px;
-        right: 15px;
-        cursor: pointer;
-        z-index: 100;
-    }
-
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background-color: var(--primary-green);
         text-align: center;
     }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .nav-links li {
-        margin: 10px 0;
-        padding: 10px;
-        border-bottom: 1px solid rgba(255,255,255,0.1);
-    }
-}
-
-@media screen and (min-width: 769px) {
-    .hamburger-menu {
-        display: none;
-    }
-
-    .nav-links {
-        display: flex !important;
-    }
-}
-
-/* Weather Icons */
-.weather-icon {
-    width: 50px;
-    height: 50px;
 }
