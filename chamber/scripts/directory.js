@@ -25,8 +25,11 @@ document.addEventListener("DOMContentLoaded", async function () {
             const memberCard = document.createElement("div");
             memberCard.classList.add("member-card");
 
+            // Ensure the image path points to the correct location in the "images" folder
+            const logoPath = `images/${member.logoPath}`; // Assuming "logoPath" is the correct key
+
             memberCard.innerHTML = `
-                <img src="images/${member.image}" alt="${member.name}" class="member-logo">
+                <img src="${logoPath}" alt="${member.name} Logo" class="member-logo">
                 <h3>${member.name}</h3>
                 <p>${member.address}</p>
                 <p>${member.phone}</p>
@@ -71,4 +74,29 @@ document.addEventListener("DOMContentLoaded", async function () {
     // Update footer with current year and last modified date
     document.getElementById("current-year").textContent = new Date().getFullYear();
     document.getElementById("last-modified").textContent = document.lastModified;
+
+    // Additional logic from the second event listener
+    fetch('members.json')
+        .then(response => response.json())
+        .then(data => {
+            data.members.forEach(member => {
+                const memberCard = document.createElement("div");
+                memberCard.classList.add("member-card");
+
+                // Same adjustment to use the correct image path for logo
+                const logoPath = `images/logos/${member.logoPath}`;
+
+                memberCard.innerHTML = `
+                    <img src="${logoPath}" alt="${member.name} Logo" class="member-logo">
+                    <h3>${member.name}</h3>
+                    <p>${member.description}</p>
+                    <p><strong>Address:</strong> ${member.address}</p>
+                    <p><strong>Phone:</strong> ${member.phone}</p>
+                    <a href="${member.website}" target="_blank">Visit Website</a>
+                `;
+
+                membersContainer.appendChild(memberCard);
+            });
+        })
+        .catch(error => console.error("Error loading members:", error));
 });

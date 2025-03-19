@@ -207,6 +207,25 @@ nav ul li a:hover, .active {
     color: var(--text-color);
 }
 
+.member-card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.member-card:hover {
+    transform: translateY(-5px);
+}
+
+.member-logo {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
 /* Footer */
 footer {
     background: green;
