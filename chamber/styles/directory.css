@@ -1,279 +1,20 @@
-
-/* Root Variables */
+/* Directory-specific styles */
 :root {
-    /* Color Scheme from Design Brief */
-    --primary-color: #2E8B57;     /* Harare Green */
-    --secondary-color: #FFD700;   /* Golden Yellow */
-    --background-color: grey;  /* Darker Shade */
-    --accent-color: #4B5320;      /* Army Green */
-    --text-color: brown;
-
-    /* Typography */
-    --heading-font: 'Poppins', sans-serif;
-    --body-font: 'Open Sans', sans-serif;
-
-    /* Spacing */
-    --spacing-small: 0.5rem;
-    --spacing-medium: 1rem;
-    --spacing-large: 2rem;
-}
-/* Normalize CSS - Ensure consistency across browsers */
-@import url('normalize.css');
-
-/* General Styles */
-body {
-    font-family: 'Open Sans', sans-serif;
-    background-color: var(--background-color);
-    color: var(--text-color);
-    margin: 0;
-    padding: 0;
+    --primary-color: #2E8B57;  /* Harare Green */
+    --secondary-color: #C7A300; /* Darker Gold for better contrast */
+    --background-color: #FFFFFF;
+    --text-color: #333333;
+    --accent-color: #4B5320;
 }
 
-h1, h2, h3 {
-    font-family: 'Poppins', sans-serif;
-    color: yellow;
+/* Header & Navigation Animations */
+@keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
-/* Header */
-header {
-    background: green;
-    color: white;
-    padding: 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    animation: slideDown 1s ease-in-out;
-}
-
-.logo-container {
-    display: flex;
-    align-items: center;
-}
-
-.logo-container img {
-    height: 50px;
-    margin-right: 10px;
-}
-
-nav {
-    display: flex;
-    align-items: center;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 15px;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    padding: 10px 15px;
-    transition: 0.3s;
-}
-
-nav ul li a:hover, .active {
-    background: yellow;
-    color: green;
-    border-radius: 5px;
-}
-
-/* HERO SECTION */
-.hero-section {
-    position: relative;
-    text-align: center;
-    overflow: hidden;
-    opacity: 0;
-    transform: translateY(30px);
-    animation: fadeInUp 1.5s ease-out forwards;
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.hero-section img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-/* Animated Hero Text */
-.hero-section h1 {
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: var(--background-color);
-    padding: var(--spacing-small) var(--spacing-medium);
-    font-size: 2rem;
-    opacity: 0;
-    animation: slideIn 1s ease-out 0.5s forwards;
-}
-
-/* Animated Button */
-.keynote-tickets {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: var(--spacing-small) var(--spacing-medium);
-    background: var(--secondary-color);
-    border: none;
-    color: var(--text-color);
-    font-size: 1rem;
-    cursor: pointer;
-    border-radius: 4px;
-    opacity: 0;
-    animation: slideIn 1s ease-out 1s forwards;
-}
-
-@keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* HOME SECTIONS */
-.home-sections {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--spacing-medium);
-    padding: var(--spacing-medium);
-    justify-content: center;
-}
-
-.home-sections section {
-    background: #2A2A2A;
-    padding: var(--spacing-medium);
-    flex: 1 1 300px;
-    border-radius: 4px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    opacity: 0;
-    transform: translateY(40px);
-    animation: fadeInUp 1s ease-out forwards;
-}
-
-/* Staggered animations */
-.home-sections section:nth-child(1) { animation-delay: 0.2s; }
-.home-sections section:nth-child(2) { animation-delay: 0.4s; }
-.home-sections section:nth-child(3) { animation-delay: 0.6s; }
-
-/* DIRECTORY GRID */
-.members-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: var(--spacing-medium);
-    padding: var(--spacing-medium);
-}
-
-/* DIRECTORY CARDS */
-.member-card {
-    background: lemonchiffon; 
-    color: var(--background-color);
-    padding: var(--spacing-medium);
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 1s ease-out forwards;
-}
-
-.member-card:hover {
-    transform: translateY(-5px);
-    background: green;
-    color: var(--text-color);
-}
-
-.member-card {
-    background: white;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s ease-in-out;
-}
-
-.member-card:hover {
-    transform: translateY(-5px);
-}
-
-.member-logo {
-    width: 100px;
-    height: auto;
-    margin-bottom: 10px;
-}
-
-/* Footer */
-footer {
-    background: green;
-    color: white;
-    padding: 20px;
-    margin-top: 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.contact-info {
-    text-align: left;
-    flex: 1;
-}
-
-.social-links {
-    text-align: center;
-    flex: 1;
-}
-
-.social-links a {
-    margin: 0 10px;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.project-info {
-    text-align: right;
-    flex: 1;
-}
-
-/* Animations */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-@keyframes slideUp {
-    from { opacity: 0; transform: translateY(20px); }
+@keyframes navFade {
+    from { opacity: 0; transform: translateY(-10px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
@@ -282,25 +23,268 @@ footer {
     to { opacity: 1; transform: scale(1); }
 }
 
-@keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    opacity: 0;
+    animation: fadeDown 0.6s ease-out forwards;
 }
 
-@keyframes slideDown {
-    from { opacity: 0; transform: translateY(-50px); }
-    to { opacity: 1; transform: translateY(0); }
+.logo-container h1 {
+    color: var(--background-color); /* White */
 }
 
-@keyframes zoomIn {
-    from { opacity: 0; transform: scale(0.95); }
-    to { opacity: 1; transform: scale(1); }
+.logo-container h1:hover {
+    color: var(--secondary-color); /* Yellow on hover */
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .footer-content {
+.nav-links a {
+    color: #000; /* Set a visible color for links */
+    text-decoration: none; /* Remove underline if present */
+    opacity: 1; /* Ensure the link is fully visible */
+}
+
+/* Hover state for the navigation links */
+.nav-links a:hover {
+    color: #FFD700; /* For example, make the text yellow on hover */
+}
+
+/* Active state for the Directory link */
+.nav-links a.active {
+    font-weight: bold; /* Make the active link stand out */
+    color: #FFD700; /* Highlight with gold color */
+}
+
+.nav-links {
+    display: none;
+}
+
+.nav-links.active {
+    display: block;
+}
+
+#hamburger-menu.active .bar {
+    background-color: var(--secondary-color);
+}
+
+/* Navigation */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+    opacity: 0;
+    animation: navFade 0.8s ease-out 0.2s forwards;
+}
+
+/* Staggered Animation for Each Nav Item */
+.nav-links li {
+    opacity: 0;
+    animation: navFade 0.8s ease-out forwards;
+}
+
+.nav-links li:nth-child(1) { animation-delay: 0.3s; }
+.nav-links li:nth-child(2) { animation-delay: 0.4s; }
+.nav-links li:nth-child(3) { animation-delay: 0.5s; }
+.nav-links li:nth-child(4) { animation-delay: 0.6s; }
+
+/* Hover Effects */
+.nav-links a {
+    color: var(--background-color);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--secondary-color);
+}
+
+/* Hamburger Menu */
+#hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    background: none;
+    border: none;
+    opacity: 0;
+    animation: popIn 0.5s ease-out 0.3s forwards;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: var(--background-color);
+    margin: 3px 0;
+    transition: 0.4s;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .nav-links {
         flex-direction: column;
-        text-align: center;
+        align-items: center;
+    }
+
+    #hamburger-menu {
+        display: flex;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Directory controls */
+.directory-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+    gap: 1rem;
+    animation: slideIn 0.5s ease-out;
+}
+
+.view-toggle {
+    display: flex;
+    gap: 1rem;
+}
+
+.view-toggle button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+}
+
+.view-toggle button:hover {
+    background-color: var(--secondary-color);
+    color: black; /* Ensures high contrast */
+    transform: scale(1.1);
+}
+
+/* Search filter */
+.search-filter {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    max-width: 600px;
+    animation: slideIn 0.6s ease-out;
+}
+
+#search-input, 
+#industry-filter {
+    flex-grow: 1;
+    padding: 0.5rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#search-input:focus, 
+#industry-filter:focus {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 8px rgba(199, 163, 0, 0.6);
+}
+
+/* Member grid/list */
+.members-grid, .members-list {
+    animation: fadeIn 0.5s ease-out;
+}
+
+.members-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.members-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.member-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+.member-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+/* Membership level badges */
+.membership-level {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    color: white;
+    animation: fadeIn 1s ease-out;
+}
+
+.membership-level.member { background-color: var(--primary-color); }
+.membership-level.silver { background-color: #C0C0C0; } /* Ensuring readable silver */
+.membership-level.gold { background-color: var(--secondary-color); color: black; }
+
+/* Member body */
+.member-body {
+    padding: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.member-body h3 {
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+}
+
+.member-card:hover .member-body {
+    background-color: rgba(46, 139, 87, 0.1);
+}
+
+.member-card:hover h3 {
+    color: var(--secondary-color);
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .directory-controls {
+        flex-direction: column;
+    }
+
+    .search-filter {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #search-input, 
+    #industry-filter {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+
+    .members-grid {
+        grid-template-columns: 1fr;
     }
 }

@@ -1,74 +1,81 @@
 {
-  "members": [
-    {
-      "name": "TechHub Zimbabwe",
-      "address": "123 Innovation Street, Harare",
-      "phone": "+263 (4) 123-4567",
-      "website": "https://www.techhubzimbabwe.com",
-      "logoPath": "techhub-logo.png",
-      "membershipLevel": 3,
-      "industryType": "tech",
-      "description": "Leading technology and digital solutions provider"
-    },
-    {
-      "name": "Green Agri Solutions",
-      "address": "45 Farmer's Avenue, Harare",
-      "phone": "+263 (4) 987-6543",
-      "website": "https://www.greenagrisolutions.co.zw",
-      "logoPath": "green-agri-logo.png",
-      "membershipLevel": 2,
-      "industryType": "services",
-      "description": "Sustainable agricultural consulting and technology"
-    },
-    {
-      "name": "Zim Financial Services",
-      "address": "789 Banking Road, Harare",
-      "phone": "+263 (4) 456-7890",
-      "website": "https://www.zimfinancial.com",
-      "logoPath": "zim-financial-logo.png",
-      "membershipLevel": 3,
-      "industryType": "services",
-      "description": "Comprehensive financial solutions and banking"
-    },
-    {
-      "name": "Sustainable Energy Zimbabwe",
-      "address": "22 Renewable Street, Harare",
-      "phone": "+263 (4) 234-5678",
-      "website": "https://www.sustainableenergyzw.com",
-      "logoPath": "sustainable-energy-logo.png",
-      "membershipLevel": 2,
-      "industryType": "tech",
-      "description": "Renewable energy solutions and consulting"
-    },
-    {
-      "name": "Zimbabwe Manufacturing Co.",
-      "address": "567 Industrial Zone, Harare",
-      "phone": "+263 (4) 876-5432",
-      "website": "https://www.zimbawemfg.co.zw",
-      "logoPath": "zimbabwe-mfg-logo.png",
-      "membershipLevel": 1,
-      "industryType": "manufacturing",
-      "description": "Industrial manufacturing and production services"
-    },
-    {
-      "name": "Digital Marketing Zimbabwe",
-      "address": "101 Media Street, Harare",
-      "phone": "+263 (4) 345-6789",
-      "website": "https://www.digitalmarketingzw.com",
-      "logoPath": "digital-marketing-logo.png",
-      "membershipLevel": 2,
-      "industryType": "tech",
-      "description": "Innovative digital marketing and branding solutions"
-    },
-    {
-      "name": "Zimbabwe Healthcare Solutions",
-      "address": "246 Medical Avenue, Harare",
-      "phone": "+263 (4) 654-3210",
-      "website": "https://www.zimhealthcare.co.zw",
-      "logoPath": "zim-healthcare-logo.png",
-      "membershipLevel": 3,
-      "industryType": "services",
-      "description": "Comprehensive healthcare technology and services"
-    }
-  ]
+    "members": [
+        {
+            "name": "ZimTech Solutions",
+            "address": "23 Innovation Drive, Borrowdale",
+            "phone": "+263 242 456 789",
+            "website": "https://zimtech.co.zw",
+            "logoPath": "zimtech-logo.png",
+            "membership": 3,
+            "sector": "Technology",
+            "services": ["Software Development", "IT Consulting", "Cloud Solutions"],
+            "hours": "Mon-Fri: 8AM-5PM"
+        },
+        {
+            "name": "Avondale Fashion House",
+            "address": "45 Retail Lane, Avondale",
+            "phone": "+263 772 987 654",
+            "website": "https://avondalefashion.co.zw",
+            "logoPath": "fashion-house-logo.png",
+            "membership": 2,
+            "sector": "Retail",
+            "specialty": "African Print Clothing",
+            "hours": "Mon-Sat: 9AM-6PM"
+        },
+        {
+            "name": "Harare Steel Works",
+            "address": "12 Industrial Way, Willowvale",
+            "phone": "+263 242 333 444",
+            "website": "https://hararesteel.com",
+            "logoPath": "steelworks-icon.png",
+            "membership": 3,
+            "sector": "Manufacturing",
+            "products": ["Steel Beams", "Roofing Sheets", "Metal Fabrication"],
+            "established": 1998
+        },
+        {
+            "name": "EcoFarm Zimbabwe",
+            "address": "8 Green Valley Road, Borrowdale",
+            "phone": "+263 712 555 888",
+            "website": "https://ecofarmzw.org",
+            "logoPath": "ecofarm-logo.png",
+            "membership": 1,
+            "sector": "Agriculture",
+            "services": ["Organic Produce", "Agri-Training", "Farm Equipment"],
+            "certifications": ["Organic Certified", "ISO 9001"]
+        },
+        {
+            "name": "Skyline Architects",
+            "address": "17 Design Crescent, Eastlea",
+            "phone": "+263 242 222 111",
+            "website": "https://skylinearchitects.co.zw",
+            "logoPath": "skyline-architects.png",
+            "membership": 2,
+            "sector": "Professional Services",
+            "specializations": ["Commercial Buildings", "Urban Planning", "Interior Design"],
+            "projects": 147
+        },
+        {
+            "name": "Mbare Market Hub",
+            "address": "Mbare Musika Complex, Stand 56",
+            "phone": "+263 773 321 678",
+            "website": "",
+            "logoPath": "mbare-market-icon.png",
+            "membership": 1,
+            "sector": "Retail",
+            "products": ["Fresh Produce", "Crafts", "Traditional Art"],
+            "marketDays": "Daily 6AM-6PM"
+        },
+        {
+            "name": "Digital Future Labs",
+            "address": "5 Tech Park Road, Chitungwiza",
+            "phone": "+263 242 777 999",
+            "website": "https://dflabs.tech",
+            "logoPath": "digital-future-logo.png",
+            "membership": 3,
+            "sector": "Technology",
+            "services": ["AI Solutions", "Digital Marketing", "App Development"],
+            "incubatorProgram": true
+        }
+    ]
 }

@@ -12,7 +12,7 @@
     <meta property="og:title" content="Harare Chamber Business Directory">
     <meta property="og:type" content="website">
     <meta property="og:image" content="images/harare-chamber-logo.png">
-    <meta property="og:url" content="https://munyaradzichiondegwa.github.io/directory.html">
+    <meta property="og:url" content="https://yourwebsite.com/directory.html">
 
     <!-- Favicon -->
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
@@ -24,11 +24,9 @@
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/directory.css">
     <script src="scripts/directory.js" defer></script>
-    <script src="scripts/weather.js" defer></script>
-    <script src="scripts/dates.js" defer></script>
-
 </head>
 
 <body>
@@ -48,70 +46,34 @@
                 <li><a href="directory.html" class="active">Directory</a></li>
                 <li><a href="discover.html">Discover</a></li>
                 <li><a href="join.html">Join</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <div class="hero-section">
-            <h1>Harare Metropolitan Chamber of Commerce</h1>
-            <img src="images/harare.jpg" alt="Harare City Landscape">
-            <button class="keynote-tickets">Keynote Tickets</button>
-        </div>
-        
-        <div class="home-sections">
-    
-            <section id="events">
-                <h2>Events</h2>
-                <!-- Dynamic events will be populated here -->
-            </section>
-        
-            <section id="current-weather">
-                <h2>Current Weather</h2>
-                <div class="weather-details">
-                    <img src="images/weather.png" alt="Weather Icon">
-                    <div class="weather-info">
-                        <p id="current-temp">75°F</p>
-                        <p id="weather-description">Partly Cloudy</p>
-                        <p>High: <span id="high-temp">85°</span></p>
-                        <p>Low: <span id="low-temp">52°</span></p>
-                        <p>Humidity: <span id="humidity">34%</span></p>
-                        <p>Sunrise: <span id="sunrise">7:30am</span></p>
-                        <p>Sunset: <span id="sunset">9:59pm</span></p>
-                    </div>
-                </div>
-            </section>
-        
-            <section id="weather-forecast">
-                <h2>Weather Forecast</h2>
-                <div class="forecast-details">
-                    <p>Today: <span id="today-forecast">90°F</span></p>
-                    <p>Wednesday: <span id="wednesday-forecast">89°F</span></p>
-                    <p>Thursday: <span id="thursday-forecast">68°F</span></p>
-                </div>
-            </section>
-        </div>
+        <h2>Business Directory</h2>
 
-        <h1>Business Directory</h1>
+        <div class="directory-controls">
+            <div class="view-toggle">
+                <button id="grid-view-btn" aria-label="Grid View">
+                    <i class="icon-grid">Grid</i>
+                </button>
+                <button id="list-view-btn" aria-label="List View">
+                    <i class="icon-list">List</i>
+                </button>
+            </div>
 
-        <div class="view-controls">
-            <button id="grid-view-btn" aria-label="Grid View">
-                <i class="icon-grid"></i> Grid View
-            </button>
-            <button id="list-view-btn" aria-label="List View">
-                <i class="icon-list"></i> List View
-            </button>
-        </div>
-
-        <div id="search-filter">
-            <input type="text" id="search-input" placeholder="Search businesses..." aria-label="Search businesses">
-            <select id="industry-filter" title="Industry Filter">
-                <option value="">All Industries</option>
-                <option value="tech">Technology</option>
-                <option value="retail">Retail</option>
-                <option value="manufacturing">Manufacturing</option>
-                <option value="services">Services</option>
-            </select>
+            <div class="search-filter">
+                <input type="text" id="search-input" placeholder="Search businesses..." aria-label="Search businesses">
+                <select id="industry-filter" aria-label="Filter by industry" title="Filter by industry">
+                    <option value="">All Industries</option>
+                    <option value="technology">Technology</option>
+                    <option value="retail">Retail</option>
+                    <option value="manufacturing">Manufacturing</option>
+                    <option value="services">Services</option>
+                </select>
+            </div>
         </div>
 
         <div id="members-container" class="members-grid">
@@ -131,11 +93,9 @@
                 <a href="#" target="_blank">Facebook</a>
                 <a href="#" target="_blank">LinkedIn</a>
                 <a href="#" target="_blank">X (Twitter)</a>
-                <a href="#" target="_blank">Instagram</a>
-                <a href="#" target="_blank">YouTube</a>
             </div>
             <div class="project-info">
-                <p>WDD231 Project by Munyaradzi Chiondegwa</p>
+                <p>WDD231 Project | Munyaradzi Chiondegwa</p>
                 <p>&copy; <span id="current-year"></span> Harare Chamber</p>
                 <p>Last Modified: <span id="last-modified"></span></p>
             </div>
@@ -143,4 +103,5 @@
     </footer>
 
 </body>
+
 </html>
