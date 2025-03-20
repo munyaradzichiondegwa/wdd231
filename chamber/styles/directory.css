@@ -200,6 +200,12 @@ header {
     box-shadow: 0 0 8px rgba(199, 163, 0, 0.6);
 }
 
+.member-header img {
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* This ensures the image maintains its aspect ratio */
+}
+
 /* Member grid/list */
 .members-grid, .members-list {
     animation: fadeIn 0.5s ease-out;

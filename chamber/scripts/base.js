@@ -57,7 +57,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
             memberCard.innerHTML = `
                 <div class="member-header">
-                    <img src="images/${member.logoPath}" alt="${member.name} Logo" 
+                    <img src="images/${member.logoPath}" 
+                         alt="${member.name} Logo" 
+                         srcset="images/${member.logoPath} 1x, images/${member.logoPath.replace('.webp', '@2x.webp')} 2x"
                          width="200" height="100"  <!-- Added width and height for better CLS -->
                          onerror="this.onerror=null; this.src='images/placeholder-logo.webp'">
                     <span class="membership-level ${getMembershipClass(member.membership)}">
