@@ -1,9 +1,10 @@
 :root {
-    --primary-color: #2E8B57;  /* Harare Green */
+    --primary-color: #2B6B47;  /* Darkened Harare Green for better contrast */
     --secondary-color: #C7A300; /* Darker Gold for better contrast */
     --background-color: #FFFFFF;
     --text-color: #333333; /* Darker text color for better contrast */
     --accent-color: #4B5320;
+    --silver-badge-color: #A9A9A9; /* Darker Silver for better contrast */
 }
 
 /* Header & Navigation Animations */
@@ -244,7 +245,7 @@ header {
 }
 
 .membership-level.member { background-color: var(--primary-color); }
-.membership-level.silver { background-color: #C0C0C0; } /* Ensuring readable silver */
+.membership-level.silver { background-color: var(--silver-badge-color); color: black; }
 .membership-level.gold { background-color: var(--secondary-color); color: black; }
 
 .member-body {

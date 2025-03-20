@@ -1,4 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Check if the browser supports service workers
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/service-worker.js')
+            .then(registration => {
+                console.log('Service Worker registered with scope:', registration.scope);
+            })
+            .catch(error => {
+                console.log('Service Worker registration failed:', error);
+            });
+    }
+
     const membersContainer = document.getElementById('members-container');
     const gridViewBtn = document.getElementById('grid-view-btn');
     const listViewBtn = document.getElementById('list-view-btn');
@@ -42,16 +53,13 @@ document.addEventListener('DOMContentLoaded', () => {
         members.forEach(member => {
             const memberCard = document.createElement('div');
             memberCard.classList.add('member-card');
-            memberCard.dataset.industry = member.sector.toLowerCase();
-
-            // Log the image path
-            console.log(`Image path for ${member.name}: images/${member.logoPath}`);
+            memberCard.dataset.industry = member.sector.toLowerCase();  // Changed from industry to sector to match the JSON data
 
             memberCard.innerHTML = `
                 <div class="member-header">
                     <img src="images/${member.logoPath}" alt="${member.name} Logo" 
-                         width="200" height="100" 
-                         onerror="this.onerror=null; this.src='images/placeholder-logo.webp';">
+                         width="200" height="100"  <!-- Added width and height for better CLS -->
+                         onerror="this.onerror=null; this.src='images/placeholder-logo.webp'">
                     <span class="membership-level ${getMembershipClass(member.membership)}">
                         ${getMembershipLabel(member.membership)}
                     </span>
@@ -102,7 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Search and filter functionality
         function updateMembers() {
             const searchTerm = searchInput.value.toLowerCase();
-            const selectedSector = industryFilter.value;
+            const selectedSector = industryFilter.value;  // Changed to sector to match the JSON data
 
             filteredMembers = members.filter(member => 
                 (member.name.toLowerCase().includes(searchTerm) || 

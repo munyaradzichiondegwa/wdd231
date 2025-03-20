@@ -1,12 +1,12 @@
 /* styles/base.css */
 :root {
-    --primary-color: #2E8B57;    /* Harare Green */
+    --primary-color: #2B6B47;    /* Darkened Harare Green for better contrast */
     --secondary-color: #C7A300;  /* Darker Golden Yellow */
     --background-color: #FFFFFF; /* Clean White */
     --accent-color: #4B5320;     /* Army Green */
-    --text-color: #333333;
+    --text-color: #2A2A2A;       /* Darker Text Color for improved contrast */
     --light-gray: #f4f4f4;
-    --dark-gray: #666666;
+    --dark-gray: #555555;        /* Darker Gray for better readability */
     --footer-text: #EDEDED;      /* Lighter than pure white for better contrast */
     /* Typography */
     --heading-font: 'Poppins', sans-serif;
@@ -47,13 +47,6 @@ h2 { font-size: 2rem; }
 h3 { font-size: 1.75rem; }
 
 /* Links */
-
-
-/* Links */
-a {
-    color: var(--primary-color);
-}
-
 a {
     color: var(--primary-color);
     text-decoration: none;
@@ -130,16 +123,9 @@ nav {
 }
 
 /* Footer */
-
-/* Footer */
 footer {
     background-color: var(--accent-color);
     color: var(--footer-text);
-}
-
-footer {
-    background-color: var(--accent-color);
-    color: var(--background-color);
     padding: var(--spacing-large);
 }
 
@@ -157,6 +143,8 @@ footer {
 /* Social Links */
 .social-links a {
     color: var(--secondary-color);
+    font-size: 1.2rem;
+    transition: color var(--transition-speed) ease;
 }
 
 .social-links a:hover {
@@ -167,16 +155,6 @@ footer {
     display: flex;
     justify-content: center;
     gap: var(--spacing-medium);
-}
-
-.social-links a {
-    color: var(--secondary-color);
-    font-size: 1.2rem;
-    transition: color var(--transition-speed) ease;
-}
-
-.social-links a:hover {
-    color: var(--background-color);
 }
 
 .project-info {
