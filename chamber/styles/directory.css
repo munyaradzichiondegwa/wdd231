@@ -1,9 +1,8 @@
-/* Directory-specific styles */
 :root {
     --primary-color: #2E8B57;  /* Harare Green */
     --secondary-color: #C7A300; /* Darker Gold for better contrast */
     --background-color: #FFFFFF;
-    --text-color: #333333;
+    --text-color: #333333; /* Darker text color for better contrast */
     --accent-color: #4B5320;
 }
 
@@ -43,21 +42,22 @@ header {
     color: var(--secondary-color); /* Yellow on hover */
 }
 
+/* Navigation links */
 .nav-links a {
-    color: #000; /* Set a visible color for links */
+    color: var(--text-color); /* Darker text color for better contrast */
     text-decoration: none; /* Remove underline if present */
     opacity: 1; /* Ensure the link is fully visible */
 }
 
 /* Hover state for the navigation links */
 .nav-links a:hover {
-    color: #FFD700; /* For example, make the text yellow on hover */
+    color: var(--secondary-color); /* Gold on hover */
 }
 
 /* Active state for the Directory link */
 .nav-links a.active {
     font-weight: bold; /* Make the active link stand out */
-    color: #FFD700; /* Highlight with gold color */
+    color: var(--secondary-color); /* Highlight with gold color */
 }
 
 .nav-links {
@@ -94,7 +94,7 @@ header {
 
 /* Hover Effects */
 .nav-links a {
-    color: var(--background-color);
+    color: var(--text-color);
     font-weight: 500;
     transition: color 0.3s ease;
 }
@@ -247,7 +247,6 @@ header {
 .membership-level.silver { background-color: #C0C0C0; } /* Ensuring readable silver */
 .membership-level.gold { background-color: var(--secondary-color); color: black; }
 
-/* Member body */
 .member-body {
     padding: 1rem;
     transition: background-color 0.3s ease;
