@@ -33,6 +33,12 @@ header {
     color: var(--secondary-color);
 }
 
+img {
+  width: 100%; /* Or your desired width */
+  height: auto; /* Or your desired height */
+  aspect-ratio: 16 / 9; /* Example aspect ratio */
+}
+
 .hero h2 {
     font-size: 2.5em; /* Adjust as needed */
     font-weight: bold;
@@ -96,6 +102,12 @@ header {
     padding: var(--spacing-medium);
 }
 
+.event img {
+    max-width: 100%;
+    height: auto;
+}
+
+
 .current-events .event {
     background: #ffffff;
     padding: 10px;
@@ -111,6 +123,11 @@ header {
 .current-events .event:nth-child(1) { animation-delay: var(--event-delay-1); }
 .current-events .event:nth-child(2) { animation-delay: var(--event-delay-2); }
 .current-events .event:nth-child(3) { animation-delay: var(--event-delay-3); }
+
+#current-weather img {
+  width: 50px; /* Match the width you're setting in HTML */
+  height: 50px; /* Match the height you're setting in HTML */
+}
 
 .forecast-day {
     background: #ffffff;

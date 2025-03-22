@@ -1,12 +1,10 @@
-// events.js
-
 document.addEventListener('DOMContentLoaded', function () {
     fetchEvents();
 });
 
 async function fetchEvents() {
     try {
-        const response = await fetch('data/events.json');  // Corrected the path to the JSON file
+        const response = await fetch('data/events.json');  // Path to the JSON file
         if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
@@ -14,7 +12,7 @@ async function fetchEvents() {
         loadEvents(data.events);
     } catch (error) {
         console.error('Error loading events:', error);
-        displayErrorMessage('Failed to load events. Please try again later.'); // Display error message
+        displayErrorMessage('Failed to load events. Please try again later.');
     }
 }
 
@@ -49,7 +47,7 @@ function loadEvents(events) {
         eventElement.appendChild(locationP);
 
         const img = document.createElement('img');
-        img.src = event.image;
+        img.src = event.image;  // Corrected image path
         img.alt = event.title;
         img.width = "100%";
         img.height = "auto";
@@ -62,7 +60,7 @@ function loadEvents(events) {
 }
 
 function displayErrorMessage(message) {
-    const errorDiv = document.getElementById('events-error'); // Make sure you have an element with this ID
+    const errorDiv = document.getElementById('events-error');
     if (errorDiv) {
         errorDiv.textContent = message;
     } else {
