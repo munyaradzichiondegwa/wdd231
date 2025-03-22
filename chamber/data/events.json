@@ -1,0 +1,28 @@
+{
+    "events": [
+        {
+            "title": "Upcoming Business Seminar",
+            "description": "Learn about the latest marketing strategies to grow your business.",
+            "date": "March 29, 2025",
+            "time": "10:00 AM",
+            "location": "Harare International Conference Centre",
+            "image": "images/seminar.jpg"
+        },
+        {
+            "title": "Networking Breakfast",
+            "description": "Join local entrepreneurs for a networking breakfast to discuss new business opportunities.",
+            "date": "April 5, 2025",
+            "time": "8:00 AM",
+            "location": "The Brasserie, Harare",
+            "image": "images/networking-breakfast.jpg"
+        },
+        {
+            "title": "Chamber Annual General Meeting",
+            "description": "Attend the annual general meeting and hear updates on the Chamber's activities.",
+            "date": "April 15, 2025",
+            "time": "3:00 PM",
+            "location": "Chamber Headquarters, Enterprise Road",
+            "image": "images/agm.jpg"
+        }
+    ]
+}

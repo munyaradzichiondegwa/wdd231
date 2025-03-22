@@ -1,0 +1,184 @@
+/* General styling for the spotlight section */
+.spotlights {
+    text-align: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.spotlights h2 {
+    font-family: 'Poppins', sans-serif;
+    color: #2E8B57; /* Harare Green */
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Styling for each spotlight container */
+.spotlight {
+    display: inline-block;
+    width: 30%;
+    margin: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    vertical-align: top;
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.spotlight:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Member header for logo and membership level */
+.member-header {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.member-header img {
+    width: 100%; /* Ensure the logo fits inside the container */
+    height: auto;
+    max-width: 200px;
+    margin: 0 auto;
+    display: block;
+    border-radius: 4px;
+}
+
+.member-header span {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+/* Membership level styling */
+.gold {
+    color: #FFD700; /* Golden Yellow */
+}
+
+.silver {
+    color: #C0C0C0; /* Silver color */
+}
+
+/* Styling for the rest of the member details */
+.spotlight h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    color: #2E8B57; /* Harare Green */
+    margin: 15px 0;
+}
+
+.spotlight p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    color: #333;
+    margin: 8px 0;
+}
+
+.spotlight a {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    color: #FFD700; /* Golden Yellow */
+    text-decoration: none;
+}
+
+.spotlight a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive design for small screens */
+@media (max-width: 768px) {
+    .spotlight {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+/* Footer */
+footer {
+    background-color: var(--accent-color);
+    color: var(--footer-text);
+    padding: var(--spacing-large);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    gap: var(--spacing-medium);
+}
+
+.contact-info {
+    text-align: left;
+}
+
+/* Social Links */
+.social-links a {
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+    transition: color var(--transition-speed) ease;
+}
+
+.social-links a:hover {
+    color: var(--background-color);
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-medium);
+}
+
+.project-info {
+    text-align: right;
+    font-size: 0.9rem;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: var(--spacing-medium);
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .contact-info,
+    .project-info {
+        text-align: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #hamburger-menu {
+        display: flex;
+        position: absolute;
+        top: var(--spacing-medium);
+        right: var(--spacing-medium);
+    }
+}
+
+/* Utility Classes */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.hidden {
+    display: none !important;
+}

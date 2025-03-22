@@ -105,6 +105,67 @@ nav {
     color: var(--primary-color);
 }
 
+/* Hero Section */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 60vh; /* Adjust this for preferred height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fills the space */
+    z-index: -1;
+}
+
+.hero-text {
+    position: relative;
+    text-align: center;
+    color: white;
+    z-index: 2;
+    max-width: 600px;
+    padding: var(--spacing-medium);
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-medium);
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: var(--background-color);
+    padding: var(--spacing-small) var(--spacing-large);
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: background-color var(--transition-speed) ease;
+}
+
+.cta-button:hover {
+    background-color: var(--primary-color);
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .hero {
+        height: 40vh;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+}
+
+
 /* Hamburger Menu */
 #hamburger-menu {
     display: none;
