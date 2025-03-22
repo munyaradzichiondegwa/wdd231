@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', () => {
     const membersContainer = document.getElementById('members-container');
     const gridViewBtn = document.getElementById('grid-view-btn');

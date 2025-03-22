@@ -12,6 +12,27 @@ document.addEventListener("DOMContentLoaded", () => {
     loadCachedForecast();
 });
 
+// Function to get the appropriate local weather icon
+function getWeatherIcon(condition) {
+    const icons = {
+        clear: "clear.png",
+        sunny: "sunny.png",
+        clouds: "cloudy.png",
+        overcast: "cloudy.png",
+        rain: "rainy.png",
+        drizzle: "rainy.png", // Treat drizzle as rain
+        thunderstorm: "thunderstorm.png",
+        snow: "snowy.png",
+        brokenclouds: "broken-clouds.png",
+        mist: "mist.png",
+        haze: "mist.png",
+        default: "default.png" // Fallback icon
+    };
+
+    return icons[condition.toLowerCase()] || icons.default;
+}
+
+// Load cached weather data if available
 async function loadCachedWeather() {
     const cachedData = localStorage.getItem(weatherCacheKey);
     const cachedTime = localStorage.getItem(weatherCacheKey + "Time");
@@ -24,6 +45,7 @@ async function loadCachedWeather() {
     }
 }
 
+// Load cached forecast data if available
 async function loadCachedForecast() {
     const cachedData = localStorage.getItem(forecastCacheKey);
     const cachedTime = localStorage.getItem(forecastCacheKey + "Time");
@@ -36,12 +58,12 @@ async function loadCachedForecast() {
     }
 }
 
+// Fetch current weather data
 async function fetchWeather() {
     try {
         const response = await fetch(weatherUrl);
-        if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
-        }
+        if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+
         const data = await response.json();
         displayWeather(data);
         localStorage.setItem(weatherCacheKey, JSON.stringify(data));
@@ -52,12 +74,12 @@ async function fetchWeather() {
     }
 }
 
+// Fetch 3-day forecast data
 async function fetchForecast() {
     try {
         const response = await fetch(forecastUrl);
-        if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
-        }
+        if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+
         const data = await response.json();
         displayForecast(data);
         localStorage.setItem(forecastCacheKey, JSON.stringify(data));
@@ -68,9 +90,13 @@ async function fetchForecast() {
     }
 }
 
+// Display current weather
 function displayWeather(data) {
     const weatherContainer = document.getElementById("current-weather");
     weatherContainer.innerHTML = ""; // Clear existing content
+
+    const condition = data.weather[0].main.toLowerCase();
+    const iconFile = getWeatherIcon(condition);
 
     const h3 = document.createElement("h3");
     h3.textContent = "Today's Weather in Harare";
@@ -89,11 +115,12 @@ function displayWeather(data) {
     weatherContainer.appendChild(weatherDescriptionP);
 
     const img = document.createElement("img");
-    img.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
+    img.src = `images/${iconFile}`;
     img.alt = data.weather[0].description;
     weatherContainer.appendChild(img);
 }
 
+// Display 3-day forecast
 function displayForecast(data) {
     const forecastContainer = document.getElementById("weather-forecast");
     forecastContainer.innerHTML = "<h3>3-Day Forecast</h3>";
@@ -102,30 +129,34 @@ function displayForecast(data) {
 
     data.list.forEach((entry) => {
         const date = entry.dt_txt.split(" ")[0]; // Extract date
-        const time = entry.dt_txt.split(" ")[1]; // Extract time
-
-        if (!dailyForecasts[date] || Math.abs(new Date(entry.dt_txt).getHours() - 12) < Math.abs(new Date(dailyForecasts[date].dt_txt).getHours() - 12)) {
-            dailyForecasts[date] = entry;
+        if (!dailyForecasts[date]) {
+            dailyForecasts[date] = entry; // Save the first occurrence for the day
         }
     });
 
-    Object.values(dailyForecasts).slice(0, 3).forEach((forecast) => {
+    Object.values(dailyForecasts).slice(0, 3).forEach((forecast, index) => {
         const forecastDiv = document.createElement("div");
+        forecastDiv.id = `day${index + 1}`;
+
+        const condition = forecast.weather[0].main.toLowerCase();
+        const iconFile = getWeatherIcon(condition);
 
         const h4 = document.createElement("h4");
         h4.textContent = forecast.dt_txt.split(" ")[0];
         forecastDiv.appendChild(h4);
 
         const tempP = document.createElement("p");
+        tempP.id = `forecast-temp${index + 1}`;
         tempP.textContent = `Temp: ${forecast.main.temp}°C`;
         forecastDiv.appendChild(tempP);
 
         const weatherDescriptionP = document.createElement("p");
+        weatherDescriptionP.id = `forecast-desc${index + 1}`;
         weatherDescriptionP.textContent = `Weather: ${forecast.weather[0].description}`;
         forecastDiv.appendChild(weatherDescriptionP);
 
         const img = document.createElement("img");
-        img.src = `https://openweathermap.org/img/wn/${forecast.weather[0].icon}.png`;
+        img.src = `images/${iconFile}`;
         img.alt = forecast.weather[0].description;
         forecastDiv.appendChild(img);
 
@@ -133,8 +164,9 @@ function displayForecast(data) {
     });
 }
 
+// Display error message
 function displayErrorMessage(message) {
-    const errorDiv = document.getElementById("weather-error"); // Make sure you have an element with this ID
+    const errorDiv = document.getElementById("weather-error");
     if (errorDiv) {
         errorDiv.textContent = message;
     } else {

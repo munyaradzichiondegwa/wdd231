@@ -33,22 +33,21 @@ header {
     color: var(--secondary-color);
 }
 
+/* Global image styling */
 img {
-  width: 100%; /* Or your desired width */
-  height: auto; /* Or your desired height */
-  aspect-ratio: 16 / 9; /* Example aspect ratio */
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensures image covers the container, maintaining aspect ratio */
 }
 
-.hero h2 {
-    font-size: 2.5em; /* Adjust as needed */
-    font-weight: bold;
-    color: #fff; /* Or your desired text color */
-    text-align: center;
-    margin-bottom: 20px; /* Adjust as needed */
-    font-family: 'Poppins', sans-serif; /* Or your desired font */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a text shadow for better readability */
+/* Event images with specific styling */
+.event img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio for event images */
+    object-fit: cover; /* Ensures it covers the container */
 }
 
+/* Hero section styling */
 .hero {
     position: relative;
     width: 100%;
@@ -63,7 +62,7 @@ img {
     position: absolute;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; /* Ensure image fits without distorting */
 }
 
 .hero-text {
@@ -95,6 +94,7 @@ img {
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
 }
 
+/* Styling for the aside-container */
 .aside-container {
     display: flex;
     flex-direction: column;
@@ -102,49 +102,7 @@ img {
     padding: var(--spacing-medium);
 }
 
-.event img {
-    max-width: 100%;
-    height: auto;
-}
-
-
-.current-events .event {
-    background: #ffffff;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    opacity: 0;
-    transform: translateX(50px);
-    animation: slideIn 0.8s ease-out forwards;
-    animation-delay: var(--event-delay);
-}
-
-.current-events .event:nth-child(1) { animation-delay: var(--event-delay-1); }
-.current-events .event:nth-child(2) { animation-delay: var(--event-delay-2); }
-.current-events .event:nth-child(3) { animation-delay: var(--event-delay-3); }
-
-#current-weather img {
-  width: 50px; /* Match the width you're setting in HTML */
-  height: 50px; /* Match the height you're setting in HTML */
-}
-
-.forecast-day {
-    background: #ffffff;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: 100%;
-    opacity: 0;
-    transform: translateX(-50px);
-    animation: slideIn 0.8s ease-out forwards;
-}
-
-.forecast-day:nth-child(1) { animation-delay: 0.3s; }
-.forecast-day:nth-child(2) { animation-delay: 0.6s; }
-.forecast-day:nth-child(3) { animation-delay: 0.9s; }
-
+/* Styling for spotlights */
 .spotlights {
     display: flex;
     justify-content: space-between;
@@ -162,12 +120,54 @@ img {
     animation: fadeInUp 1s ease-out forwards 1.6s;
 }
 
+/* Footer styling */
 footer {
     background-color: var(--primary-color);
     color: white;
     padding: 20px;
 }
 
+/* Event containers and animations */
+.current-events .event {
+    background: #ffffff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateX(50px);
+    animation: slideIn 0.8s ease-out forwards;
+    animation-delay: var(--event-delay);
+}
+
+.current-events .event:nth-child(1) { animation-delay: var(--event-delay-1); }
+.current-events .event:nth-child(2) { animation-delay: var(--event-delay-2); }
+.current-events .event:nth-child(3) { animation-delay: var(--event-delay-3); }
+
+/* Weather icon */
+#current-weather img {
+    width: 50px; /* Match the width you're setting in HTML */
+    height: 50px; /* Match the height you're setting in HTML */
+}
+
+/* Forecast day styling */
+.forecast-day {
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: slideIn 0.8s ease-out forwards;
+}
+
+.forecast-day:nth-child(1) { animation-delay: 0.3s; }
+.forecast-day:nth-child(2) { animation-delay: 0.6s; }
+.forecast-day:nth-child(3) { animation-delay: 0.9s; }
+
+/* Keyframes for animations */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -199,6 +199,7 @@ footer {
     }
 }
 
+/* Accessibility and reduced motion for users who prefer it */
 @media (prefers-reduced-motion: reduce) {
     * {
         animation: none !important;
@@ -206,6 +207,7 @@ footer {
     }
 }
 
+/* Mobile view adjustments */
 @media (max-width: 768px) {
     .hero {
         height: 40vh;
@@ -225,6 +227,7 @@ footer {
     }
 }
 
+/* Desktop view adjustments */
 @media (min-width: 768px) {
     .aside-container {
         flex-direction: row;
