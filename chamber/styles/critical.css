@@ -1,0 +1,28 @@
+/* critical.css */
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header,
+footer {
+    background-color: #0056b3;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+main {
+    padding: 1rem;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+/* Add more critical styles here */

@@ -1,70 +1,46 @@
-/* styles/base.css */
+/* Root Variables */
 :root {
-    --primary-color: #2B6B47;    /* Darkened Harare Green for better contrast */
-    --secondary-color: #C7A300;  /* Darker Golden Yellow */
+    --primary-color: #2E8B57; /* Harare Green */
+    --secondary-color: #FFD700; /* Golden Yellow */
     --background-color: #FFFFFF; /* Clean White */
-    --accent-color: #4B5320;     /* Army Green */
-    --text-color: #2A2A2A;       /* Darker Text Color for improved contrast */
-    --light-gray: #f4f4f4;
-    --dark-gray: #555555;        /* Darker Gray for better readability */
-    --footer-text: #EDEDED;      /* Lighter than pure white for better contrast */
-    /* Typography */
-    --heading-font: 'Poppins', sans-serif;
-    --body-font: 'Open Sans', sans-serif;
-
-    /* Spacing */
-    --spacing-small: 0.5rem;
-    --spacing-medium: 1rem;
-    --spacing-large: 2rem;
-
-    /* Transitions */
-    --transition-speed: 0.3s;
+    --accent-color: #4B5320; /* Army Green */
+    --text-color: #333;
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
 }
 
-/* Reset and Base Styles */
-* {
+/* Global Reset */
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: var(--body-font);
-    line-height: 1.6;
+    font-family: var(--font-body);
     color: var(--text-color);
     background-color: var(--background-color);
-}
-
-/* Typography */
-h1, h2, h3, h4, h5, h6 {
-    font-family: var(--heading-font);
-    margin-bottom: var(--spacing-medium);
-    color: var(--primary-color);
-}
-
-h1 { font-size: 2.5rem; }
-h2 { font-size: 2rem; }
-h3 { font-size: 1.75rem; }
-
-/* Links */
-a {
-    color: var(--primary-color);
-    text-decoration: none;
-    transition: color var(--transition-speed) ease;
-}
-
-a:hover {
-    color: var(--secondary-color);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /* Header */
 header {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 1rem 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: var(--spacing-medium);
-    background-color: var(--background-color);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    flex-wrap: wrap;
 }
 
 .logo-container {
@@ -73,13 +49,15 @@ header {
 }
 
 .logo-container img {
-    max-height: 50px;
-    margin-right: var(--spacing-medium);
+    max-width: 100px;
+    margin-right: 10px;
+    height: auto; /* Ensure aspect ratio is maintained */
 }
 
 .logo-container h1 {
+    font-family: var(--font-heading);
     font-size: 1.5rem;
-    margin: 0;
+    margin: 0; /* Reset default heading margins */
 }
 
 /* Navigation */
@@ -88,183 +66,142 @@ nav {
     align-items: center;
 }
 
-.nav-links {
-    display: flex;
+nav ul {
     list-style: none;
-    gap: var(--spacing-medium);
-}
-
-.nav-links a {
-    color: var(--text-color);
-    font-weight: 500;
-    transition: color var(--transition-speed) ease;
-}
-
-.nav-links a:hover,
-.nav-links a.active {
-    color: var(--primary-color);
-}
-
-/* Hero Section */
-.hero {
-    position: relative;
-    width: 100%;
-    height: 60vh; /* Adjust this for preferred height */
     display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
+    margin: 0; /* Reset default ul margins */
+    padding: 0; /* Reset default ul padding */
 }
 
-.hero img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensures the image fills the space */
-    z-index: -1;
+nav ul li {
+    margin: 0 15px;
 }
 
-.hero-text {
-    position: relative;
-    text-align: center;
-    color: white;
-    z-index: 2;
-    max-width: 600px;
-    padding: var(--spacing-medium);
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    display: block; /* Make the entire link area clickable */
+    padding: 0.5em 0; /* Add some padding for better touch targets */
 }
 
-.hero h2 {
-    font-size: 2.5rem;
-    margin-bottom: var(--spacing-medium);
+nav ul li a:hover,
+nav ul li a.active {
+    color: var(--secondary-color);
 }
-
-.cta-button {
-    display: inline-block;
-    background-color: var(--secondary-color);
-    color: var(--background-color);
-    padding: var(--spacing-small) var(--spacing-large);
-    font-size: 1.2rem;
-    border-radius: 5px;
-    transition: background-color var(--transition-speed) ease;
-}
-
-.cta-button:hover {
-    background-color: var(--primary-color);
-}
-
-/* Responsive Adjustments */
-@media screen and (max-width: 768px) {
-    .hero {
-        height: 40vh;
-    }
-
-    .hero h2 {
-        font-size: 2rem;
-    }
-}
-
 
 /* Hamburger Menu */
 #hamburger-menu {
     display: none;
     flex-direction: column;
-    cursor: pointer;
     background: none;
     border: none;
+    cursor: pointer;
+    padding: 0; /* Remove default button padding */
 }
 
-.bar {
+#hamburger-menu .bar {
+    display: block;
     width: 25px;
     height: 3px;
-    background-color: var(--text-color);
-    margin: 3px 0;
-    transition: 0.4s;
+    background-color: white;
+    margin: 5px 0;
+}
+
+/* Main Content */
+main {
+    flex: 1;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 0;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    object-fit: cover; /* Prevents image distortion */
+}
+
+.call-to-action {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+.call-to-action:hover {
+    background-color: var(--accent-color);
+    color: #fff;
 }
 
 /* Footer */
 footer {
-    background-color: var(--accent-color);
-    color: var(--footer-text);
-    padding: var(--spacing-large);
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
 }
 
 .footer-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    align-items: center;
-    gap: var(--spacing-medium);
-}
-
-.contact-info {
-    text-align: left;
-}
-
-/* Social Links */
-.social-links a {
-    color: var(--secondary-color);
-    font-size: 1.2rem;
-    transition: color var(--transition-speed) ease;
-}
-
-.social-links a:hover {
-    color: var(--background-color);
-}
-
-.social-links {
     display: flex;
-    justify-content: center;
-    gap: var(--spacing-medium);
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 1em;
 }
 
-.project-info {
-    text-align: right;
-    font-size: 0.9rem;
+.footer-content div {
+    margin: 10px 0;
 }
 
-/* Responsive Adjustments */
-@media screen and (max-width: 768px) {
+/* Responsive Design */
+@media (max-width: 768px) {
     header {
+        padding: 1rem 2%; /* Adjust header padding on smaller screens */
+    }
+
+    .logo-container h1 {
+        font-size: 1.2rem; /* Adjust logo text size */
+    }
+
+    nav ul {
+        display: none;
         flex-direction: column;
-        gap: var(--spacing-medium);
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: var(--primary-color);
+        z-index: 10; /* Ensure it's above other content */
     }
 
-    .footer-content {
-        grid-template-columns: 1fr;
+    nav ul li {
         text-align: center;
-    }
-
-    .contact-info,
-    .project-info {
-        text-align: center;
-    }
-
-    .nav-links {
-        flex-direction: column;
-        align-items: center;
+        padding: 10px;
     }
 
     #hamburger-menu {
         display: flex;
-        position: absolute;
-        top: var(--spacing-medium);
-        right: var(--spacing-medium);
+        padding: 0.5em; /* Add padding for better touch target */
+        margin: 0; /* Reset any default margins */
     }
-}
-
-/* Utility Classes */
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-}
-
-.hidden {
-    display: none !important;
 }
