@@ -1,27 +1,71 @@
 // events.js
 
 document.addEventListener('DOMContentLoaded', function () {
-    fetch('data/events.json')  // Corrected the path to the JSON file
-        .then(response => response.json())
-        .then(data => loadEvents(data.events))
-        .catch(error => console.error('Error loading events:', error));
+    fetchEvents();
 });
+
+async function fetchEvents() {
+    try {
+        const response = await fetch('data/events.json');  // Corrected the path to the JSON file
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        const data = await response.json();
+        loadEvents(data.events);
+    } catch (error) {
+        console.error('Error loading events:', error);
+        displayErrorMessage('Failed to load events. Please try again later.'); // Display error message
+    }
+}
 
 function loadEvents(events) {
     const eventsContainer = document.querySelector('.current-events');
+    eventsContainer.innerHTML = ''; // Clear existing content
+
+    const fragment = document.createDocumentFragment(); // Use fragment to minimize reflows
+
     events.forEach(event => {
         const eventElement = document.createElement('div');
         eventElement.classList.add('event');
 
-        eventElement.innerHTML = `
-            <h3>${event.title}</h3>
-            <p>${event.description}</p>
-            <p><strong>Date:</strong> ${event.date}</p>
-            <p><strong>Time:</strong> ${event.time}</p>
-            <p><strong>Location:</strong> ${event.location}</p>
-            <img src="${event.image}" alt="${event.title}" width="100%" height="auto">
-        `;
+        const h3 = document.createElement('h3');
+        h3.textContent = event.title;
+        eventElement.appendChild(h3);
 
-        eventsContainer.appendChild(eventElement);
+        const descriptionP = document.createElement('p');
+        descriptionP.textContent = event.description;
+        eventElement.appendChild(descriptionP);
+
+        const dateP = document.createElement('p');
+        dateP.innerHTML = `<strong>Date:</strong> ${event.date}`;
+        eventElement.appendChild(dateP);
+
+        const timeP = document.createElement('p');
+        timeP.innerHTML = `<strong>Time:</strong> ${event.time}`;
+        eventElement.appendChild(timeP);
+
+        const locationP = document.createElement('p');
+        locationP.innerHTML = `<strong>Location:</strong> ${event.location}`;
+        eventElement.appendChild(locationP);
+
+        const img = document.createElement('img');
+        img.src = event.image;
+        img.alt = event.title;
+        img.width = "100%";
+        img.height = "auto";
+        eventElement.appendChild(img);
+
+        fragment.appendChild(eventElement);
     });
+
+    eventsContainer.appendChild(fragment);
+}
+
+function displayErrorMessage(message) {
+    const errorDiv = document.getElementById('events-error'); // Make sure you have an element with this ID
+    if (errorDiv) {
+        errorDiv.textContent = message;
+    } else {
+        alert(message);
+    }
 }

@@ -1,4 +1,16 @@
 /* General styling for the spotlight section */
+.spotlight-logo {
+    object-fit: contain; /* or cover, depending on your design */
+}
+
+.spotlight-logo:not([src]) {
+    /* Styles for when the image fails to load */
+    background-color: #eee; /* Placeholder background color */
+    width: 200px;
+    height: 100px;
+    /* Add a placeholder image or icon */
+    content: url('images/placeholder-logo.webp'); /* Or any other placeholder */
+}
 .spotlights {
     text-align: center;
     padding: 20px;
