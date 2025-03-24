@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chamber of Commerce - Membership Application</title>
+    <meta name="description" content="Business directory for Harare's thriving business community">
+    <meta name="author" content="Munyaradzi Chiondegwa">
+    
+    <!-- Facebook Open Graph Meta Tags -->
+    <meta property="og:title" content="Harare Chamber Business Directory">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/harare-chamber-logo.webp">
+    <meta property="og:url" content="https://munyaradzichiondegwa.github.io/chamber/directory.html">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.webp" type="image/x-icon">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/join.css">
+    <script src="scripts/join.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <!-- Your existing header content -->
+        <div class="logo-container">
+            <!-- Ensure image source is correct to avoid 404 errors -->
+            <img src="images/harare-chamber-logo.webp" alt="Harare Chamber of Commerce Logo" width="150" height="150">
+            <h1>Harare Metropolitan Chamber of Commerce</h1>
+        </div>
+        <nav>
+            <button id="hamburger-menu" aria-label="Toggle Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <ul class="nav-links">
+                <!-- Ensure all links are valid and crawlable -->
+                <li><a href="index.html" title="Go to the Home page">Home</a></li>
+                <li><a href="directory.html" class="active" title="View the Business Directory">Directory</a></li>
+                <li><a href="discover.html" title="Discover businesses in Harare">Discover</a></li>
+                <li><a href="join.html" title="Join the Chamber of Commerce">Join</a></li>
+                <li><a href="contact.html" title="Contact the Chamber of Commerce">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="form-section">
+            <h1>Chamber of Commerce Membership Application</h1>
+
+            <form method="get" action="thankyou.html" id="membershipForm">
+                <input type="hidden" name="timestamp" id="timestamp">
+
+                <label>
+                    First Name
+                    <input type="text" name="firstName" title="First Name" autocomplete="given-name" required aria-label="First Name">
+                </label>
+
+                <label>
+                    Last Name
+                    <input type="text" name="lastName" title="Last Name" autocomplete="family-name" required aria-label="Last Name">
+                </label>
+
+                <label>
+                    Organizational Title
+                    <input type="text" name="orgTitle" title="Organizational Title" autocomplete="organization-title"
+                        pattern="[A-Za-z\- ]{7,}">
+                </label>
+
+                <label>
+                    Email Address
+                    <input type="email" name="email" title="Email Address" autocomplete="email"
+                        placeholder="example@company.com" required>
+                </label>
+
+                <label>
+                    Mobile Phone
+                    <input type="tel" name="phone" title="Mobile Phone" autocomplete="tel" required aria-label="Mobile Phone">
+                </label>
+
+                <label>
+                    Business/Organization Name
+                    <input type="text" name="businessName" title="Business Name" autocomplete="organization" required aria-label="Business Name">
+                </label>
+
+                <label>
+                    Membership Level
+                    <select name="membershipLevel" required>
+                        <option value="">Select Membership Level</option>
+                        <option value="np">NP Membership (Non-Profit)</option>
+                        <option value="bronze">Bronze Membership</option>
+                        <option value="silver">Silver Membership</option>
+                        <option value="gold">Gold Membership</option>
+                    </select>
+                </label>
+
+                <label>
+                    Business/Organization Description
+                    <textarea name="orgDescription" title="Organization Description" rows="4"></textarea>
+                </label>
+
+                <button type="submit">Submit Membership Application</button>
+            </form>
+        </section>
+
+        <section class="membership-cards">
+            <div class="membership-card" data-level="np">
+                <h3>NP Membership</h3>
+                <p>For Non-Profit Organizations</p>
+                <a href="#" onclick="openModal('npModal')">Learn More</a>
+            </div>
+            <div class="membership-card" data-level="bronze">
+                <h3>Bronze Membership</h3>
+                <p>Basic Chamber Benefits</p>
+                <a href="#" onclick="openModal('bronzeModal')">Learn More</a>
+            </div>
+            <div class="membership-card" data-level="silver">
+                <h3>Silver Membership</h3>
+                <p>Enhanced Chamber Benefits</p>
+                <a href="#" onclick="openModal('silverModal')">Learn More</a>
+            </div>
+            <div class="membership-card" data-level="gold">
+                <h3>Gold Membership</h3>
+                <p>Premium Chamber Benefits</p>
+                <a href="#" onclick="openModal('goldModal')">Learn More</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Membership Level Modals -->
+    <div id="npModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('npModal')">&times;</span>
+            <h2>NP Membership Benefits</h2>
+            <p>Details for Non-Profit Organizations</p>
+        </div>
+    </div>
+    <!-- Similar modals for bronze, silver, and gold -->
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Harare Metropolitan Chamber of Commerce</h3>
+                <p>10 Enterprise Road, Harare, Zimbabwe</p>
+                <p>info@hararechamber.org</p>
+                <p>+263 (4) 123-4567</p>
+            </div>
+            <div class="social-links">
+                <!-- Provide clear descriptions for social media links -->
+                <a href="https://facebook.com/HarareChamber" target="_blank" rel="noopener"
+                    aria-label="Visit our Facebook page">Facebook</a>
+                <a href="https://linkedin.com/company/HarareChamber" target="_blank" rel="noopener"
+                    aria-label="Visit our LinkedIn page">LinkedIn</a>
+                <a href="https://twitter.com/HarareChamber" target="_blank" rel="noopener"
+                    aria-label="Visit our Twitter page">Twitter</a>
+            </div>
+            <div class="project-info">
+                <p>WDD231 Project | Munyaradzi Chiondegwa</p>
+                <p>&copy; <span id="current-year"></span> Harare Chamber</p>
+                <p>Last Modified: <span id="last-modified"></span></p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

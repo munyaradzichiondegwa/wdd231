@@ -7,6 +7,12 @@
     --silver-badge-color: #A9A9A9; /* Darker Silver for better contrast */
 }
 
+/* Improve color contrast */
+:root {
+  --primary-text: #333;
+  --background: #f4f4f4;
+  --contrast-ratio: 4.5:1; /* WCAG AA standard */
+}
 /* Header & Navigation Animations */
 @keyframes fadeDown {
     from { opacity: 0; transform: translateY(-20px); }
