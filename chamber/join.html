@@ -7,36 +7,35 @@
     <title>Chamber of Commerce - Membership Application</title>
     <meta name="description" content="Business directory for Harare's thriving business community">
     <meta name="author" content="Munyaradzi Chiondegwa">
-    
+
     <!-- Facebook Open Graph Meta Tags -->
     <meta property="og:title" content="Harare Chamber Business Directory">
     <meta property="og:type" content="website">
     <meta property="og:image" content="images/harare-chamber-logo.webp">
     <meta property="og:url" content="https://munyaradzichiondegwa.github.io/chamber/directory.html">
-    
+
     <!-- Favicon -->
     <link rel="icon" href="images/favicon.webp" type="image/x-icon">
     <link rel="manifest" href="/manifest.json">
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-    
+
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
         rel="stylesheet">
 
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/join.css">
     <script src="scripts/join.js" defer></script>
-    <script src="acripts/dates.js" defer></script>
+    <script src="scripts/dates.js" defer></script>
 </head>
 
 <body>
     <header>
-        <!-- Your existing header content -->
         <div class="logo-container">
-            <!-- Ensure image source is correct to avoid 404 errors -->
             <img src="images/harare-chamber-logo.webp" alt="Harare Chamber of Commerce Logo" width="150" height="150">
-            <h1>Harare Metropolitan Chamber of Commerce</h1>
+            <p class="site-title">Harare Metropolitan Chamber of Commerce</p>
         </div>
         <nav>
             <button id="hamburger-menu" aria-label="Toggle Menu">
@@ -45,7 +44,6 @@
                 <span class="bar"></span>
             </button>
             <ul class="nav-links">
-                <!-- Ensure all links are valid and crawlable -->
                 <li><a href="index.html" title="Go to the Home page">Home</a></li>
                 <li><a href="directory.html" class="active" title="View the Business Directory">Directory</a></li>
                 <li><a href="discover.html" title="Discover businesses in Harare">Discover</a></li>
@@ -57,64 +55,54 @@
 
     <main class="container">
         <section class="form-section">
-            <h1>Chamber of Commerce Membership Application</h1>
+            <h1>Membership Application</h1>
 
             <form method="get" action="thankyou.html" id="membershipForm">
                 <input type="hidden" name="timestamp" id="timestamp">
 
-                <label>
-                    First Name
-                    <input type="text" name="firstName" title="First Name" autocomplete="given-name" required aria-label="First Name">
-                </label>
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" name="firstName" title="First Name" autocomplete="given-name" required
+                    aria-label="First Name">
 
-                <label>
-                    Last Name
-                    <input type="text" name="lastName" title="Last Name" autocomplete="family-name" required aria-label="Last Name">
-                </label>
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" name="lastName" title="Last Name" autocomplete="family-name" required
+                    aria-label="Last Name">
 
-                <label>
-                    Organizational Title
-                    <input type="text" name="orgTitle" title="Organizational Title" autocomplete="organization-title"
-                        pattern="[A-Za-z\- ]{7,}">
-                </label>
+                <label for="orgTitle">Organizational Title</label>
+                <input type="text" id="orgTitle" name="orgTitle" title="Organizational Title"
+                    autocomplete="organization-title" pattern="[A-Za-z\- ]{7,}">
 
-                <label>
-                    Email Address
-                    <input type="email" name="email" title="Email Address" autocomplete="email"
-                        placeholder="example@company.com" required>
-                </label>
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" title="Email Address" autocomplete="email"
+                    placeholder="example@company.com" required>
 
-                <label>
-                    Mobile Phone
-                    <input type="tel" name="phone" title="Mobile Phone" autocomplete="tel" required aria-label="Mobile Phone">
-                </label>
+                <label for="phone">Mobile Phone</label>
+                <input type="tel" id="phone" name="phone" title="Mobile Phone" autocomplete="tel" required
+                    aria-label="Mobile Phone">
 
-                <label>
-                    Business/Organization Name
-                    <input type="text" name="businessName" title="Business Name" autocomplete="organization" required aria-label="Business Name">
-                </label>
+                <label for="businessName">Business/Organization Name</label>
+                <input type="text" id="businessName" name="businessName" title="Business Name"
+                    autocomplete="organization" required aria-label="Business Name">
 
-                <label>
-                    Membership Level
-                    <select name="membershipLevel" required>
-                        <option value="">Select Membership Level</option>
-                        <option value="np">NP Membership (Non-Profit)</option>
-                        <option value="bronze">Bronze Membership</option>
-                        <option value="silver">Silver Membership</option>
-                        <option value="gold">Gold Membership</option>
-                    </select>
-                </label>
+                <label for="membershipLevel">Membership Level</label>
+                <select id="membershipLevel" name="membershipLevel" required>
+                    <option value="">Select Membership Level</option>
+                    <option value="np">NP Membership (Non-Profit)</option>
+                    <option value="bronze">Bronze Membership</option>
+                    <option value="silver">Silver Membership</option>
+                    <option value="gold">Gold Membership</option>
+                </select>
 
-                <label>
-                    Business/Organization Description
-                    <textarea name="orgDescription" title="Organization Description" rows="4"></textarea>
-                </label>
+                <label for="orgDescription">Business/Organization Description</label>
+                <textarea id="orgDescription" name="orgDescription" title="Organization Description"
+                    rows="4"></textarea>
 
                 <button type="submit">Submit Membership Application</button>
             </form>
         </section>
 
         <section class="membership-cards">
+            <h2>Membership Levels</h2>
             <div class="membership-card" data-level="np">
                 <h3>NP Membership</h3>
                 <p>For Non-Profit Organizations</p>
@@ -146,7 +134,7 @@
             <p>Details for Non-Profit Organizations</p>
         </div>
     </div>
-    <!-- Similar modals for bronze, silver, and gold -->
+
     <footer>
         <div class="footer-content">
             <div class="contact-info">
@@ -156,7 +144,6 @@
                 <p>+263 (4) 123-4567</p>
             </div>
             <div class="social-links">
-                <!-- Provide clear descriptions for social media links -->
                 <a href="https://facebook.com/HarareChamber" target="_blank" rel="noopener"
                     aria-label="Visit our Facebook page">Facebook</a>
                 <a href="https://linkedin.com/company/HarareChamber" target="_blank" rel="noopener"
@@ -171,7 +158,6 @@
             </div>
         </div>
     </footer>
-
 </body>
 
 </html>
