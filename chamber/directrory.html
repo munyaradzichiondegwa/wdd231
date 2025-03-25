@@ -23,20 +23,44 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
         rel="stylesheet">
-
+    
+    <!-- Preload critical assets -->
+    <link rel="preload" href="styles/base.css" as="style">
+    <link rel="preload" href="scripts/directory.js" as="script">
+    
+    <!-- Async and defer non-critical resources -->
+    <link rel="stylesheet" href="styles/normalize.css" media="print" onload="this.media='all'">
+    
+    <!-- Optimize Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@400;700&display=swap"
+            rel="stylesheet" media="print" onload="this.media='all'">
+    
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/critical.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/directory.css">
+    <link rel="stylesheet" href="styles/accessibility.css">
     <script src="scripts/directory.js" defer></script>
+    <script src="scripts/nav.js" defer></script>
+    <script src="scripts/performance.js" defer></script>
     <script src="scripts/service-worker.js" defer></script>
+    <script src="scripts/lighthouserc.js" defer></script>
+    <script src="scripts/performance-monitor.js" defer></script>
+    <script src="scripts/accessibility.js" defer></script>
+    <script src="scripts/seoMetadata.js" defer></script>
 </head>
 
 <body>
     <header>
         <div class="logo-container">
             <!-- Ensure image source is correct to avoid 404 errors -->
-            <img src="images/harare-chamber-logo.webp" alt="Harare Chamber of Commerce Logo" width="150" height="150">
+            <!-- In directory.html or wherever images are used -->
+            <img src="images/harare-chamber-logo.webp" alt="Harare Chamber of Commerce Logo" width="150" height="122" loading="lazy"
+                srcset="images/harare-chamber-logo.webp 1x, 
+                        images/harare-chamber-logo@2x.webp 2x">
             <h1>Harare Metropolitan Chamber of Commerce</h1>
         </div>
         <nav>
@@ -89,21 +113,24 @@
 
     <footer>
         <div class="footer-content">
-            <div class="contact-info">
-                <h3>Harare Metropolitan Chamber of Commerce</h3>
-                <p>10 Enterprise Road, Harare, Zimbabwe</p>
-                <p>info@hararechamber.org</p>
-                <p>+263 (4) 123-4567</p>
-            </div>
-            <div class="social-links">
-                <!-- Provide clear descriptions for social media links -->
-                <a href="https://facebook.com/HarareChamber" target="_blank" rel="noopener"
-                    aria-label="Visit our Facebook page">Facebook</a>
-                <a href="https://linkedin.com/company/HarareChamber" target="_blank" rel="noopener"
-                    aria-label="Visit our LinkedIn page">LinkedIn</a>
-                <a href="https://twitter.com/HarareChamber" target="_blank" rel="noopener"
-                    aria-label="Visit our Twitter page">Twitter</a>
-            </div>
+
+        <div class="contact-info">
+            <h3>Harare Metropolitan Chamber of Commerce</h3>
+            <p>10 Enterprise Road, Harare, Zimbabwe</p>
+            <p>Email: <a href="mailto:info@hararemetrochamber.org">info@hararemetrochamber.org</a></p>
+            <p>Phone: <a href="tel:+263412345678">+263 (4) 123-4567</a></p>
+        </div>
+        <div class="social-links">
+            <a href="https://facebook.com/HarareChamber" aria-label="Facebook Page">
+                Facebook
+            </a>
+            <a href="https://linkedin.com/company/HarareChamber" aria-label="LinkedIn Page">
+                LinkedIn
+            </a>
+            <a href="https://twitter.com/HarareChamber" aria-label="Twitter Page">
+                Twitter
+            </a>
+        </div>
             <div class="project-info">
                 <p>WDD231 Project | Munyaradzi Chiondegwa</p>
                 <p>&copy; <span id="current-year"></span> Harare Chamber</p>

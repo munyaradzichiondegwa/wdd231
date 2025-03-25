@@ -1,207 +1,299 @@
-/* Root Variables */
 :root {
-    --primary-color: #2E8B57; /* Harare Green */
-    --secondary-color: #FFD700; /* Golden Yellow */
-    --background-color: #FFFFFF; /* Clean White */
-    --accent-color: #4B5320; /* Army Green */
-    --text-color: #333;
-    --font-heading: 'Poppins', sans-serif;
-    --font-body: 'Open Sans', sans-serif;
+    /* Color Scheme */
+    --primary-color: #2E8B57;      /* Harare Green */
+    --secondary-color: #FFD700;    /* Golden Yellow */
+    --background-color: #FFFFFF;   /* Clean White */
+    --accent-color: #4B5320;       /* Army Green */
+    --text-color: #333333;
+
+    /* Typography */
+    --heading-font: 'Poppins', sans-serif;
+    --body-font: 'Open Sans', sans-serif;
 }
 
-/* Global Reset */
-*,
-*::before,
-*::after {
+:root {
+    --primary-color: #2E8B57;
+    --text-color: #333;
+    --background-color: #F4F4F4;
+}
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
-    font-family: var(--font-body);
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
     color: var(--text-color);
     background-color: var(--background-color);
-    line-height: 1.6;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
 }
 
-/* Header */
-header {
-    background-color: var(--primary-color);
-    color: #fff;
-    padding: 1rem 5%;
+.critical-above-fold {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
+    padding: 1rem;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navigation Styling */
+header {
+    background-color: var(--background-color);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
 }
 
 .logo-container {
     display: flex;
     align-items: center;
+    gap: 1rem;
 }
 
 .logo-container img {
     max-width: 100px;
-    margin-right: 10px;
-    height: auto; /* Ensure aspect ratio is maintained */
+    height: auto;
 }
 
 .logo-container h1 {
-    font-family: var(--font-heading);
     font-size: 1.5rem;
-    margin: 0; /* Reset default heading margins */
+    color: var(--primary-color);
 }
 
-/* Navigation */
 nav {
     display: flex;
     align-items: center;
 }
 
-nav ul {
-    list-style: none;
+.nav-links {
     display: flex;
-    margin: 0; /* Reset default ul margins */
-    padding: 0; /* Reset default ul padding */
+    list-style-type: none;
+    gap: 1rem;
 }
 
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #fff;
+.nav-links li a {
+    color: var(--accent-color);
     font-weight: 600;
-    transition: color 0.3s ease;
-    display: block; /* Make the entire link area clickable */
-    padding: 0.5em 0; /* Add some padding for better touch targets */
+    text-transform: uppercase;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+    border-radius: 4px;
 }
 
-nav ul li a:hover,
-nav ul li a.active {
-    color: var(--secondary-color);
+.nav-links li a:hover,
+.nav-links li a.active {
+    background-color: var(--primary-color);
+    color: white;
 }
 
-/* Hamburger Menu */
 #hamburger-menu {
     display: none;
     flex-direction: column;
     background: none;
     border: none;
     cursor: pointer;
-    padding: 0; /* Remove default button padding */
 }
 
-#hamburger-menu .bar {
-    display: block;
+.bar {
     width: 25px;
     height: 3px;
-    background-color: white;
-    margin: 5px 0;
-}
-
-/* Main Content */
-main {
-    flex: 1;
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-    padding: 20px 0;
-}
-
-/* Hero Section */
-.hero {
-    position: relative;
-    text-align: center;
-    overflow: hidden;
-    border-radius: 10px;
-}
-
-.hero img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 10px;
-    object-fit: cover; /* Prevents image distortion */
-}
-
-.call-to-action {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: var(--secondary-color);
-    color: var(--primary-color);
-    padding: 10px 20px;
-    font-weight: bold;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
-}
-
-.call-to-action:hover {
     background-color: var(--accent-color);
-    color: #fff;
+    margin: 3px 0;
+    transition: 0.4s;
 }
 
-/* Footer */
-footer {
-    background-color: var(--primary-color);
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: auto;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding: 1em;
-}
-
-.footer-content div {
-    margin: 10px 0;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
+/* Responsive Navigation */
+@media screen and (max-width: 768px) {
     header {
-        padding: 1rem 2%; /* Adjust header padding on smaller screens */
-    }
-
-    .logo-container h1 {
-        font-size: 1.2rem; /* Adjust logo text size */
-    }
-
-    nav ul {
-        display: none;
         flex-direction: column;
-        width: 100%;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        background-color: var(--primary-color);
-        z-index: 10; /* Ensure it's above other content */
-    }
-
-    nav ul li {
-        text-align: center;
-        padding: 10px;
+        padding: 1rem;
     }
 
     #hamburger-menu {
         display: flex;
-        padding: 0.5em; /* Add padding for better touch target */
-        margin: 0; /* Reset any default margins */
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
     }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 0.5rem 0;
+    }
+
+    .nav-links li a {
+        display: block;
+        padding: 1rem;
+        width: 100%;
+    }
+}
+
+body {
+    font-family: var(--body-font);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--secondary-color);
+}
+
+.button, button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover, button:hover {
+    background-color: var(--accent-color);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+/* Footer Styling */
+footer {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 2rem 1rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-info h3 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+.contact-info p {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.social-links a {
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--secondary-color);
+}
+
+.project-info {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.project-info p {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+/* Add icons if you want */
+.social-links a::before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.social-links a[href*="facebook"]::before {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm3 8h-1.35c-.538 0-.65.221-.65.778v1.222h2l-.209 2h-1.791v7h-3v-7h-2v-2h2v-2.308c0-1.769.931-2.692 3.029-2.692h1.971v3z"/></svg>');
+}
+
+.social-links a[href*="linkedin"]::before {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.492-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.492 1.109-1.1 1.109zm8 6.891h-1.998v-2.861c0-1.881-2.002-1.722-2.002 0v2.861h-2v-6h2v1.052c.896-1.63 4-1.751 4 1.562v3.386z"/></svg>');
+}
+
+.social-links a[href*="twitter"]::before {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.066 9.645c.183 4.04-2.83 8.544-8.164 8.544-1.622 0-3.131-.476-4.402-1.291 1.524.18 3.045-.244 4.252-1.189-1.256-.023-2.317-.854-2.684-1.995.451.086.895.061 1.298-.049-1.381-.278-2.335-1.522-2.304-2.853.386.214.83.343 1.301.359-1.279-.855-1.641-2.544-.889-3.835 1.416 1.738 3.533 2.881 5.92 3.001-.419-1.796.944-3.527 2.799-3.527.825 0 1.572.349 2.096.907.654-.128 1.27-.367 1.824-.697-.215.671-.67 1.233-1.263 1.589.581-.07 1.135-.224 1.649-.453-.384.578-.87 1.084-1.433 1.489z"/></svg>');
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .social-links {
+        align-items: center;
+    }
+
+    .social-links a {
+        justify-content: center;
+    }
+}
+
+/* Use contain property to isolate layout changes */
+.member-card {
+    contain: layout;
+}
+
+/* Reduce layout shifts */
+img {
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 4/3; /* Maintain image proportions */
 }

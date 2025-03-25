@@ -1,0 +1,65 @@
+/* Visually Hidden Class for Screen Readers */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Keyboard Navigation Focus */
+*:focus {
+    outline: 3px solid #4A90E2;
+    outline-offset: 2px;
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+    body {
+        color: #000;
+        background-color: #FFF;
+    }
+}
+
+/* Visually Hidden Class for Screen Readers */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+    body {
+        color: #000;
+        background-color: #FFF;
+    }
+}
+
+/* Ensure Sufficient Color Contrast */
+:root {
+    --text-color: #333;
+    --background-color: #FFF;
+    --primary-color: #2E8B57;
+}
+
+/* Implement WCAG 2.1 Level AA Contrast Ratios */
+a {
+    color: #0066cc; /* Ensure 4.5:1 contrast ratio */
+}
+
+/* Keyboard Navigation Focus */
+*:focus {
+    outline: 3px solid #4A90E2;
+    outline-offset: 2px;
+}

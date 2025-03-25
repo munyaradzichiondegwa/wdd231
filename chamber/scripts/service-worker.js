@@ -12,7 +12,7 @@ const CACHE_FILES = [
 // Install event: Cache the required assets
 self.addEventListener('install', event => {
     event.waitUntil(
-        caches.open(CACHE_NAME)
+        caches.open(CACHE_NAME_V2)
             .then(cache => {
                 console.log('Caching assets...');
                 return cache.addAll(CACHE_FILES);
@@ -57,6 +57,35 @@ self.addEventListener('fetch', event => {
                     }
                     return networkResponse;
                 });
+            })
+    );
+});
+
+const CACHE_NAME_V2 = 'chamber-v1';
+const urlsToCache = [
+    '/',
+    '/index.html',
+    '/directory.html',
+    '/styles/base.css',
+    '/js/directory.js',
+    '/images/default-business-logo.webp'
+];
+
+self.addEventListener('install', (event) => {
+    event.waitUntil(
+        caches.open(CACHE_NAME)
+            .then((cache) => cache.addAll(urlsToCache))
+    );
+});
+
+self.addEventListener('fetch', (event) => {
+    event.respondWith(
+        caches.match(event.request)
+            .then((response) => {
+                if (response) {
+                    return response;
+                }
+                return fetch(event.request);
             })
     );
 });

@@ -1,4 +1,18 @@
+function handleImageError(event) {
+    // Fallback to a default logo if specific image fails to load
+    event.target.src = 'images/default-business-logo.webp';
+    event.target.onerror = null; // Prevent infinite error loop
+}
 
+// When creating member cards
+function createMemberCard(member) {
+    const img = document.createElement('img');
+    img.src = member.image || 'images/default-business-logo.webp';
+    img.alt = `${member.name} logo`;
+    img.onerror = handleImageError;
+    
+    // Rest of your card creation logic
+}
 document.addEventListener('DOMContentLoaded', () => {
     const membersContainer = document.getElementById('members-container');
     const gridViewBtn = document.getElementById('grid-view-btn');
@@ -122,3 +136,72 @@ document.addEventListener('DOMContentLoaded', () => {
 
     initializeDirectory();
 });
+
+function displayMembersGrid(members) {
+    membersContainer.innerHTML = members.map(member => `
+        <div class="member-card">
+            <img 
+                src="${member.image || 'images/default-business-logo.webp'}" 
+                srcset="${member.image || 'images/default-business-logo.webp'} 1x, 
+                        ${member.imageHiDpi || 'images/default-business-logo@2x.webp'} 2x"
+                alt="${member.name} logo"
+                onerror="this.src='images/default-business-logo.webp';this.onerror=null;"
+                width="150"
+                height="122"
+                loading="lazy"
+            >
+            <h3>${member.name}</h3>
+            <!-- Rest of card content -->
+        </div>
+    `).join('');
+}
+
+window.addEventListener('error', (event) => {
+    if (event.target.tagName === 'IMG') {
+        console.warn(`Image load error: ${event.target.src}`);
+    }
+});
+
+// Use code splitting and lazy loading
+async function initPage() {
+    // Defer heavy operations
+    await Promise.all([
+        loadMembers(),
+        initEventListeners()
+    ]);
+}
+
+// Minimize main thread work
+function loadMembers() {
+    return new Promise((resolve) => {
+        // Use requestAnimationFrame for non-critical rendering
+        requestAnimationFrame(async () => {
+            try {
+                const members = await fetchMembers();
+                renderMembers(members);
+                resolve();
+            } catch (error) {
+                console.error('Failed to load members', error);
+                resolve(); // Ensure promise resolves
+            }
+        });
+    });
+}
+
+function initEventListeners() {
+    // Use passive event listeners
+    document.addEventListener('click', handleNavigation, { passive: true });
+}
+
+// Debounce function to reduce unnecessary calculations
+function debounce(func, wait = 20) {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
+}
