@@ -18,3 +18,21 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+function handleImageError(event) {
+    const img = event.target;
+    
+    // Fallback to a default placeholder image
+    img.src = 'path/to/default-placeholder.webp';
+    
+    // Optional: Add a class to indicate fallback image
+    img.classList.add('image-fallback');
+}
+
+// Apply error handling to all images
+document.addEventListener('DOMContentLoaded', () => {
+    const images = document.querySelectorAll('img');
+    images.forEach(img => {
+        img.addEventListener('error', handleImageError);
+    });
+});

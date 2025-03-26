@@ -18,25 +18,27 @@
     <link rel="icon" href="images/favicon.webp" type="image/x-icon">
     <link rel="manifest" href="/manifest.json">
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <!-- In your HTML head -->
+    <link rel="preload" href="path/to/default-placeholder.webp" as="image">
 
     <!-- Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
-        rel="stylesheet">
-    
-    <!-- Preload critical assets -->
-    <link rel="preload" href="styles/base.css" as="style">
-    <link rel="preload" href="scripts/directory.js" as="script">
-    
-    <!-- Async and defer non-critical resources -->
-    <link rel="stylesheet" href="styles/normalize.css" media="print" onload="this.media='all'">
-    
-    <!-- Optimize Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@400;700&display=swap"
-            rel="stylesheet" media="print" onload="this.media='all'">
+    
+    <!-- Font Loading -->
+    <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@400;600&display=swap"
+        as="style">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@400;600&display=swap"
+        media="print" onload="this.media='all'">
+
+    
+    <!-- Deferred CSS -->
+    <link rel="preload" href="styles/directory.css" as="style">
+    <link rel="stylesheet" href="styles/directory.css" media="print" onload="this.media='all'">
+    <link rel="preload" href="styles/accessibility.css" as="style">
+    <link rel="stylesheet" href="styles/accessibility.css" media="print" onload="this.media='all'">
     
     <!-- Stylesheets -->
     <link rel="stylesheet" href="styles/critical.css">
@@ -48,19 +50,15 @@
     <script src="scripts/performance.js" defer></script>
     <script src="scripts/service-worker.js" defer></script>
     <script src="scripts/lighthouserc.js" defer></script>
-    <script src="scripts/performance-monitor.js" defer></script>
     <script src="scripts/accessibility.js" defer></script>
-    <script src="scripts/seoMetadata.js" defer></script>
 </head>
 
 <body>
     <header>
         <div class="logo-container">
-            <!-- Ensure image source is correct to avoid 404 errors -->
-            <!-- In directory.html or wherever images are used -->
             <img src="images/harare-chamber-logo.webp" alt="Harare Chamber of Commerce Logo" width="150" height="122" loading="lazy"
                 srcset="images/harare-chamber-logo.webp 1x, 
-                        images/harare-chamber-logo@2x.webp 2x">
+                                    images/harare-chamber-logo@2x.webp 2x">
             <h1>Harare Metropolitan Chamber of Commerce</h1>
         </div>
         <nav>
