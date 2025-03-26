@@ -36,3 +36,52 @@ window.onclick = function(event) {
         event.target.style.display = 'none';
     }
 };
+
+// Optimize JavaScript Execution
+class MembershipForm {
+    constructor() {
+        this.form = document.getElementById('membershipForm');
+        this.init();
+    }
+
+    init() {
+        // Use requestAnimationFrame for non-critical rendering
+        requestAnimationFrame(() => {
+            this.addEventListeners();
+            this.setTimestamp();
+        });
+    }
+
+    addEventListeners() {
+        if (this.form) {
+            this.form.addEventListener('submit', this.handleSubmit.bind(this), { passive: true });
+        }
+    }
+
+    setTimestamp() {
+        const timestampField = document.getElementById('timestamp');
+        if (timestampField) {
+            timestampField.value = new Date().toISOString();
+        }
+    }
+
+    handleSubmit(event) {
+        // Validate form before submission
+        if (this.validateForm()) {
+            // Allow submission
+            return true;
+        }
+        event.preventDefault();
+    }
+
+    validateForm() {
+        // Basic client-side validation
+        const requiredFields = this.form.querySelectorAll('[required]');
+        return Array.from(requiredFields).every(field => field.value.trim() !== '');
+    }
+}
+
+// Lazy initialize on DOMContentLoaded
+document.addEventListener('DOMContentLoaded', () => {
+    new MembershipForm();
+});

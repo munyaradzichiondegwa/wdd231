@@ -1,4 +1,4 @@
-const CACHE_NAME = 'business-directory-cache-v1';
+const CACHE_NAME_BUSINESS = 'business-directory-cache-v1';
 const CACHE_FILES = [
     '/',
     '/index.html',
@@ -12,7 +12,7 @@ const CACHE_FILES = [
 // Install event: Cache the required assets
 self.addEventListener('install', event => {
     event.waitUntil(
-        caches.open(CACHE_NAME_V2)
+        caches.open(CACHE_NAME_CHAMBER_V2)
             .then(cache => {
                 console.log('Caching assets...');
                 return cache.addAll(CACHE_FILES);
@@ -61,8 +61,8 @@ self.addEventListener('fetch', event => {
     );
 });
 
-const CACHE_NAME_V2 = 'chamber-v1';
-const urlsToCache = [
+const CACHE_NAME_DIRECTORY = 'directory-cache-v1';
+const urlsToCacheDirectory = [
     '/',
     '/index.html',
     '/directory.html',
@@ -73,8 +73,8 @@ const urlsToCache = [
 
 self.addEventListener('install', (event) => {
     event.waitUntil(
-        caches.open(CACHE_NAME)
-            .then((cache) => cache.addAll(urlsToCache))
+        caches.open(CACHE_NAME_DIRECTORY)
+                    .then((cache) => cache.addAll(urlsToCacheDirectory))
     );
 });
 
@@ -86,6 +86,32 @@ self.addEventListener('fetch', (event) => {
                     return response;
                 }
                 return fetch(event.request);
+            })
+    );
+});
+
+const CACHE_NAME_JOIN = 'join-cache-v1';
+const urlsToCacheJoin = [
+    '/',
+    '/index.html',
+    '/join.html',
+    '/styles/base.css',
+    '/scripts/join.js',
+    '/images/harare-chamber-logo.webp'
+];
+
+self.addEventListener('install', (event) => {
+    event.waitUntil(
+        caches.open(CACHE_NAME_JOIN)
+                    .then((cache) => cache.addAll(urlsToCacheJoin))
+    );
+});
+
+self.addEventListener('fetch', (event) => {
+    event.respondWith(
+        caches.match(event.request)
+            .then((response) => {
+                return response || fetch(event.request);
             })
     );
 });

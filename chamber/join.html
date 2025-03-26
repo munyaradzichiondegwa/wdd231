@@ -20,15 +20,26 @@
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 
     <!-- Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
+    <!-- Preload critical assets -->
+    <link rel="preload" href="styles/base.css" as="style">
+    <link rel="preload" href="scripts/join.js" as="script">
+    
+    <!-- Font Loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
         rel="stylesheet">
-
+    
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/join.css">
+    <link rel="stylesheet" href="styles/accessibility.css">
+    
+    <!-- Scripts -->
     <script src="scripts/join.js" defer></script>
     <script src="scripts/dates.js" defer></script>
+
 </head>
 
 <body>

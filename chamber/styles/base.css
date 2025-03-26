@@ -297,3 +297,39 @@ img {
     height: auto;
     aspect-ratio: 4/3; /* Maintain image proportions */
 }
+:root {
+    --primary-color: #2E8B57;
+    --text-color: #333;
+    --background-color: #FFFFFF;
+    --font-primary: 'Open Sans', sans-serif;
+}
+
+body {
+    font-family: var(--font-primary);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    line-height: 1.6;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.logo-container img {
+    max-width: 150px;
+    height: auto;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .logo-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
