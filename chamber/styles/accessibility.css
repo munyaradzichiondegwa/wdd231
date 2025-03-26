@@ -1,4 +1,41 @@
 /* Visually Hidden Class for Screen Readers */
+:root {
+    --primary-color: #2E8B57;
+    --text-color: #333;
+    --background-color: #FFFFFF;
+    --font-primary: 'Open Sans', sans-serif;
+}
+
+body {
+    font-family: var(--font-primary);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    line-height: 1.6;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.logo-container img {
+    max-width: 150px;
+    height: auto;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .logo-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -25,56 +62,10 @@
     }
 }
 
-/* Visually Hidden Class for Screen Readers */
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
-}
-
-/* High Contrast Mode */
-@media (prefers-contrast: high) {
-    body {
-        color: #000;
-        background-color: #FFF;
-    }
-}
-
-/* Ensure Sufficient Color Contrast */
-:root {
-    --text-color: #333;
-    --background-color: #FFF;
-    --primary-color: #2E8B57;
-}
 
 /* Implement WCAG 2.1 Level AA Contrast Ratios */
 a {
     color: #0066cc; /* Ensure 4.5:1 contrast ratio */
-}
-
-/* Keyboard Navigation Focus */
-*:focus {
-    outline: 3px solid #4A90E2;
-    outline-offset: 2px;
-}
-
-/* Improve Color Contrast */
-:root {
-    --primary-color: #2E8B57;
-    --text-color: #333;
-    --background-color: #FFFFFF;
-    --link-color: #0066CC;
-}
-
-body {
-    color: var(--text-color);
-    background-color: var(--background-color);
 }
 
 a {
@@ -83,24 +74,6 @@ a {
     text-decoration: underline;
 }
 
-/* Focus Styles for Keyboard Navigation */
-*:focus {
-    outline: 3px solid #4A90E2;
-    outline-offset: 2px;
-}
-
-/* Visually Hidden Class */
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
-}
 
 /* Accessibility Enhancements */
 :root {
@@ -111,27 +84,6 @@ a {
 *:focus {
     outline: 3px solid var(--focus-outline-color);
     outline-offset: 2px;
-}
-
-/* Visually Hidden Class for Screen Readers */
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
-}
-
-/* High Contrast Mode Support */
-@media (prefers-contrast: high) {
-    body {
-        color: #000;
-        background-color: #FFF;
-    }
 }
 
 /* Ensure Sufficient Link Contrast */
