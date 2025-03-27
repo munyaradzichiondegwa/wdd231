@@ -8,25 +8,24 @@
     <meta name="description" content="Business directory for Harare's thriving business community">
     <meta name="author" content="Munyaradzi Chiondegwa">
 
-    <!-- Facebook Open Graph Meta Tags -->
+    <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Harare Chamber Business Directory">
     <meta property="og:type" content="website">
     <meta property="og:image" content="images/harare-chamber-logo.webp">
-    <meta property="og:url" content="https://munyaradzichiondegwa.github.io/chamber/directory.html">
+    <meta property="og:url" content="https://munyaradzichiondegwa.github.io/wdd231/chamber/directory.html">
 
     <!-- Favicon -->
     <link rel="icon" href="images/favicon.webp" type="image/x-icon">
 
     <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/join.css">
     <link rel="stylesheet" href="styles/directory-large.css">
     <link rel="stylesheet" href="styles/directory-small.css">
-    <link rel="stylesheet" href="styles/join.css">
-    
-    <!-- Scripts -->
-    <script src="scripts/join.js" defer></script>
-    <script src="scripts/dates.js" defer></script>
-    <script src="scripts/nav.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 
+    <script src="scripts/join.js" defer></script>
+    <script src="scripts/nav.js" defer></script>
+    <script src="scripts/date.js" defer></script>
 </head>
 
 <body>
@@ -36,12 +35,13 @@
             <span>Harare Chamber of Commerce</span>
         </div>
         <nav>
-            <button id="myButton">&#9776;</button>
+            <button id="myButton">☰</button>
             <ul class="menuLinks">
                 <li><a href="index.html" title="Home">Home</a></li>
-                <li class="currrent-menu-item"><a href="#">Directory</a></li>
-                <li><a href="#" title="join">Join</a></li>
+                <li class="current-menu-item"><a href="#">Directory</a></li>
+                <li><a href="join.html" title="Join">Join</a></li>
                 <li><a href="#" title="Discover">Discover</a></li>
+                <li><a href="thankyou.html" title="Thank You">Thank You</a></li>
             </ul>
         </nav>
     </header>
@@ -63,15 +63,14 @@
 
                 <label for="orgTitle">Organizational Title</label>
                 <input type="text" id="orgTitle" name="orgTitle" title="Organizational Title"
-                    autocomplete="organization-title" pattern="[A-Za-z\- ]{7,}">
+                    autocomplete="organization-title" pattern="[A-Za-z\- ]{7,}" required>
 
                 <label for="email">Email Address</label>
                 <input type="email" id="email" name="email" title="Email Address" autocomplete="email"
                     placeholder="example@company.com" required>
 
                 <label for="phone">Mobile Phone</label>
-                <input type="tel" id="phone" name="phone" title="Mobile Phone" autocomplete="tel" required
-                    aria-label="Mobile Phone">
+                <input type="tel" id="phone" name="phone" title="Mobile Phone" autocomplete="tel" required>
 
                 <label for="businessName">Business/Organization Name</label>
                 <input type="text" id="businessName" name="businessName" title="Business Name"
@@ -90,66 +89,94 @@
                 <textarea id="orgDescription" name="orgDescription" title="Organization Description"
                     rows="4"></textarea>
 
-                <button type="submit">Submit Membership Application</button>
+                <input type="submit" value="Submit Application" aria-label="Submit Membership Application">
             </form>
         </section>
 
         <section class="membership-cards">
             <h2>Membership Levels</h2>
-            <div class="membership-card" data-level="np">
+            <div class="membership-card">
                 <h3>NP Membership</h3>
-                <p>For Non-Profit Organizations</p>
-                <a href="#" onclick="openModal('npModal')">Learn More</a>
+                <p>No Fee - Non-Profit Organizations</p>
+                <button onclick="openModal('npModal')">Learn More</button>
             </div>
-            <div class="membership-card" data-level="bronze">
+            <div class="membership-card">
                 <h3>Bronze Membership</h3>
-                <p>Basic Chamber Benefits</p>
-                <a href="#" onclick="openModal('bronzeModal')">Learn More</a>
+                <p>Basic Membership Level</p>
+                <button onclick="openModal('bronzeModal')">Learn More</button>
             </div>
-            <div class="membership-card" data-level="silver">
+            <div class="membership-card">
                 <h3>Silver Membership</h3>
-                <p>Enhanced Chamber Benefits</p>
-                <a href="#" onclick="openModal('silverModal')">Learn More</a>
+                <p>Intermediate Level with More Benefits</p>
+                <button onclick="openModal('silverModal')">Learn More</button>
             </div>
-            <div class="membership-card" data-level="gold">
+            <div class="membership-card">
                 <h3>Gold Membership</h3>
-                <p>Premium Chamber Benefits</p>
-                <a href="#" onclick="openModal('goldModal')">Learn More</a>
+                <p>Premium Level with Exclusive Benefits</p>
+                <button onclick="openModal('goldModal')">Learn More</button>
             </div>
         </section>
     </main>
 
-    <!-- Membership Level Modals -->
+    <!-- Modals -->
     <div id="npModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('npModal')">&times;</span>
             <h2>NP Membership Benefits</h2>
-            <p>Details for Non-Profit Organizations</p>
+            <p>This membership level is tailored for non-profit organizations.</p>
+        </div>
+    </div>
+    <div id="bronzeModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('bronzeModal')">&times;</span>
+            <h2>Bronze Membership Benefits</h2>
+            <p>Basic access to resources and limited event participation.</p>
+        </div>
+    </div>
+    <div id="silverModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('silverModal')">&times;</span>
+            <h2>Silver Membership Benefits</h2>
+            <p>Enhanced benefits including discounted event access.</p>
+        </div>
+    </div>
+    <div id="goldModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('goldModal')">&times;</span>
+            <h2>Gold Membership Benefits</h2>
+            <p>Premium benefits including featured listings and discounts.</p>
         </div>
     </div>
 
     <footer>
-        <div class="footer-content">
-            <div class="contact-info">
-                <h3>Harare Metropolitan Chamber of Commerce</h3>
-                <p>10 Enterprise Road, Harare, Zimbabwe</p>
-                <p>info@hararechamber.org</p>
-                <p>+263 (4) 123-4567</p>
-            </div>
-            <div class="social-links">
-                <a href="https://facebook.com/HarareChamber" target="_blank" rel="noopener"
-                    aria-label="Visit our Facebook page">Facebook</a>
-                <a href="https://linkedin.com/company/HarareChamber" target="_blank" rel="noopener"
-                    aria-label="Visit our LinkedIn page">LinkedIn</a>
-                <a href="https://twitter.com/HarareChamber" target="_blank" rel="noopener"
-                    aria-label="Visit our Twitter page">Twitter</a>
-            </div>
-            <div class="project-info">
-                <p>WDD231 Project | Munyaradzi Chiondegwa</p>
-                <p>&copy; <span id="current-year"></span> Harare Chamber</p>
-                <p>Last Modified: <span id="last-modified"></span></p>
-            </div>
+    <div class="footer-content">
+        <div class="contact-info">
+            <h3>Harare Metropolitan Chamber of Commerce</h3>
+            <p>10 Enterprise Road, Harare, Zimbabwe</p>
+            <p><a href="mailto:inf@hararechamber.org">inf@hararechamber.org</a></p> <!-- Added email link -->
+            <p>+263 (4) 123-4567</p>
         </div>
+    
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/munyaradzi-chiondegwa" title="LinkedIn" target="_blank"
+                rel="noopener noreferrer">
+                <i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn Profile
+            </a>
+            <a href="https://web.facebook.com/nevanjimunya.chiondegwa" title="Facebook" target="_blank"
+                rel="noopener noreferrer">
+                <i class="fab fa-facebook" aria-hidden="true"></i> Facebook Profile
+            </a>
+            <a href="https://x.com/NNehoreka" title="X" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-x-twitter" aria-hidden="true"></i> X (formerly Twitter) Profile
+            </a>
+        </div>
+    
+        <div class="project-info">
+            <p>WDD231 Project | Munyaradzi Chiondegwa</p>
+            <p>© <span id="current-year"></span> Harare Chamber</p>
+            <p>Last Modified: <span id="last-modified"></span></p>
+        </div>
+    </div>
     </footer>
 </body>
 

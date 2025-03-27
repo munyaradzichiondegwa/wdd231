@@ -5,7 +5,7 @@
             "address": "23 Innovation Drive, Borrowdale",
             "phone": "+263 242 456 789",
             "website": "https://zimtech.co.zw",
-            "logoPath": "zimtech-logo.webp",
+            "logoPath": "images/zimtech-logo.webp",
             "membership": 3,
             "membershipLevel": "Gold"
         },
@@ -14,7 +14,7 @@
             "address": "45 Retail Lane, Avondale",
             "phone": "+263 772 987 654",
             "website": "https://avondalefashion.co.zw",
-            "logoPath": "fashion-house-logo.webp",
+            "logoPath": "images/fashion-house-logo.webp",
             "membership": 3,
             "membershipLevel": "Gold"
         },
@@ -23,7 +23,7 @@
             "address": "34 Solar Avenue, Greendale",
             "phone": "+263 242 123 456",
             "website": "https://greenenergy.co.zw",
-            "logoPath": "green-energy-icon.webp",
+            "logoPath": "images/green-energy-logo.png",
             "membership": 2,
             "membershipLevel": "Silver"
         },
@@ -32,7 +32,7 @@
             "address": "9 Law Chambers, CBD",
             "phone": "+263 242 987 654",
             "website": "https://hararelegal.co.zw",
-            "logoPath": "legal-services-icon.webp",
+            "logoPath": "images/legal-service-logo.png",
             "membership": 2,
             "membershipLevel": "Silver"
         },
@@ -41,7 +41,7 @@
             "address": "56 Building Road, Belvedere",
             "phone": "+263 242 456 789",
             "website": "https://harareconstruction.co.zw",
-            "logoPath": "construction-icon.webp",
+            "logoPath": "images/construction-services-logo.png",
             "membership": 3,
             "membershipLevel": "Gold"
         },
@@ -50,7 +50,7 @@
             "address": "78 Garage Road, Graniteside",
             "phone": "+263 242 123 456",
             "website": "https://harareautorepairs.co.zw",
-            "logoPath": "auto-repairs-icon.webp",
+            "logoPath": "images/auto-repairs-logo.png",
             "membership": 2,
             "membershipLevel": "Silver"
         },
@@ -60,7 +60,7 @@
             "address": "12 Industrial Way, Willowvale",
             "phone": "+263 242 333 444",
             "website": "https://hararesteel.com",
-            "logoPath": "steelworks-icon.webp",
+            "logoPath": "images/steelworks-icon.webp",
             "membership": 3,
             "membershipLevel": "Gold"
         },
@@ -69,7 +69,7 @@
             "address": "8 Green Valley Road, Borrowdale",
             "phone": "+263 712 555 888",
             "website": "https://ecofarmzw.org",
-            "logoPath": "ecofarm-logo.webp",
+            "logoPath": "images/ecofarm-logo.webp",
             "membership": 1,
             "membershipLevel": "Bronze"
         },
@@ -78,7 +78,7 @@
             "address": "17 Design Crescent, Eastlea",
             "phone": "+263 242 222 111",
             "website": "https://skylinearchitects.co.zw",
-            "logoPath": "skyline-architects.webp",
+            "logoPath": "images/skyline-architects.webp",
             "membership": 2,
             "membershipLevel": "Silver"
         },
@@ -87,7 +87,7 @@
             "address": "Mbare Musika Complex, Stand 56",
             "phone": "+263 773 321 678",
             "website": "",
-            "logoPath": "mbare-market-icon.webp",
+            "logoPath": "images/mbare-market-icon.webp",
             "membership": 1,
             "membershipLevel": "Bronze"
         },
@@ -96,7 +96,7 @@
             "address": "5 Tech Park Road, Chitungwiza",
             "phone": "+263 242 777 999",
             "website": "https://dflabs.tech",
-            "logoPath": "digital-future-logo.webp",
+            "logoPath": "images/digital-future-logo.webp",
             "membership": 3,
             "membershipLevel": "Gold"
         }

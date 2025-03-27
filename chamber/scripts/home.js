@@ -14,11 +14,13 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Fetch Events
-    fetch("./data/events.json") // ✅ Corrected relative path
+    fetch("./data/events.json")
         .then(response => response.json())
-        .then(events => {
+        .then(data => {
             const eventsContainer = document.getElementById("events-container");
             eventsContainer.innerHTML = ""; // Clear placeholder
+
+            const events = data.events;
 
             if (events.length === 0) {
                 eventsContainer.innerHTML = "<p>No upcoming events.</p>";
@@ -33,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     <img src="${event.image}" alt="${event.title}">
                     <div class="event-card-content">
                         <h3>${event.title}</h3>
-                        <p><strong>Date:</strong> ${event.date}</p>
+                        <p><strong>Date:</strong> ${event.date} at ${event.time}</p>
                         <p><strong>Location:</strong> ${event.location}</p>
                         <p>${event.description}</p>
                     </div>
@@ -47,85 +49,81 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById("events-container").innerHTML = "<p>Failed to load events.</p>";
         });
 
-    // Fetch Weather
-const apiKey = "f4619f75c2d45cc1bfe1a55992e82aaa";
-const city = "Uyo"; 
-const country = "NG"; 
-const weatherURL = `https://api.openweathermap.org/data/2.5/forecast?q=${city},${country}&units=metric&appid=${apiKey}`;
-const oneCallURL = `https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&units=metric&appid=${apiKey}`;
+    // Fetch Weather Data
+    const apiKey = "29d21f6d21332090b676864d7a297325"; // Replace with your real API key
+    const city = "Harare";  // City name
+    const country = "ZW";    // Country code for Zimbabwe
+    const weatherURL = `https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&units=metric&appid=${apiKey}`;
+    const forecastURL = `https://api.openweathermap.org/data/2.5/forecast?q=${city},${country}&units=metric&appid=${apiKey}`;
 
-fetch(oneCallURL)
-    .then(response => response.json())
-    .then(data => {
-        const currentTemp = Math.round(data.main.temp);
-        const highTemp = Math.round(data.main.temp_max);
-        const lowTemp = Math.round(data.main.temp_min);
-        const humidity = data.main.humidity;
-        const description = capitalizeEachWord(data.weather[0].description);
-        const weatherIcon = getWeatherEmoji(data.weather[0].main);
-        
-        const sunrise = formatTime(data.sys.sunrise);
-        const sunset = formatTime(data.sys.sunset);
+    // Fetch Current Weather
+    fetch(weatherURL)
+        .then(response => response.json())
+        .then(data => {
+            const currentTemp = Math.round(data.main.temp);
+            const weatherDescription = capitalizeEachWord(data.weather.map(event => event.description).join(", "));
+            const weatherIcon = getWeatherEmoji(data.weather[0].main);
 
-        document.querySelector("#current-temp").innerHTML = `${weatherIcon} ${currentTemp}°C`;
-        document.querySelector("#weather-desc").textContent = description;
-        document.querySelector("#high-temp").textContent = `${highTemp}°C`;
-        document.querySelector("#low-temp").textContent = `${lowTemp}°C`;
-        document.querySelector("#humidity").textContent = `${humidity}%`;
-        document.querySelector("#sunrise").textContent = sunrise;
-        document.querySelector("#sunset").textContent = sunset;
-    })
-    .catch(error => console.error("Error fetching weather data:", error));
+            document.querySelector("#current-temp").innerHTML = `${weatherIcon} ${currentTemp}°C`;
+            document.querySelector("#weather-desc").textContent = weatherDescription;
+            document.querySelector("#high-temp").textContent = `High: ${Math.round(data.main.temp_max)}°C`;
+            document.querySelector("#low-temp").textContent = `Low: ${Math.round(data.main.temp_min)}°C`;
+            document.querySelector("#humidity").textContent = `Humidity: ${data.main.humidity}%`;
+            document.querySelector("#sunrise").textContent = `Sunrise: ${formatTime(data.sys.sunrise)}`;
+            document.querySelector("#sunset").textContent = `Sunset: ${formatTime(data.sys.sunset)}`;
+        })
+        .catch(error => console.error("Error fetching weather data:", error));
 
-// Fetch 3-Day Forecast
-fetch(weatherURL)
-    .then(response => response.json())
-    .then(data => {
-        for (let i = 1; i <= 3; i++) {
-            const forecast = data.list[i * 8];
-            const temp = Math.round(forecast.main.temp);
-            const forecastIcon = getWeatherEmoji(forecast.weather[0].main);
-            document.querySelector(`#day${i}-temp`).innerHTML = `${forecastIcon} ${temp}°C`;
-        }
-    })
-    .catch(error => console.error("Error fetching forecast data:", error));
+    // Fetch 3-Day Forecast
+    fetch(forecastURL)
+        .then(response => response.json())
+        .then(data => {
+            const forecastContainer = document.getElementById("forecast-container");
+            forecastContainer.innerHTML = ""; // Clear previous forecast
 
-// Capitalize each word
-function capitalizeEachWord(str) {
-    return str.replace(/\b\w/g, c => c.toUpperCase());
-}
+            // Calculate the forecast for the next 3 days
+            let dateCount = new Set();  // to keep track of unique dates
+            let daysForecast = [];       // array to hold the forecast of 3 days
 
-// Convert Unix timestamp to readable time
-function formatTime(timestamp) {
-    const date = new Date(timestamp * 1000);
-    return date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: true });
-}
+            // Loop through the forecast data
+            data.list.forEach(forecast => {
+                const forecastDate = new Date(forecast.dt * 1000).toDateString();
+                // If we haven't already stored 3 unique forecasts for the coming days
+                if (!dateCount.has(forecastDate) && daysForecast.length < 3) {
+                    dateCount.add(forecastDate); // Mark this date as seen
+                    daysForecast.push(forecast); // Add this forecast to the array
+                }
+            });
 
-// Weather Emoji function
-function getWeatherEmoji(condition) {
-    const emojis = {
-        "Clear": "☀️",
-        "Clouds": "☁️",
-        "Rain": "🌧️",
-        "Drizzle": "🌦️",
-        "Thunderstorm": "⛈️",
-        "Snow": "❄️",
-        "Mist": "🌫️",
-        "Fog": "🌁"
-    };
-    return emojis[condition] || "🌍";
-}
+            // Now display the forecasts for each of the next 3 days
+            daysForecast.forEach((forecast) => {
+                const temp = Math.round(forecast.main.temp);
+                const high = Math.round(forecast.main.temp_max);
+                const low = Math.round(forecast.main.temp_min);
+                const forecastDescription = capitalizeEachWord(forecast.weather.map(event => event.description).join(", "));
+                const forecastIcon = getWeatherEmoji(forecast.weather[0].main);
 
-});
- // Fetch Spotlight Members
-document.addEventListener("DOMContentLoaded", () => {
+                forecastContainer.innerHTML += `
+                    <div class="forecast-card">
+                        <h4>${new Date(forecast.dt * 1000).toLocaleDateString()}</h4>
+                        <p>${forecastIcon} ${temp}°C</p>
+                        <p>High: ${high}°C</p>
+                        <p>Low: ${low}°C</p>
+                        <p>${forecastDescription}</p>
+                    </div>
+                `;
+            });
+        })
+        .catch(error => console.error("Error fetching forecast data:", error));
+
+    // Fetch Spotlight Members
     const spotlightContainer = document.getElementById("spotlight-container");
 
     fetch("data/members.json")
         .then(response => response.json())
         .then(data => {
             // Filter only Gold and Silver members
-            const eligibleMembers = data.filter(member => 
+            const eligibleMembers = data.members.filter(member => 
                 member.membershipLevel === "Gold" || member.membershipLevel === "Silver"
             );
 
@@ -135,24 +133,50 @@ document.addEventListener("DOMContentLoaded", () => {
             // Display selected members
             spotlightContainer.innerHTML = selectedMembers.map(member => createMemberCard(member)).join("\n");
         })
-        .catch(error => console.error("Error fetching member data:", error));
+        .catch(error => {
+            console.error("Error fetching member data:", error);
+            spotlightContainer.innerHTML = "<p>Failed to load members.</p>";
+        });
+
+    function getRandomMembers(array, min, max) {
+        const shuffled = array.sort(() => 0.5 - Math.random());
+        const count = Math.floor(Math.random() * (max - min + 2)) + min;
+        return shuffled.slice(0, count);
+    }
+
+    function createMemberCard(member) {
+        return `
+            <div class="member-card">
+                <img src="${member.logoPath}" alt="${member.name} Logo">
+                <h3>${member.name}</h3>
+                <p>${member.address}</p>
+                <p>${member.phone}</p>
+                <a href="${member.website}" target="_blank">Visit Website</a>
+                <span class="membership-level">${member.membershipLevel} Member</span>
+            </div>
+        `;
+    }
+
+    function capitalizeEachWord(str) {
+        return str.replace(/\b\w/g, c => c.toUpperCase());
+    }
+
+    function formatTime(timestamp) {
+        const date = new Date(timestamp * 1000);
+        return date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: true });
+    }
+
+    function getWeatherEmoji(condition) {
+        const emojis = {
+            "Clear": "☀️",
+            "Clouds": "☁️",
+            "Rain": "🌧️",
+            "Drizzle": "🌦️",
+            "Thunderstorm": "⛈️",
+            "Snow": "❄️",
+            "Mist": "🌫️",
+            "Fog": "🌁"
+        };
+        return emojis[condition] || "🌍";
+    }
 });
-
-function getRandomMembers(array, min, max) {
-    const shuffled = array.sort(() => 0.5 - Math.random());
-    const count = Math.floor(Math.random() * (max - min + 1)) + min;
-    return shuffled.slice(0, count);
-}
-
-function createMemberCard(member) {
-    return `
-        <div class="member-card">
-            <img src="${member.image}" alt="${member.name} Logo">
-            <h3>${member.name}</h3>
-            <p>${member.address}</p>
-            <p>${member.phone}</p>
-            <a href="${member.website}" target="_blank">Visit Website</a>
-            <span class="membership-level">${member.membershipLevel} Member</span>
-        </div>
-    `;
-}

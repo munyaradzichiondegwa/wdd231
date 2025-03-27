@@ -9,8 +9,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('membershipForm');
     if (form) {
         form.addEventListener('submit', (e) => {
-            // Additional form validation can be added here
-            console.log('Form submitted');
+            if (!validateForm()) {
+                e.preventDefault(); // Prevent submission if validation fails
+            }
         });
     }
 });
@@ -37,51 +38,9 @@ window.onclick = function(event) {
     }
 };
 
-// Optimize JavaScript Execution
-class MembershipForm {
-    constructor() {
-        this.form = document.getElementById('membershipForm');
-        this.init();
-    }
-
-    init() {
-        // Use requestAnimationFrame for non-critical rendering
-        requestAnimationFrame(() => {
-            this.addEventListeners();
-            this.setTimestamp();
-        });
-    }
-
-    addEventListeners() {
-        if (this.form) {
-            this.form.addEventListener('submit', this.handleSubmit.bind(this), { passive: true });
-        }
-    }
-
-    setTimestamp() {
-        const timestampField = document.getElementById('timestamp');
-        if (timestampField) {
-            timestampField.value = new Date().toISOString();
-        }
-    }
-
-    handleSubmit(event) {
-        // Validate form before submission
-        if (this.validateForm()) {
-            // Allow submission
-            return true;
-        }
-        event.preventDefault();
-    }
-
-    validateForm() {
-        // Basic client-side validation
-        const requiredFields = this.form.querySelectorAll('[required]');
-        return Array.from(requiredFields).every(field => field.value.trim() !== '');
-    }
+// Basic client-side validation
+function validateForm() {
+    const form = document.getElementById('membershipForm');
+    const requiredFields = form.querySelectorAll('[required]');
+    return Array.from(requiredFields).every(field => field.value.trim() !== '');
 }
-
-// Lazy initialize on DOMContentLoaded
-document.addEventListener('DOMContentLoaded', () => {
-    new MembershipForm();
-});
