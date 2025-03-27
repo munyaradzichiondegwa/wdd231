@@ -1,0 +1,131 @@
+/* Theme Variables */
+:root {
+    /* Zimbabwe Flag Colors */
+    --color-green: #00A64D;
+    --color-yellow: #FCDD09;
+    --color-red: #D40000;
+    --color-black: #000000;
+    --color-white: #FFFFFF;
+
+    /* Primary Color Palette */
+    --primary: var(--color-green);
+    --primary-light: #00C760;
+    --primary-dark: #007B3A;
+    
+    --secondary: var(--color-yellow);
+    --accent: var(--color-red);
+
+    /* Grayscale */
+    --gray-50: #F9FAFB;
+    --gray-100: #F3F4F6;
+    --gray-200: #E5E7EB;
+    --gray-300: #D1D5DB;
+    --gray-400: #9CA3AF;
+    --gray-500: #6B7280;
+    --gray-600: #4B5563;
+    --gray-700: #374151;
+    --gray-800: #1F2937;
+    --gray-900: #111827;
+
+    /* Dark Mode Colors */
+    --dark-bg: #121212;
+    --dark-surface: #1E1E1E;
+    --dark-text: #E0E0E0;
+}
+
+/* Theme Transitions */
+* {
+    transition-property: background-color, color, border-color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+}
+
+/* Dark Mode Styles */
+.dark {
+    background-color: var(--dark-bg);
+    color: var(--dark-text);
+}
+
+.dark body {
+    background-color: var(--dark-bg);
+    color: var(--dark-text);
+}
+
+/* Color Utilities */
+.bg-primary { background-color: var(--primary); }
+.text-primary { color: var(--primary); }
+.border-primary { border-color: var(--primary); }
+
+.bg-secondary { background-color: var(--secondary); }
+.text-secondary { color: var(--secondary); }
+.border-secondary { border-color: var(--secondary); }
+
+.bg-accent { background-color: var(--accent); }
+.text-accent { color: var(--accent); }
+.border-accent { border-color: var(--accent); }
+
+/* Theme Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { 
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Theme Utility Classes */
+.animate-fade-in {
+    animation: fadeIn 0.5s ease-out;
+}
+
+.animate-slide-in {
+    animation: slideIn 0.7s ease-out;
+}
+
+/* Responsive Typography */
+html {
+    font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--gray-100);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-dark);
+}
+
+/* Focus and Selection Styles */
+::selection {
+    background-color: var(--primary);
+    color: var(--color-white);
+}
+
+:focus {
+    outline-color: var(--primary);
+    outline-offset: 2px;
+}

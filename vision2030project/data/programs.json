@@ -1,0 +1,103 @@
+{
+    "programs": [
+        {
+            "id": "tsp",
+            "name": "Transitional Stabilisation Programme",
+            "period": "2018-2020",
+            "description": "Short-term economic recovery plan to stabilize the economy",
+            "key_objectives": [
+                "Macroeconomic stability",
+                "Fiscal discipline",
+                "Investment attraction"
+            ],
+            "major_achievements": [
+                "Reduced inflation from 250% to 50%",
+                "Stabilized exchange rate",
+                "Improved ease of doing business ranking"
+            ],
+            "key_reforms": [
+                "Public sector reforms",
+                "Monetary policy adjustments",
+                "Investment law amendments"
+            ],
+            "financial_details": {
+                "total_budget": "USD 2.3 Billion",
+                "funding_sources": [
+                    "Government allocation",
+                    "International development partners",
+                    "Domestic resource mobilization"
+                ]
+            },
+            "media": [
+                "tsp_launch_conference.jpg",
+                "economic_reforms_presentation.mp4",
+                "ministerial_economic_briefing.jpg"
+            ]
+        },
+        {
+            "id": "nds1",
+            "name": "National Development Strategy 1",
+            "period": "2021-2025",
+            "description": "Medium-term plan for accelerating economic growth",
+            "key_focus_areas": [
+                "Macro-economic stability",
+                "Accelerated economic recovery",
+                "Sustainable development"
+            ],
+            "flagship_projects": [
+                "Digital transformation",
+                "Infrastructure development",
+                "Green economy initiatives"
+            ],
+            "economic_targets": [
+                "7% annual GDP growth",
+                "Reduce unemployment to 40%",
+                "Increase foreign direct investment"
+            ],
+            "financial_details": {
+                "total_budget": "USD 5.6 Billion",
+                "key_investment_sectors": [
+                    "Agriculture",
+                    "Mining",
+                    "Infrastructure",
+                    "Digital Economy"
+                ]
+            },
+            "media": [
+                "nds1_launch_event.jpg",
+                "economic_strategy_presentation.mp4",
+                "national_development_forum.jpg"
+            ]
+        },
+        {
+            "id": "nds2",
+            "name": "National Development Strategy 2",
+            "period": "2026-2030",
+            "description": "Final phase towards achieving Vision 2030 goals",
+            "strategic_focus": [
+                "Upper middle-income economy transformation",
+                "Technological innovation",
+                "Sustainable development"
+            ],
+            "projected_milestones": [
+                "Achieve USD 4,000 per capita income",
+                "40% renewable energy penetration",
+                "Become regional digital economy hub"
+            ],
+            "preliminary_framework": {
+                "total_projected_budget": "USD 8.5 Billion",
+                "key_transformation_areas": [
+                    "Digital infrastructure",
+                    "Renewable energy",
+                    "Advanced manufacturing",
+                    "Innovation ecosystem"
+                ]
+            },
+            "media": [
+                "vision2030_final_phase_roadmap.jpg",
+                "economic_transformation_vision.mp4",
+                "national_development_summit.jpg"
+            ]
+        }
+    ]
+}

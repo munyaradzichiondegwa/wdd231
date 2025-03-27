@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zimbabwe Vision 2030 - News & Updates</title>
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/tailwind-custom.css">
+    <link rel="stylesheet" href="styles/icons.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body class="antialiased font-sans dark:bg-dark-bg dark:text-dark-text">
+    <!-- Header -->
+    <header class="bg-white dark:bg-dark-card shadow-md">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <div class="flex flex-col">
+                        <span class="text-xl font-bold text-primary">Zimbabwe Vision 2030</span>
+                        <span class="text-xs text-gray-600 dark:text-gray-400">Towards an Upper Middle-Income Economy</span>
+                    </div>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-800 hover:text-primary dark:text-gray-300 dark:hover:text-primary">Home</a>
+                    <a href="overview.html" class="text-gray-800 hover:text-primary dark:text-gray-300 dark:hover:text-primary">Overview</a>
+                    <a href="programs.html" class="text-gray-800 hover:text-primary dark:text-gray-300 dark:hover:text-primary">Programs</a>
+                    <a href="sectors.html" class="text-gray-800 hover:text-primary dark:text-gray-300 dark:hover:text-primary">Sectors</a>
+                    <a href="news.html" class="text-gray-800 hover:text-primary dark:text-gray-300 dark:hover:text-primary">News</a>
+                    <a href="resources.html" class="text-gray-800 hover:text-primary dark:text-gray-300 dark:hover:text-primary">Resources</a>
+                </nav>
+                <div class="flex items-center">
+                    <button id="theme-toggle" type="button" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700" title="Toggle Theme">
+                        <i class="fas fa-moon hidden dark:block text-gray-300"></i>
+                        <i class="fas fa-sun block dark:hidden text-gray-800"></i>
+                    </button>
+                    <button id="mobile-menu-button" type="button" class="md:hidden p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700" title="Toggle Mobile Menu">
+                        <i class="fas fa-bars text-gray-800 dark:text-gray-300"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden hidden mt-3 pb-3">
+                <a href="index.html" class="block py-2 text-gray-800 hover:text-primary dark:text-gray-300 dark:hover:text-primary">Home</a>
+                <a href="overview.html" class="block py-2 text-gray-800 hover:text-primary dark:text-gray-300 dark:hover:text-primary">Overview</a>
+                <a href="programs.html" class="block py-2 text-gray-800 hover:text-primary dark:text-gray-300 dark:hover:text-primary">Programs</a>
+                <a href="sectors.html" class="block py-2 text-gray-800 hover:text-primary dark:text-gray-300 dark:hover:text-primary">Sectors</a>
+                <a href="news.html" class="block py-2 text-gray-800 hover:text-primary dark:text-gray-300 dark:hover:text-primary">News</a>
+                <a href="resources.html" class="block py-2 text-gray-800 hover:text-primary dark:text-gray-300 dark:hover:text-primary">Resources</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- News & Updates Section -->
+    <section id="news" class="py-12 bg-white dark:bg-dark-card">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h1 class="text-3xl font-bold mb-4">News &amp; Updates</h1>
+                <p class="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">Stay informed about Zimbabwe's progress towards Vision 2030.</p>
+            </div>
+           
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- News Item 1 -->
+                <div class="bg-gray-100 dark:bg-dark-bg rounded-lg shadow-md overflow-hidden">
+                    <div class="p-6">
+                        <span class="text-sm text-primary font-semibold mb-2 block">Policy Update</span>
+                        <h3 class="text-xl font-bold mb-3">New Investment Laws Boost Economic Growth</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Zimbabwe introduces comprehensive investment reforms to attract foreign direct investment and stimulate economic development.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500 dark:text-gray-400">July 3, 2023</span>
+                            <a href="#" class="text-primary hover:underline">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- News Item 2 -->
+                <div class="bg-gray-100 dark:bg-dark-bg rounded-lg shadow-md overflow-hidden">
+                    <div class="p-6">
+                        <span class="text-sm text-primary font-semibold mb-2 block">Infrastructure</span>
+                        <h3 class="text-xl font-bold mb-3">Gwayi-Shangani Dam Project Completed</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Major water infrastructure project completed, set to transform agricultural irrigation and water management in Matabeleland region.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500 dark:text-gray-400">June 28, 2023</span>
+                            <a href="#" class="text-primary hover:underline">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- News Item 3 -->
+                <div class="bg-gray-100 dark:bg-dark-bg rounded-lg shadow-md overflow-hidden">
+                    <div class="p-6">
+                        <span class="text-sm text-primary font-semibold mb-2 block">Technology</span>
+                        <h3 class="text-xl font-bold mb-3">Digital Economy Strategy Launched</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Comprehensive strategy to transform Zimbabwe into a regional digital economy hub, focusing on technology infrastructure.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500 dark:text-gray-400">January 15, 2024</span>
+                            <a href="#" class="text-primary hover:underline">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+            <div class="mt-8 text-center">
+                <button type="button" class="px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary-dark transition-colors">Load More News</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Zimbabwe Vision 2030</h4>
+                    <p class="text-gray-400">Transforming Zimbabwe into an upper middle-income economy through strategic development.</p>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Quick Links</h4>
+                    <ul>
+                        <li><a href="overview.html" class="text-gray-300 hover:text-white">Overview</a></li>
+                        <li><a href="programs.html" class="text-gray-300 hover:text-white">Programs</a></li>
+                        <li><a href="sectors.html" class="text-gray-300 hover:text-white">Sectors</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Resources</h4>
+                    <ul>
+                        <li><a href="news.html" class="text-gray-300 hover:text-white">News</a></li>
+                        <li><a href="resources.html" class="text-gray-300 hover:text-white">Downloads</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Contact</h4>
+                    <p class="text-gray-400">Ministry of Finance and Economic Development</p>
+                    <p class="text-gray-400">Harare, Zimbabwe</p>
+                </div>
+            </div>
+            <div class="mt-8 pt-4 border-t border-gray-700 text-center">
+                <p class="text-gray-400">&copy; 2025 Zimbabwe Vision 2030. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

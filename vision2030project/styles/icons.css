@@ -1,0 +1,44 @@
+/* Custom Icon System */
+.icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: currentColor;
+}
+
+/* Common Icon Sizes */
+.icon-sm { font-size: 0.75rem; }
+.icon-md { font-size: 1rem; }
+.icon-lg { font-size: 1.5rem; }
+.icon-xl { font-size: 2rem; }
+
+/* Color Variations */
+.icon-primary { color: var(--primary); }
+.icon-secondary { color: var(--secondary); }
+.icon-accent { color: var(--accent); }
+.icon-white { color: white; }
+.icon-black { color: black; }
+
+/* Animated Icons */
+.icon-spin {
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Icon Positioning */
+.icon-left { margin-right: 0.5rem; }
+.icon-right { margin-left: 0.5rem; }
+
+/* Specific Icons (You'll manually add SVGs or use an icon font) */
+.icon-home::before { content: '🏠'; }
+.icon-user::before { content: '👤'; }
+.icon-settings::before { content: '⚙️'; }
+.icon-download::before { content: '⬇️'; }
+.icon-pdf::before { content: '📄'; }
