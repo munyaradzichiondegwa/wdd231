@@ -13,126 +13,87 @@
     <meta property="og:title" content="Harare Chamber Home">
     <meta property="og:type" content="website">
     <meta property="og:image" content="images/harare-chamber-logo.webp">
-    <meta property="og:url" content="https://munyaradzichiondegwa.github.io/chamber/index.html">
+    <meta property="og:url" content="https://munyaradzichiondegwa.github.io/wdd231/chamber/index.html">
 
-    <!-- Favicon -->
-    <link rel="icon" href="images/favicon.webp" type="image/x-icon">
-    <link rel="manifest" href="/manifest.json">
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-    <link rel="preconnect" href="https://openweathermap.org">
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
-        rel="stylesheet">
-
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="styles/critical.css">
     <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/home.css">
-    <link rel="stylesheet" href="styles/spotlight.css">
-
-    <script src="scripts/weather.js" defer></script>
-    <script src="scripts/spotlight.js" defer></script>
-    <script src="scripts/events.js" defer></script>
+    <link rel="stylesheet" href="styles/directory-large.css">
+    <link rel="stylesheet" href="styles/directory-small.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="favicon.ico">
+    <script src="scripts/nav.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/directory.js" defer></script>
+    <script src="scripts/home.js" defer></script>
+    <script src="https://kit.fontawesome.com/ed4ce25ef3.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <header>
         <div class="logo-container">
-            <img src="images/harare-chamber-logo.webp" alt="Harare Chamber of Commerce Logo" width="100" height="81">
-            <h1>Harare Metropolitan Chamber of Commerce</h1>
+            <img src="images/harare-chamber-logo.webp" alt="Chamber Logo">
+            <span>Harare Chamber of Commerce</span>
         </div>
         <nav>
-            <button id="hamburger-menu" aria-label="Toggle Menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
-            <ul class="nav-links">
-                <li><a href="index.html" class="active" title="Go to the Home page">Home</a></li>
-                <li><a href="directory.html" title="View the Business Directory">Directory</a></li>
-                <li><a href="discover.html" title="Discover businesses in Harare">Discover</a></li>
-                <li><a href="join.html" title="Join the Chamber of Commerce">Join</a></li>
-                <li><a href="contact.html" title="Contact the Chamber of Commerce">Contact</a></li>
+            <button id="myButton">☰</button>
+            <ul class="menuLinks">
+                <li><a href="index.html" title="Home Page">Home</a></li>
+                <li class="current-menu-item"><a href="directory.html">Directory</a></li>
+                <li><a href="#" title="Join">Join</a></li>
+                <li><a href="#" title="Discover page">Discover</a></li>
+                <li><a href="thankyou.html" title="Thank You page">Thank You</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
+        <!-- Hero Section -->
         <section class="hero">
-            <h2>Welcome to the Harare Metropolitan Chamber of Commerce</h2>
-            <img src="images/harare.webp" alt="Welcome to Harare Chamber of Commerce" width="1200" height="600">
-            <a href="join.html" class="call-to-action">Join the Chamber</a>
+            <div class="hero-text">
+                <h1>Welcome to the Harare Chamber of Commerce</h1>
+                <p>Empowering businesses and fostering community growth.</p>
+                <button class="join-btn">Join Us Today</button>
+            </div>
         </section>
 
-        <div class="aside-container">
-            <aside class="current-events">
-                <h2>Current Events</h2>
-                <div class="event">
-                    <h3>Upcoming Business Seminar</h3>
-                    <p>Learn about the latest marketing strategies...</p>
-                    <p>Date: March 29, 2025</p>
-                </div>
-            </aside>
+        <!-- Events Section -->
+        <section class="events fade-in">
+            <h2>Upcoming Events</h2>
+            <div id="events-container">
+                <p>Loading events...</p>
+            </div>
+        </section>
 
-            <aside class="weather">
-                <h2>Weather in Harare</h2>
-                <div id="current-weather">
-                    <p>Temperature: <span id="current-temp"></span>°C</p>
-                    <p>Condition: <span id="weather-description"></span></p>
-                    <!-- Weather icon based on local stored images -->
-                    <img src="images/light-rain.png" alt="rainy weather" width="50" height="50"
-                        id="weather-icon">
+        <!-- Weather Section -->
+        <div class="weather-container">
+            <section class="weather current-weather">
+                <h2>🌤️ Current Weather</h2>
+                <div class="weather-details">
+                    <p><strong>Temperature:</strong> <span id="current-temp">--°C</span></p>
+                    <p><strong>Conditions:</strong> <span id="weather-desc">Loading...</span></p>
+                    <p><strong>High:</strong> <span id="high-temp">--°C</span></p>
+                    <p><strong>Low:</strong> <span id="low-temp">--°C</span></p>
+                    <p><strong>Humidity:</strong> <span id="humidity">--%</span></p>
+                    <p><strong>Sunrise:</strong> <span id="sunrise">--:--</span></p>
+                    <p><strong>Sunset:</strong> <span id="sunset">--:--</span></p>
                 </div>
-            </aside>
+            </section>
 
-            <aside class="forecast">
-                <h2>3-Day Forecast</h2>
-                <div id="weather-forecast">
-                    <!-- Forecast data will be displayed here -->
-                    <div class="forecast-day" id="day1">
-                        <h3>Day 1</h3>
-                        <img src="images/sunny.png" alt="sunny weather" width="50" height="50">
-                        <p id="forecast-temp1"></p>
-                        <p id="forecast-desc1"></p>
-                    </div>
-                    <div class="forecast-day" id="day2">
-                        <h3>Day 2</h3>
-                        <img src="images/cloudy.png" alt="cloudy weather" width="50" height="50">
-                        <p id="forecast-temp2"></p>
-                        <p id="forecast-desc2"></p>
-                    </div>
-                    <div class="forecast-day" id="day3">
-                        <h3>Day 3</h3>
-                        <img src="images/rainy.png" alt="rainy weather" width="50" height="50">
-                        <p id="forecast-temp3"></p>
-                        <p id="forecast-desc3"></p>
-                    </div>
-                </div>
-            </aside>
-
+            <section class="weather weather-forecast">
+                <h2>📅 Weather Forecast</h2>
+                <div id="forecast-container"></div>
+                <!-- The 3-day forecast details will be dynamically inserted here -->
+            </section>
         </div>
 
-        <section class="spotlights">
-            <h2>Member Spotlights</h2>
-            <div class="spotlight-button-container">
-                <button id="refresh-spotlights">Refresh Spotlights</button>
-            </div>
-            <div class="spotlight" id="spotlight1">
-                <!-- Spotlight 1 content will be inserted here by JavaScript -->
-            </div>
-            <div class="spotlight" id="spotlight2">
-                <!-- Spotlight 2 content will be inserted here by JavaScript -->
-            </div>
-            <div class="spotlight" id="spotlight3">
-                <!-- Spotlight 3 content will be inserted here by JavaScript -->
+        <!-- Spotlight Section -->
+        <section class="spotlight fade-in">
+            <h2>Member Spotlight</h2>
+            <div id="spotlight-container" class="spotlight-grid">
+                <!-- Spotlight members will be inserted here dynamically -->
             </div>
         </section>
-
-
     </main>
 
     <footer>
@@ -143,18 +104,19 @@
                 <p>info@hararechamber.org</p>
                 <p>+263 (4) 123-4567</p>
             </div>
-            <div class="social-links">
-                <!-- Provide clear descriptions for social media links -->
-                <a href="https://facebook.com/HarareChamber" target="_blank" rel="noopener"
-                    aria-label="Visit our Facebook page">Facebook</a>
-                <a href="https://linkedin.com/company/HarareChamber" target="_blank" rel="noopener"
-                    aria-label="Visit our LinkedIn page">LinkedIn</a>
-                <a href="https://twitter.com/HarareChamber" target="_blank" rel="noopener"
-                    aria-label="Visit our Twitter page">Twitter</a>
+
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/munyaradzi-chiondegwa" title="LinkedIn"><i
+                        class="fab fa-linkedin"></i> LinkedIn Profile</a>
+                <a href="https://web.facebook.com/nevanjimunya.chiondegwa" title="Facebook"><i
+                        class="fab fa-facebook"></i> Facebook Profile</a>
+                <a href="https://x.com/NNehoreka" title="X"><i class="fab fa-x-twitter"></i> X (formerly Twitter)
+                    Profile</a>
             </div>
+
             <div class="project-info">
                 <p>WDD231 Project | Munyaradzi Chiondegwa</p>
-                <p>&copy; <span id="current-year"></span> Harare Chamber</p>
+                <p>© <span id="current-year"></span> Harare Chamber</p>
                 <p>Last Modified: <span id="last-modified"></span></p>
             </div>
         </div>
@@ -162,3 +124,31 @@
 </body>
 
 </html>
+       
+   
+
+       
+       
+   
+       
+   
+
+       
+   
+       
+   
+       
+   
+
+       
+   
+
+       
+   
+       
+   
+
+       
+                                                                                                                                                                                                                       
+        
+          

@@ -1,0 +1,179 @@
+@media (min-width: 850px){
+    #myButton {
+        display: none;
+    }
+
+    nav {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 1rem 5%;
+        height: 30px;
+    }
+
+    ul.menuLinks {
+        display: flex !important;
+        gap: 1rem;
+    }
+
+    ul.menuLinks li {
+        list-style: none;
+    }
+
+    ul.menuLinks a {
+        padding: 0.5rem 1rem;
+        font-weight: bold;
+        border-radius: 5px;
+
+    }
+
+     /*Header Styling for Large Screens */
+     header {
+        padding: 1.5rem 5%;
+        justify-content: space-between;
+    }
+
+
+    /* Buttons stay centered on large screens */
+    .view-buttons {
+        margin: 30px 0;
+    }
+    
+    /* Grid Layout for Larger Screens */
+    #directory {
+        gap: 25px;
+    }
+
+    /* Slightly Bigger Cards */
+    .business-card {
+        padding: 25px;
+        border-radius: 12px;
+    }
+
+    .business-card img {
+        max-width: 120px;
+    }
+
+    .business-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .business-card p {
+        font-size: 1.1rem;
+    }
+
+    footer{
+        width: 100% !important;
+    }
+
+    /* List View Refinement */
+    .list-card img {
+        width: 80px !important;
+      }
+      
+      .list-card h3 {
+        font-size: 1.2rem !important;
+      }
+      
+      .list-card p {
+        font-size: 1rem !important;
+      }
+      
+      .list-card a{
+        font-size: 1rem !important;
+      }
+
+    .hero-text h1 {
+        white-space: nowrap;
+        font-size: 1.6rem !important;
+        overflow: hidden;
+        border-right: 3px solid white;
+        animation: typing 3s steps(40, end), blinkCursor 0.75s step-end infinite;
+    }
+
+    .hero-text p {
+        font-size: 1rem !important;
+    }
+
+    .weather-container {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+footer {
+    background-color: var(--accent-color);
+    color: var(--background-color);
+    padding: var(--spacing-large);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-info {
+    flex: 1;
+    text-align: left;
+}
+
+.contact-info h3 {
+    color: var(--secondary-color);
+    margin-bottom: var(--spacing-small);
+}
+
+.contact-info p {
+    margin: 0.25rem 0;
+}
+
+.social-icons {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-medium);
+}
+
+.social-icons a {
+    color: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color var(--transition-speed) ease;
+}
+
+.social-icons a:hover {
+    color: var(--background-color);
+}
+
+.social-icons i {
+    font-size: 1.5rem;
+}
+
+.project-info {
+    flex: 1;
+    text-align: right;
+}
+
+.project-info p {
+    margin: 0.25rem 0;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-info,
+    .social-icons,
+    .project-info {
+        text-align: center;
+        margin-bottom: var(--spacing-medium);
+    }
+
+    .social-icons {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}

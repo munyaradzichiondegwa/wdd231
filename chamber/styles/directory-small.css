@@ -1,0 +1,587 @@
+:root {
+  --primary-color: #008000; 
+  --secondary-color: #FFA500; 
+  --background-color: #faf9f0; 
+  --text-color: #4A4A4A; 
+ --card-bg: #fff;
+  --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --radius: 10px;
+  --transition: all 0.3s ease-in-out;
+  --font-primary: "Poppins", sans-serif;
+  --font-secondary: "Roboto", sans-serif;
+}
+
+/* General Styling */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+
+/* 🔹 Header Styling */
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: var(--primary-color);
+  padding: 1rem;
+  color: white;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-container img {
+  margin-right: 10px; 
+  height: 50px; 
+}
+
+.logo-container span {
+  font-size: 1.2em; /* Adjust the text size */
+  font-weight: bold;
+}
+
+
+/* Navigation */
+nav {
+  background-color: var(--primary-color);
+  padding: 1rem;
+
+}
+
+/*Hamburger Button */
+#myButton {
+  font-size: 2rem;
+  background-color: var(--primary-color);
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  width: 100%;
+  padding: .25rem 2vw;
+  margin-left: 16px;
+}
+
+
+/* Menu Links */
+ul.menuLinks {
+  display: none;
+  list-style-type: none;
+  padding: 1rem;
+  text-align: center;
+}
+
+ul.menuLinks li a {
+  display: block;
+  padding: .75rem 2vw;
+  color: #fff;
+  text-decoration: none;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+ul.menuLinks a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/*Active Menu Item */
+li.current-menu-item a {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+/*Show Menu When Button is Clicked */
+ul.menuLinks.open {
+  display: block;
+}
+
+/* Hide Hamburger Icon When Open */
+#myButton.open {
+  visibility: hidden; 
+}
+
+
+#myButton.open::before {
+  content: "✖"; 
+  visibility: visible; 
+}
+
+main {
+  margin: 20px auto;
+  text-align: center;
+}
+
+.head h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  text-align: center;
+  margin: 20px 0;
+  border-bottom: 2px solid var(--secondary-color);
+  padding-bottom: 10px;
+}
+
+
+/* Buttons */
+.view-buttons button {
+  background: var(--primary-color);
+  border: none;
+  color: white;
+  padding: 12px 16px;
+  font-size: 1rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: var(--shadow);
+  margin: 10px;
+}
+
+.view-buttons button:hover {
+  background: var(--secondary-color);
+  transform: scale(1.05);
+}
+
+/* Center the buttons */
+#gridView, #listView {
+  display: inline-flex;
+}
+
+/* Directory Grid */
+#directory {
+  display: grid;
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+  width: 100%;
+}
+
+.grid-view{
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+/* Business Cards */
+.business-card {
+  background: var(--card-bg);
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  border: 1px solid var(--primary-color);
+  border-radius: 1px;
+  padding: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.business-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.business-card img {
+  width: 80px; 
+  height: 80px;
+  border-radius: 50px;
+  margin-right: 1rem;
+}
+
+/* Visit Website Button */
+.business-card a {
+  display: inline-block;
+  font-size: 1rem;
+  color: #0077cc;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.business-card a:hover {
+  color: var(--secondary-color);
+  transform: scale(1.05);
+}
+
+/* List View */
+.list-card {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  gap: 10px;
+  padding: 10px;
+  max-width: 850px;
+}
+.list-card img {
+  width: 50px;
+  height: 50px;
+}
+
+.list-card h3 {
+  font-size: .6rem;
+}
+
+.list-card p {
+  font-size: .5rem;
+}
+
+.list-card a{
+  font-size: .6rem;
+}
+
+/* HOME */
+
+.hero {
+    width: 95%;
+    text-align: center;
+    background: linear-gradient(rgba(12, 12, 12, 0.5), rgba(15, 15, 15, 0.5)), url("../images/hero.png");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+    min-height: 500px;
+    position: relative;
+    overflow: hidden;
+    animation: heroZoom 3s ease-in-out forwards;
+    background-attachment: fixed;
+}
+
+/* Background Image Animation */
+@keyframes heroZoom {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.05); }
+}
+
+/* HERO TEXT */
+.hero-text {
+    position: relative;
+    z-index: 1;
+    max-width: 80%;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+/* Fade-in Animation */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Typing Effect */
+.hero-text h1 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 8px;
+}
+
+/* Typing Animation */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+/* Blinking Cursor */
+@keyframes blinkCursor {
+    50% { border-color: transparent; }
+}
+
+/* SUBTEXT */
+.hero-text p {
+    font-size: .8rem;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* BUTTON */
+.join-btn {
+    background: var(--secondary-color);
+    padding: 15px 25px;
+    border: none;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: bold;
+    position: relative;
+    animation: pulse 2s infinite;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Button Pulse Effect */
+@keyframes pulse {
+    0% { box-shadow: 0 0 5px rgba(255, 136, 0, 0.5); }
+    50% { box-shadow: 0 0 20px rgba(255, 136, 0, 1); }
+    100% { box-shadow: 0 0 5px rgba(255, 136, 0, 0.5); }
+}
+
+/* Button Hover */
+.join-btn:hover {
+    background: #ff8800;
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(255, 136, 0, 0.8);
+}
+
+/* WAVE ANIMATION AT BOTTOM */
+.hero::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: url("../images/wave.svg") repeat-x;
+    animation: waveMove 6s linear infinite;
+}
+
+/* Wave Movement */
+@keyframes waveMove {
+    0% { background-position: 0 0; }
+    100% { background-position: 1000px 0; }
+}
+
+
+
+/* General Section Styles */
+section {
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  background: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Fade-in animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Events Section */
+#events-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.event-card {
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease-in-out;
+}
+
+.event-card:hover {
+  transform: scale(1.02);
+}
+
+.event-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-right: 15px;
+}
+
+.event-card-content {
+  flex: 1;
+}
+
+.event-card h3 {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+
+.event-card p {
+  font-size: 0.9em;
+  color: #666;
+}
+
+/* Weather Section */
+.weather-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.weather {
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+.weather-details p,
+.forecast-details p {
+    font-size: 1.2rem;
+    margin: 5px 0;
+}
+
+.forecast p {
+  font-weight: bold;
+}
+
+hr {
+  border: none;
+  height: 2px;
+  background: white;
+  margin: 10px 0;
+}
+
+h2 {
+  background: #333;
+  font-size: 1.8rem; 
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  color: #fff;
+  border-radius: 2px;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+
+/* Spotlight Section */
+.spotlight {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: #f9f9f9;
+}
+
+
+/* Grid Layout */
+.spotlight-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  justify-content: center;
+  padding: 1rem;
+}
+
+/* Member Card */
+.member-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.member-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Member Image */
+.member-card img {
+  max-width: 100px;
+  height: auto;
+  margin-bottom: 1rem;
+  border-radius: 50%;
+}
+
+
+.member-card p {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0.3rem 0;
+}
+
+/* Membership Level Badge */
+.membership-level {
+  color: var(--text-color);
+  font-weight: bold;
+  padding: 0.2rem 0.5rem;
+  border-radius: 5px;
+}
+
+/* Member Website Link */
+.member-card a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #0077cc;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.member-card a:hover {
+  text-decoration: underline;
+}
+
+
+/* FOOTER */
+footer {
+  background-color: var(--primary-color);
+  color: var(--footer-text);
+  text-align: center;
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  color: #fff;
+  width: 519px;
+}
+
+.footer-column {
+  flex: 1;
+  padding: 0.5rem;
+}
+
+.social-icons a {
+  color: #fff;
+  margin: 0 0.5rem;
+  text-decoration: none;
+  align-items: center;
+}
+
+/* Fade-In Animation */
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(30px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Apply Animation to Cards */
+.business-card, .list-card {
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Hover Effect */
+ul.menuLinks li a:hover {
+  color: var(--secondary-color); 
+}
+
+/* Hero Section Animation */
+.hero-content {
+  animation: fadeInUp 1s ease-out;
+}
+
+/* Button Animation */
+.join-btn {
+  animation: fadeInUp 1.2s ease-out;
+  transition: transform 0.3s ease-in-out;
+}
+
+.join-btn:hover {
+  transform: scale(1.1);
+}
+

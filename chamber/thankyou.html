@@ -4,52 +4,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Harare Metropolitan Chamber of Commerce - Business Directory</title>
-    <meta name="description" content="Business directory for Harare's thriving business community">
+    <title>Thank You - Chamber of Commerce</title>
+    <meta name="description" content="Thank you for your application to the Harare Chamber of Commerce">
     <meta name="author" content="Munyaradzi Chiondegwa">
 
-    <!-- Facebook Open Graph Meta Tags -->
-    <meta property="og:title" content="Harare Chamber Business Directory">
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Thank You - Harare Chamber of Commerce">
     <meta property="og:type" content="website">
     <meta property="og:image" content="images/harare-chamber-logo.webp">
-    <meta property="og:url" content="https://munyaradzichiondegwa.github.io/wdd231/chamber/directory.html">
+    <meta property="og:url" content="https://munyaradzichiondegwa.github.io/wdd231/chamber/thankyou.html">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.webp" type="image/x-icon">
 
     <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/join.css">
     <link rel="stylesheet" href="styles/directory-large.css">
     <link rel="stylesheet" href="styles/directory-small.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="images/favicon.webp"> <!-- Corrected rel to favicon -->
+    <link rel="stylesheet" href="styles/thankyou.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@300;400;700&display=swap"
+        rel="stylesheet">
+
+    <script src="scripts/join.js" defer></script>
     <script src="scripts/nav.js" defer></script>
     <script src="scripts/date.js" defer></script>
-    <script src="scripts/directory.js" defer></script>
-    <script src="https://kit.fontawesome.com/ed4ce25ef3.js" crossorigin="anonymous"></script>
+    <script src="scripts/thankyou.js" defer></script> 
 </head>
 
 <body>
     <header>
         <div class="logo-container">
-            <img src="images/harare-chamber-logo.webp" alt="Harare Chamber of Commerce Logo" width="200" height="100"> <!-- Added width and height -->
+            <img src="images/harare-chamber-logo.webp" alt="Chamber Logo">
             <span>Harare Chamber of Commerce</span>
         </div>
         <nav>
-            <button id="myButton" aria-expanded="false" aria-controls="menu" title="Open menu">☰</button>
-            <ul class="menuLinks" id="menu" hidden>
+            <button id="myButton">☰</button>
+            <ul class="menuLinks">
                 <li><a href="index.html" title="Home">Home</a></li>
-                <li class="current-menu-item"><a href="#">Directory</a></li>
-                <li><a href="#" title="Join">Join</a></li>
+                <li class="current-menu-item"><a href="directory.html">Directory</a></li>
+                <li><a href="join.html" title="Join">Join</a></li>
                 <li><a href="#" title="Discover">Discover</a></li>
                 <li><a href="thankyou.html" title="Thank You">Thank You</a></li>
             </ul>
         </nav>
     </header>
-    <main>
-        <h1>Business Directory</h1>
-        <div class="view-buttons">
-            <button id="gridView" type="button" title="Switch to grid view"><i class="fas fa-th" aria-hidden="true"></i></button>
-            <button id="listView" type="button" title="Switch to list view"><i class="fas fa-list" aria-hidden="true"></i></button>
-        </div>
-        <section id="directory" class="grid-view">
-            <!-- Business cards will be dynamically inserted here -->
+
+    <main class="container">
+        <section>
+            <h2>Thank You for Your Application!</h2>
+            <h3>Your Application Details</h3>
+            <p><strong>First Name:</strong> <span id="thankYouFirstName"></span></p>
+            <p><strong>Last Name:</strong> <span id="thankYouLastName"></span></p>
+            <p><strong>Email:</strong> <span id="thankYouEmail"></span></p>
+            <p><strong>Mobile Phone:</strong> <span id="thankYouPhone"></span></p>
+            <p><strong>Business Name:</strong> <span id="thankYouBusinessName"></span></p>
+            <p><strong>Timestamp:</strong> <span id="thankYouTimestamp"></span></p>
         </section>
     </main>
 
@@ -61,19 +71,21 @@
                 <p><a href="mailto:inf@hararechamber.org">inf@hararechamber.org</a></p> <!-- Added email link -->
                 <p>+263 (4) 123-4567</p>
             </div>
-
+        
             <div class="social-icons">
-                <a href="https://www.linkedin.com/in/munyaradzi-chiondegwa" title="LinkedIn" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.linkedin.com/in/munyaradzi-chiondegwa" title="LinkedIn" target="_blank"
+                    rel="noopener noreferrer">
                     <i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn Profile
                 </a>
-                <a href="https://web.facebook.com/nevanjimunya.chiondegwa" title="Facebook" target="_blank" rel="noopener noreferrer">
+                <a href="https://web.facebook.com/nevanjimunya.chiondegwa" title="Facebook" target="_blank"
+                    rel="noopener noreferrer">
                     <i class="fab fa-facebook" aria-hidden="true"></i> Facebook Profile
                 </a>
                 <a href="https://x.com/NNehoreka" title="X" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-x-twitter" aria-hidden="true"></i> X (formerly Twitter) Profile
                 </a>
             </div>
-
+        
             <div class="project-info">
                 <p>WDD231 Project | Munyaradzi Chiondegwa</p>
                 <p>© <span id="current-year"></span> Harare Chamber</p>
@@ -83,4 +95,5 @@
     </footer>
 
 </body>
+
 </html>
