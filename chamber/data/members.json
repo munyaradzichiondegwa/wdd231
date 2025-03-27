@@ -7,9 +7,7 @@
             "website": "https://zimtech.co.zw",
             "logoPath": "zimtech-logo.webp",
             "membership": 3,
-            "sector": "Technology",
-            "services": ["Software Development", "IT Consulting", "Cloud Solutions"],
-            "hours": "Mon-Fri: 8AM-5PM"
+            "membershipLevel": "Gold"
         },
         {
             "name": "Avondale Fashion House",
@@ -17,11 +15,46 @@
             "phone": "+263 772 987 654",
             "website": "https://avondalefashion.co.zw",
             "logoPath": "fashion-house-logo.webp",
-            "membership": 2,
-            "sector": "Retail",
-            "specialty": "African Print Clothing",
-            "hours": "Mon-Sat: 9AM-6PM"
+            "membership": 3,
+            "membershipLevel": "Gold"
         },
+        {
+            "name": "Green Energy Solutions",
+            "address": "34 Solar Avenue, Greendale",
+            "phone": "+263 242 123 456",
+            "website": "https://greenenergy.co.zw",
+            "logoPath": "green-energy-icon.webp",
+            "membership": 2,
+            "membershipLevel": "Silver"
+        },
+        {
+            "name": "Harare Legal Services",
+            "address": "9 Law Chambers, CBD",
+            "phone": "+263 242 987 654",
+            "website": "https://hararelegal.co.zw",
+            "logoPath": "legal-services-icon.webp",
+            "membership": 2,
+            "membershipLevel": "Silver"
+        },
+        {
+            "name": "Harare Construction Co.",
+            "address": "56 Building Road, Belvedere",
+            "phone": "+263 242 456 789",
+            "website": "https://harareconstruction.co.zw",
+            "logoPath": "construction-icon.webp",
+            "membership": 3,
+            "membershipLevel": "Gold"
+        },
+        {
+            "name": "Harare Auto Repairs",
+            "address": "78 Garage Road, Graniteside",
+            "phone": "+263 242 123 456",
+            "website": "https://harareautorepairs.co.zw",
+            "logoPath": "auto-repairs-icon.webp",
+            "membership": 2,
+            "membershipLevel": "Silver"
+        },
+        
         {
             "name": "Harare Steel Works",
             "address": "12 Industrial Way, Willowvale",
@@ -29,9 +62,7 @@
             "website": "https://hararesteel.com",
             "logoPath": "steelworks-icon.webp",
             "membership": 3,
-            "sector": "Manufacturing",
-            "products": ["Steel Beams", "Roofing Sheets", "Metal Fabrication"],
-            "established": 1998
+            "membershipLevel": "Gold"
         },
         {
             "name": "EcoFarm Zimbabwe",
@@ -40,9 +71,7 @@
             "website": "https://ecofarmzw.org",
             "logoPath": "ecofarm-logo.webp",
             "membership": 1,
-            "sector": "Agriculture",
-            "services": ["Organic Produce", "Agri-Training", "Farm Equipment"],
-            "certifications": ["Organic Certified", "ISO 9001"]
+            "membershipLevel": "Bronze"
         },
         {
             "name": "Skyline Architects",
@@ -51,9 +80,7 @@
             "website": "https://skylinearchitects.co.zw",
             "logoPath": "skyline-architects.webp",
             "membership": 2,
-            "sector": "Professional Services",
-            "specializations": ["Commercial Buildings", "Urban Planning", "Interior Design"],
-            "projects": 147
+            "membershipLevel": "Silver"
         },
         {
             "name": "Mbare Market Hub",
@@ -62,9 +89,7 @@
             "website": "",
             "logoPath": "mbare-market-icon.webp",
             "membership": 1,
-            "sector": "Retail",
-            "products": ["Fresh Produce", "Crafts", "Traditional Art"],
-            "marketDays": "Daily 6AM-6PM"
+            "membershipLevel": "Bronze"
         },
         {
             "name": "Digital Future Labs",
@@ -73,9 +98,7 @@
             "website": "https://dflabs.tech",
             "logoPath": "digital-future-logo.webp",
             "membership": 3,
-            "sector": "Technology",
-            "services": ["AI Solutions", "Digital Marketing", "App Development"],
-            "incubatorProgram": true
+            "membershipLevel": "Gold"
         }
     ]
 }

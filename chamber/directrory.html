@@ -14,100 +14,47 @@
     <meta property="og:image" content="images/harare-chamber-logo.webp">
     <meta property="og:url" content="https://munyaradzichiondegwa.github.io/chamber/directory.html">
 
-    <!-- Favicon -->
-    <link rel="icon" href="images/favicon.webp" type="image/x-icon">
-    <link rel="manifest" href="/manifest.json">
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-    <!-- In your HTML head -->
-    <link rel="preload" href="path/to/default-placeholder.webp" as="image">
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
-    <!-- Font Loading -->
-    <link rel="preload"
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@400;600&display=swap"
-        as="style">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@400;600&display=swap"
-        media="print" onload="this.media='all'">
-
-    
-    <!-- Deferred CSS -->
-    <link rel="preload" href="styles/directory.css" as="style">
-    <link rel="stylesheet" href="styles/directory.css" media="print" onload="this.media='all'">
-    <link rel="preload" href="styles/accessibility.css" as="style">
-    <link rel="stylesheet" href="styles/accessibility.css" media="print" onload="this.media='all'">
-    
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="styles/critical.css">
-    <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/directory.css">
-    <link rel="stylesheet" href="styles/accessibility.css">
-    <script src="scripts/directory.js" defer></script>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/directory-large.css">
+    <link rel="stylesheet" href="styles/directory-small.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="favicon" href="images/favicon.webp">
     <script src="scripts/nav.js" defer></script>
-    <script src="scripts/performance.js" defer></script>
-    <script src="scripts/service-worker.js" defer></script>
-    <script src="scripts/lighthouserc.js" defer></script>
-    <script src="scripts/accessibility.js" defer></script>
+    <script src="scripts/dates.js" defer></script>
+    <script src="scripts/directory.js" defer></script>
+    <script src="https://kit.fontawesome.com/ed4ce25ef3.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
     <header>
         <div class="logo-container">
-            <img src="images/harare-chamber-logo.webp" alt="Harare Chamber of Commerce Logo" width="150" height="122" loading="lazy"
-                srcset="images/harare-chamber-logo.webp 1x, 
-                                    images/harare-chamber-logo@2x.webp 2x">
-            <h1>Harare Metropolitan Chamber of Commerce</h1>
+            <img src="images/harare-chamber-logo.webp" alt="Chamber Logo">
+            <span>Harare Chamber of Commerce</span>
         </div>
         <nav>
-            <button id="hamburger-menu" aria-label="Toggle Menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
-            <ul class="nav-links">
-                <!-- Ensure all links are valid and crawlable -->
-                <li><a href="index.html" title="Go to the Home page">Home</a></li>
-                <li><a href="directory.html" class="active" title="View the Business Directory">Directory</a></li>
-                <li><a href="discover.html" title="Discover businesses in Harare">Discover</a></li>
-                <li><a href="join.html" title="Join the Chamber of Commerce">Join</a></li>
-                <li><a href="contact.html" title="Contact the Chamber of Commerce">Contact</a></li>
+            <button id="myButton">&#9776;</button>
+            <ul class="menuLinks">
+                <li><a href="index.html" title="Home">Home</a></li>
+                <li class="currrent-menu-item"><a href="#">Directory</a></li>
+                <li><a href="#" title="join">Join</a></li>
+                <li><a href="#" title="Discover">Discover</a></li>
             </ul>
         </nav>
     </header>
-
-    <main>
-        <h2>Business Directory</h2>
-
-        <div class="directory-controls">
-            <div class="view-toggle">
-                <button id="grid-view-btn" aria-label="Switch to Grid View">
-                    <i class="icon-grid" aria-hidden="true">Grid</i>
-                </button>
-                <button id="list-view-btn" aria-label="Switch to List View">
-                    <i class="icon-list" aria-hidden="true">List</i>
-                </button>
-            </div>
-
-            <div class="search-filter">
-                <input type="text" id="search-input" placeholder="Search businesses..."
-                    aria-label="Search for businesses">
-                <select id="industry-filter" aria-label="Filter by industry" title="Filter businesses by industry">
-                    <option value="">All Industries</option>
-                    <option value="technology">Technology</option>
-                    <option value="retail">Retail</option>
-                    <option value="manufacturing">Manufacturing</option>
-                    <option value="services">Services</option>
-                </select>
-            </div>
+    <main class="head">
+        <h1>Business Directory</h1>
+        <div class="view-buttons">
+            <button id="gridView" type="button" title="Switch to grid view"><i class="fas fa-th"></i></button>
+            <button id="listView" type="button" title="Switch to list view"><i class="fas fa-list"></i></button>
         </div>
-
-        <div id="members-container" class="members-grid">
-            <!-- Members will be dynamically loaded here -->
-        </div>
+        <section id="directory" class="grid-view">
+            <!-- Business cards will be dynamically inserted here -->
+        </section>
     </main>
+ 
 
     <footer>
         <div class="footer-content">

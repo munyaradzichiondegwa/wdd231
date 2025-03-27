@@ -16,25 +16,11 @@
 
     <!-- Favicon -->
     <link rel="icon" href="images/favicon.webp" type="image/x-icon">
-    <link rel="manifest" href="/manifest.json">
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 
-    <!-- Fonts -->
-    <!-- Preload critical assets -->
-    <link rel="preload" href="styles/base.css" as="style">
-    <link rel="preload" href="scripts/join.js" as="script">
-    
-    <!-- Font Loading -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
-        rel="stylesheet">
-    
-    <!-- Stylesheets -->
     <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/directory-large.css">
+    <link rel="stylesheet" href="styles/directory-small.css">
     <link rel="stylesheet" href="styles/join.css">
-    <link rel="stylesheet" href="styles/accessibility.css">
     
     <!-- Scripts -->
     <script src="scripts/join.js" defer></script>
@@ -46,21 +32,16 @@
 <body>
     <header>
         <div class="logo-container">
-            <img src="images/harare-chamber-logo.webp" alt="Harare Chamber of Commerce Logo" width="150" height="150">
-            <p class="site-title">Harare Metropolitan Chamber of Commerce</p>
+            <img src="images/harare-chamber-logo.webp" alt="Chamber Logo">
+            <span>Harare Chamber of Commerce</span>
         </div>
         <nav>
-            <button id="hamburger-menu" aria-label="Toggle Menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
-            <ul class="nav-links">
-                <li><a href="index.html" title="Go to the Home page">Home</a></li>
-                <li><a href="directory.html" class="active" title="View the Business Directory">Directory</a></li>
-                <li><a href="discover.html" title="Discover businesses in Harare">Discover</a></li>
-                <li><a href="join.html" title="Join the Chamber of Commerce">Join</a></li>
-                <li><a href="contact.html" title="Contact the Chamber of Commerce">Contact</a></li>
+            <button id="myButton">&#9776;</button>
+            <ul class="menuLinks">
+                <li><a href="index.html" title="Home">Home</a></li>
+                <li class="currrent-menu-item"><a href="#">Directory</a></li>
+                <li><a href="#" title="join">Join</a></li>
+                <li><a href="#" title="Discover">Discover</a></li>
             </ul>
         </nav>
     </header>
