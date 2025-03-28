@@ -1,0 +1,60 @@
+{
+    "news": [
+        {
+            "id": "investment-law-2023",
+            "title": "New Investment Laws to Boost Foreign Direct Investment",
+            "category": "Policy",
+            "date": "July 3, 2023",
+            "full_content": "Zimbabwe has introduced comprehensive investment law reforms to attract foreign direct investment, simplifying business registration and providing tax incentives.",
+            "key_details": {
+                "policy_impact": "Reduced bureaucracy",
+                "investment_target": "USD 2 Billion annually",
+                "sectors_affected": ["Mining", "Agriculture", "Technology"]
+            },
+            "media": [
+                "investment_law_signing.jpg",
+                "ministerial_press_conference.mp4"
+            ]
+        },
+        {
+            "id": "dam-project-2023",
+            "title": "Major Dam Project to Boost Agricultural Productivity",
+            "category": "Infrastructure",
+            "date": "June 28, 2023",
+            "full_content": "The government completed the Gwayi-Shangani Dam project, set to transform agricultural irrigation and water management in Matabeleland region.",
+            "project_details": {
+                "dam_capacity": "790 million cubic meters",
+                "irrigation_area": "55,000 hectares",
+                "total_investment": "USD 320 Million"
+            },
+            "expected_outcomes": [
+                "Enhanced water security",
+                "Increased agricultural productivity",
+                "Climate change resilience"
+            ],
+            "media": [
+                "gwayi_shangani_dam_aerial.jpg",
+                "dam_construction_progress.mp4",
+                "ministerial_site_visit.jpg"
+            ]
+        },
+        {
+            "id": "digital-economy-2024",
+            "title": "Zimbabwe Launches National Digital Economy Strategy",
+            "category": "Technology",
+            "date": "January 15, 2024",
+            "full_content": "Comprehensive strategy to transform Zimbabwe into a regional digital economy hub, focusing on technology infrastructure and innovation.",
+            "strategy_pillars": [
+                "Digital infrastructure development",
+                "Tech skills training",
+                "Startup ecosystem support"
+            ],
+            "investment_target": "USD 500 Million by 2026",
+            "media": [
+                "digital_strategy_launch.jpg",
+                "tech_innovation_showcase.mp4",
+                "ministerial_digital_briefing.jpg"
+            ]
+        }
+    ]
+}

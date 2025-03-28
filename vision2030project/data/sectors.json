@@ -1,0 +1,127 @@
+{
+    "sectors": [
+        {
+            "name": "Agriculture",
+            "icon": "fa-tractor",
+            "description": "Transforming agricultural productivity and food security",
+            "projects": [
+                {
+                    "title": "Command Agriculture Programme",
+                    "year": "2016-2023",
+                    "description": "National agricultural financing and support program",
+                    "achievements": [
+                        "Increased maize production from 500,000 to 1.2 million tonnes",
+                        "Reduced national food import dependency",
+                        "Supported over 300,000 small-scale farmers"
+                    ],
+                    "media": [
+                        "command_agriculture_1.jpg",
+                        "command_agriculture_2.jpg",
+                        "command_agriculture_field_visit.mp4"
+                    ],
+                    "location": "Nationwide",
+                    "budget": "USD 500 Million"
+                },
+                {
+                    "title": "Pfumvudza/Inputs Support Programme",
+                    "year": "2020-2023",
+                    "description": "Climate-smart agriculture initiative",
+                    "achievements": [
+                        "Distributed conservation farming inputs to 1.8 million households",
+                        "Improved crop resilience to climate change",
+                        "Enhanced food security in rural communities"
+                    ],
+                    "media": [
+                        "pfumvudza_farming.jpg",
+                        "inputs_distribution.mp4",
+                        "climate_smart_agriculture.jpg"
+                    ],
+                    "location": "All rural provinces",
+                    "budget": "USD 250 Million"
+                }
+            ]
+        },
+        {
+            "name": "Mining",
+            "icon": "fa-hard-hat",
+            "description": "Leveraging mineral resources for economic transformation",
+            "projects": [
+                {
+                    "title": "Great Dyke Minerals Complex",
+                    "year": "2019-2024",
+                    "description": "Platinum and chrome beneficiation project",
+                    "achievements": [
+                        "Attracted USD 4.2 billion in foreign investment",
+                        "Established integrated mining and processing facility",
+                        "Created over 5,000 direct employment opportunities"
+                    ],
+                    "media": [
+                        "great_dyke_aerial.jpg",
+                        "mining_facility_construction.mp4",
+                        "mineral_processing_plant.jpg"
+                    ],
+                    "location": "Midlands Province",
+                    "budget": "USD 4.2 Billion"
+                },
+                {
+                    "title": "Minerals Value Addition Strategy",
+                    "year": "2021-2025",
+                    "description": "Enhanced mineral beneficiation program",
+                    "achievements": [
+                        "Implemented export tax reforms",
+                        "Established special economic zones for mineral processing",
+                        "Increased mineral export value by 35%"
+                    ],
+                    "media": [
+                        "mineral_export_stats.jpg",
+                        "value_addition_workshop.mp4",
+                        "special_economic_zone.jpg"
+                    ],
+                    "location": "Nationwide",
+                    "budget": "USD 300 Million"
+                }
+            ]
+        },
+        {
+            "name": "Tourism",
+            "icon": "fa-landmark",
+            "description": "Repositioning Zimbabwe as a premier tourism destination",
+            "projects": [
+                {
+                    "title": "Victoria Falls Tourism Revitalization",
+                    "year": "2018-2023",
+                    "description": "Infrastructure and attraction development",
+                    "achievements": [
+                        "Upgraded international airport facilities",
+                        "Developed new tourism infrastructure",
+                        "Increased tourist arrivals by 45%"
+                    ],
+                    "media": [
+                        "victoria_falls_aerial.jpg",
+                        "airport_expansion.mp4",
+                        "tourist_welcome_center.jpg"
+                    ],
+                    "location": "Victoria Falls",
+                    "budget": "USD 150 Million"
+                },
+                {
+                    "title": "National Tourism Recovery Strategy",
+                    "year": "2020-2024",
+                    "description": "Post-COVID tourism recovery initiative",
+                    "achievements": [
+                        "Developed digital tourism marketing platforms",
+                        "Implemented COVID-19 safety protocols",
+                        "Launched international tourism campaigns"
+                    ],
+                    "media": [
+                        "tourism_marketing_campaign.jpg",
+                        "digital_tourism_platform.mp4",
+                        "international_tourism_fair.jpg"
+                    ],
+                    "location": "Nationwide",
+                    "budget": "USD 75 Million"
+                }
+            ]
+        }
+    ]
+}

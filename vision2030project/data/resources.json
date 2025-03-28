@@ -1,0 +1,61 @@
+{
+    "documents": [
+        {
+            "id": "tsp-report",
+            "title": "Transitional Stabilisation Programme Final Report",
+            "type": "Policy Document",
+            "period": "2018-2020",
+            "fileSize": "4.2 MB",
+            "description": "Comprehensive report on economic stabilization efforts and achievements",
+            "key_sections": [
+                "Macroeconomic reforms",
+                "Fiscal policy analysis",
+                "Investment landscape"
+            ],
+            "download_link": "/resources/tsp_final_report.pdf"
+        },
+        {
+            "id": "nds1-midterm",
+            "title": "National Development Strategy 1 Mid-Term Review",
+            "type": "Progress Report",
+            "period": "2021-2023",
+            "fileSize": "5.8 MB",
+            "description": "Detailed evaluation of NDS1 implementation and economic progress",
+            "performance_metrics": [
+                "GDP growth tracking",
+                "Sector-specific achievements",
+                "Future recommendations"
+            ],
+            "download_link": "/resources/nds1_midterm_review.pdf"
+        },
+        {
+            "id": "vision2030-masterplan",
+            "title": "Zimbabwe Vision 2030 Master Plan",
+            "type": "Strategic Document",
+            "period": "2018-2030",
+            "fileSize": "7.5 MB",
+            "description": "Comprehensive roadmap for economic transformation",
+            "strategic_dimensions": [
+                "Economic transformation",
+                "Social development",
+                "Infrastructure modernization"
+            ],
+            "download_link": "/resources/vision2030_masterplan.pdf"
+        }
+    ],
+    "multimedia_resources": [
+        {
+            "id": "economic-forum-2023",
+            "title": "Zimbabwe Economic Transformation Forum 2023",
+            "type": "Video Recording",
+            "duration": "2h 45m",
+            "description": "Full recording of the national economic strategy discussion",
+            "key_speakers": [
+                "President Mnangagwa",
+                "Finance Minister",
+                "Central Bank Governor"
+            ],
+            "download_link": "/resources/economic_forum_2023.mp4"
+        }
+    ]
+}
