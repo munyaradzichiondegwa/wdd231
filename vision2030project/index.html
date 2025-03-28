@@ -27,19 +27,19 @@
     <meta name="twitter:image" content="path/to/your/image.jpg">
 
     <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/homepage.css">
+    <link rel="stylesheet" href="styles/hero-slideshow.css">
     <link rel="stylesheet" href="styles/tailwind-custom.css">
     <link rel="stylesheet" href="styles/icons.css">
-    <link rel="stylesheet" href="styles/homepage.css">
-    <link rel="stylesheet" href="styles/theme.css">
+    <link rel="stylesheet" href="styles/modal.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <!-- JavaScript Files -->
-    <script src="scripts/theme.js"></script>
     <script src="scripts/hero-slideshow.js"></script>
+    <script src="script/tailwind.js"></script>
     <script src="scripts/main.js"></script>
     <script src="scripts/modal.js"></script>
-    <script src="scripts/scroll.js"></script>
     <script src="scripts/icons.js"></script>
 </head>
 
@@ -87,57 +87,56 @@
     <!-- Hero Section -->
     <section id="home" class="relative w-full overflow-hidden">
         <div class="slides relative">
-            <div class="slide fade" style="background-image: url('path/to/your/image1.jpg');">
-                <div class="container mx-auto px-4 py-16">
-                    <div class="text-center">
-                        <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Zimbabwe Vision 2030</h1>
-                        <p class="text-xl text-white max-w-3xl mx-auto">
-                            Transforming Zimbabwe into an upper middle-income economy through strategic development, innovation, and sustainable growth.
-                        </p>
-                    </div>
+            <div class="slide" style="background-image: url('path/to/your/image1.jpg');">
+                <div class="slide-content">
+                    <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Zimbabwe Vision 2030</h1>
+                    <p class="text-xl text-white max-w-3xl mx-auto">
+                        Transforming Zimbabwe into an upper middle-income economy through strategic development, innovation,
+                        and sustainable growth.
+                    </p>
                 </div>
             </div>
-            <div class="slide fade" style="background-image: url('path/to/your/image2.jpg');">
-                <div class="container mx-auto px-4 py-16">
-                    <div class="text-center">
-                        <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Empowering the Economy</h1>
-                        <p class="text-xl text-white max-w-3xl mx-auto">
-                            Unlocking opportunities for growth through innovation and infrastructure.
-                        </p>
-                    </div>
+            <div class="slide" style="background-image: url('path/to/your/image2.jpg');">
+                <div class="slide-content">
+                    <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Empowering the Economy</h1>
+                    <p class="text-xl text-white max-w-3xl mx-auto">
+                        Unlocking opportunities for growth through innovation and infrastructure.
+                    </p>
                 </div>
             </div>
-            <div class="slide fade" style="background-image: url('path/to/your/image3.jpg');">
-                <div class="container mx-auto px-4 py-16">
-                    <div class="text-center">
-                        <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Creating Sustainable Futures</h1>
-                        <p class="text-xl text-white max-w-3xl mx-auto">
-                            Building a resilient economy for future generations.
-                        </p>
-                    </div>
+            <div class="slide" style="background-image: url('path/to/your/image3.jpg');">
+                <div class="slide-content">
+                    <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Creating Sustainable Futures</h1>
+                    <p class="text-xl text-white max-w-3xl mx-auto">
+                        Building a resilient economy for future generations.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Quick Links Section -->
-    <section class="bg-white dark:bg-dark-card py-12">
-        <div class="container mx-auto px-4">
+<section class="bg-white dark:bg-dark-card py-12 relative z-10">
+    <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-gray-100 dark:bg-dark-bg p-6 rounded-lg text-center hover:shadow-lg transition-all">
+                <div
+                    class="bg-gray-100 dark:bg-dark-bg p-6 rounded-lg text-center hover:shadow-lg transition-all cursor-pointer">
                     <i class="fas fa-chart-line text-4xl text-primary mb-4"></i>
                     <h3 class="text-xl font-semibold mb-2">Economic Transformation</h3>
                     <p class="text-gray-600 dark:text-gray-400">Strategic roadmap for economic recovery and growth</p>
                 </div>
-                <div class="bg-gray-100 dark:bg-dark-bg p-6 rounded-lg text-center hover:shadow-lg transition-all">
+                <div
+                    class="bg-gray-100 dark:bg-dark-bg p-6 rounded-lg text-center hover:shadow-lg transition-all cursor-pointer">
                     <i class="fas fa-industry text-4xl text-primary mb-4"></i>
                     <h3 class="text-xl font-semibold mb-2">Sector Development</h3>
                     <p class="text-gray-600 dark:text-gray-400">Targeted strategies for key economic sectors</p>
                 </div>
-                <div class="bg-gray-100 dark:bg-dark-bg p-6 rounded-lg text-center hover:shadow-lg transition-all">
+                <div
+                    class="bg-gray-100 dark:bg-dark-bg p-6 rounded-lg text-center hover:shadow-lg transition-all cursor-pointer">
                     <i class="fas fa-globe text-4xl text-primary mb-4"></i>
                     <h3 class="text-xl font-semibold mb-2">Global Positioning</h3>
-                    <p class="text-gray-600 dark:text-gray-400">Enhancing Zimbabwe's international economic competitiveness</p>
+                    <p class="text-gray-600 dark:text-gray-400">Enhancing Zimbabwe's international economic competitiveness
+                    </p>
                 </div>
             </div>
         </div>
@@ -181,6 +180,24 @@
         </div>
     </section>
 
+    <div id="programDetailsModal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Program Details</h2>
+                <button id="closeModal" class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <!-- Dynamic content will be inserted here -->
+                <div id="modalProgramContent">
+                    <p>Loading program details...</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="modalCloseButton" class="btn btn-secondary">Close</button>
+            </div>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer class="bg-gray-800 text-white py-12">
         <div class="container mx-auto px-4">
@@ -215,5 +232,7 @@
             </div>
         </div>
     </footer>
+    <!-- Add this just before the closing </body> tag -->
+    
 </body>
 </html>
