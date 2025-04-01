@@ -1,0 +1,29 @@
+/* Small screen layout */
+@media screen and (max-width: 640px) {
+    .discover-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "visit"
+            "card1"
+            "card2"
+            "card3"
+            "card4"
+            "card5"
+            "card6"
+            "card7"
+            "card8";
+    }
+}
+
+/* Medium screen layout */
+@media screen and (min-width: 641px) and (max-width: 1024px) {
+    .discover-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+            "visit visit"
+            "card1 card2"
+            "card3 card4"
+            "card5 card6"
+            "card7 card8";
+    }
+}

@@ -1,0 +1,60 @@
+{
+    "locations": [
+        {
+            "id": 1,
+            "name": "Location 1",
+            "address": "123 Main St",
+            "description": "Description of location 1",
+            "image": "images/location1.webp"
+        },
+        {
+            "id": 2,
+            "name": "Location 2",
+            "address": "456 Oak Ave",
+            "description": "Description of location 2",
+            "image": "images/location2.webp"
+        },
+        {
+            "id": 3,
+            "name": "Location 3",
+            "address": "789 Pine Blvd",
+            "description": "Description of location 3",
+            "image": "images/location3.webp"
+        },
+        {
+            "id": 4,
+            "name": "Location 4",
+            "address": "101 Maple Rd",
+            "description": "Description of location 4",
+            "image": "images/location4.webp"
+        },
+        {
+            "id": 5,
+            "name": "Location 5",
+            "address": "202 Birch Ln",
+            "description": "Description of location 5",
+            "image": "images/location5.webp"
+        },
+        {
+            "id": 6,
+            "name": "Location 6",
+            "address": "303 Cedar Dr",
+            "description": "Description of location 6",
+            "image": "images/location6.webp"
+        },
+        {
+            "id": 7,
+            "name": "Location 7",
+            "address": "404 Elm St",
+            "description": "Description of location 7",
+            "image": "images/location7.webp"
+        },
+        {
+            "id": 8,
+            "name": "Location 8",
+            "address": "505 Willow Way",
+            "description": "Description of location 8",
+            "image": "images/location8.webp"
+        }
+    ]
+}
