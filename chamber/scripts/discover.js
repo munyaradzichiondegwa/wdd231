@@ -1,30 +1,48 @@
-// Visit tracking functionality
-function getVisitMessage() {
-    const lastVisit = localStorage.getItem('lastVisit');
-    const currentDate = Date.now();
-    let message = '';
-
-    if (!lastVisit) {
-        message = "Welcome! Let us know if you have any questions.";
-    } else {
-        const daysSinceLastVisit = Math.floor((currentDate - lastVisit) / (1000 * 60 * 60 * 24));
-        
-        if (daysSinceLastVisit < 1) {
-            message = "Back so soon! Awesome!";
-        } else {
-            message = `You last visited ${daysSinceLastVisit} ${daysSinceLastVisit === 1 ? 'day' : 'days'} ago.`;
-        }
-    }
-
-    localStorage.setItem('lastVisit', currentDate);
-    return message;
-}
-
-// When the DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
-    // Display visit message
-    const visitMessageElement = document.getElementById('visitMessage');
-    if (visitMessageElement) {
-        visitMessageElement.textContent = getVisitMessage();
+    const sidebar = document.getElementById('sidebar');
+    const gallery = document.getElementById('discover-gallery');
+
+    // Last Visit Logic
+    function calculateVisitMessage() {
+        const currentVisit = Date.now();
+        const lastVisit = localStorage.getItem('lastVisit');
+
+        if (!lastVisit) {
+            sidebar.innerHTML = "Welcome! Let us know if you have any questions.";
+        } else {
+            const daysDifference = Math.floor((currentVisit - parseInt(lastVisit)) / (1000 * 60 * 60 * 24));
+            
+            if (daysDifference < 1) {
+                sidebar.innerHTML = "Back so soon! Awesome!";
+            } else {
+                sidebar.innerHTML = `You last visited ${daysDifference} day${daysDifference !== 1 ? 's' : ''} ago.`;
+            }
+        }
+
+        localStorage.setItem('lastVisit', currentVisit.toString());
     }
+
+    // Load Discover Items
+    async function loadDiscoverItems() {
+        const response = await fetch('data/discover-items.json');
+        const data = await response.json();
+
+        data.items.forEach(item => {
+            const card = document.createElement('div');
+            card.classList.add('discover-card');
+            card.innerHTML = `
+                <h2>${item.title}</h2>
+                <figure>
+                    <img src="images/${item.image}" alt="${item.title}">
+                </figure>
+                <address>${item.address}</address>
+                <p>${item.description}</p>
+                <button>Learn More</button>
+            `;
+            gallery.appendChild(card);
+        });
+    }
+
+    calculateVisitMessage();
+    loadDiscoverItems();
 });

@@ -1,0 +1,77 @@
+/* Global Styles */
+body {
+    font-family: 'Georgia', serif;
+    color: #000;
+    /* Black for standard text */
+    background-color: #fff;
+    line-height: 1.6;
+    margin: 20px;
+}
+
+/* Heading Styles */
+h1,
+h2,
+h3 {
+    font-family: 'Arial', sans-serif;
+    color: #008000;
+    /* Green inspired by Zimbabwe's flag */
+}
+
+/* Accent and Highlight Classes */
+.accent {
+    color: #FF0000;
+    /* Red accents for important elements */
+}
+
+.highlight {
+    background-color: #FFFF00;
+    /* Yellow highlights for emphasis */
+}
+
+/* Wireframe Container */
+.wireframe {
+    border: 2px dashed #000;
+    padding: 10px;
+    margin: 15px 0;
+}
+
+/* Header Styles */
+header {
+    margin-bottom: 20px;
+}
+
+/* Navigation (if needed) */
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+/* Footer Styles */
+footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+/* Additional Styling for Sections */
+section {
+    margin-bottom: 25px;
+}
+
+section p,
+section ul {
+    margin-left: 15px;
+}
+
+/* Responsive adjustments can be added as needed */
+@media (max-width: 600px) {
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+}

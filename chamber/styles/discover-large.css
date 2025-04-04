@@ -1,92 +1,59 @@
-/* Base styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
-}
-
-/* Visit message styles */
-.visit-message {
-    background: #f0f0f0;
-    padding: 1rem;
-    margin: 1rem;
-    border-radius: 4px;
-    text-align: center;
-}
-
-/* Grid container */
+/* Base Grid Layout for Small Screens */
 .discover-grid {
     display: grid;
+    grid-template-areas: 
+        "sidebar"
+        "gallery";
     gap: 1rem;
-    padding: 1rem;
 }
 
-/* Card styles */
-.card {
+.sidebar {
+    grid-area: sidebar;
+}
+
+.gallery {
+    grid-area: gallery;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.discover-card {
     border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    background: white;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.card figure img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
+    padding: 1rem;
     transition: transform 0.3s ease;
 }
 
-.card-content {
-    padding: 1rem;
+.discover-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
 }
 
-.card h2 {
-    margin-bottom: 0.5rem;
-    color: #333;
-    font-family: 'Poppins', sans-serif;
+/* Hover effect for non-mobile screens */
+@media screen and (min-width: 641px) {
+    .discover-card img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
 }
 
-.card address {
-    font-style: normal;
-    margin-bottom: 0.5rem;
-    color: #666;
-}
-
-.card p {
-    margin-bottom: 1rem;
-}
-
-.card button {
-    background: #0066cc;
-    color: white;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.card button:hover {
-    background: #0052a3;
-}
-
-/* Large screen layout */
-@media screen and (min-width: 1025px) {
+/* Medium Screen Layout */
+@media screen and (min-width: 641px) {
     .discover-grid {
-        grid-template-columns: repeat(4, 1fr);
         grid-template-areas: 
-            "visit visit visit visit"
-            "card1 card2 card3 card4"
-            "card5 card6 card7 card8";
+            "sidebar gallery";
+        grid-template-columns: 1fr 3fr;
     }
 
-    .card figure img:hover {
-        transform: scale(1.05);
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Large Screen Layout */
+@media screen and (min-width: 1025px) {
+    .gallery {
+        grid-template-columns: repeat(4, 1fr);
     }
 }

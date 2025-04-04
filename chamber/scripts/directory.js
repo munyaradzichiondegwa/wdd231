@@ -1,66 +1,53 @@
-document.addEventListener("DOMContentLoaded", async function () {
-    const directory = document.getElementById("directory");
+document.addEventListener("DOMContentLoaded", () => {
+    fetch("data/discover.json")
+        .then(response => response.json())
+        .then(data => displayCards(data))
+        .catch(error => console.error("Error loading JSON data:", error));
 
-    // Fetch JSON data
-    async function getMembers() {
-        const response = await fetch("data/members.json");
-        const data = await response.json();
-        return data.members; // Fetching the members array directly
-    }
-
-    // Function to display members in grid or list view
-    async function displayMembers(viewType = "grid") {
-        const members = await getMembers();
-        directory.innerHTML = ""; // Clear previous content
-
-        // Update directory class based on view type
-        if (viewType === "list") {
-            directory.classList.add("list-view");
-            directory.classList.remove("grid-view");
-        } else {
-            directory.classList.add("grid-view");
-            directory.classList.remove("list-view");
-        }
-
-        members.forEach((member) => {
+    function displayCards(items) {
+        const container = document.getElementById("discover");
+        container.innerHTML = "";
+        
+        items.forEach(item => {
             const card = document.createElement("div");
-            card.classList.add("business-card");
-
-            if (viewType === "list") {
-                card.classList.add("list-card");
-            }
-
+            card.classList.add("card");
+            
             card.innerHTML = `
-                <img src="${member.logoPath}" alt="${member.name}"> <!-- Changed here -->
-                <h3>${member.name}</h3>
-                <p>${member.address}</p>
-                <p>${member.phone}</p>
-                <a href="${member.website}" target="_blank">Visit Website</a>
-                <p class="membership-level">Membership Level: ${getMembershipLevel(member.membership)}</p>
+                <figure>
+                    <img src="${item.image}" alt="${item.name}" loading="lazy">
+                </figure>
+                <div class="card-content">
+                    <h2>${item.name}</h2>
+                    <address>${item.address}</address>
+                    <p>${item.description}</p>
+                    <button onclick="window.location.href='${item.link}'">Learn More</button>
+                </div>
             `;
-
-            directory.appendChild(card);
+            
+            container.appendChild(card);
         });
     }
 
-    // Helper function to get membership level text
-    function getMembershipLevel(level) {
-        switch (level) {
-            case 1:
-                return "Member";
-            case 2:
-                return "Silver Member";
-            case 3:
-                return "Gold Member";
-            default:
-                return "Member";
+    // Visitor message using localStorage
+    const visitorMessage = document.getElementById("visitor-message");
+    if (visitorMessage) {
+        const lastVisit = localStorage.getItem("lastVisit");
+        const now = Date.now();
+
+        if (!lastVisit) {
+            visitorMessage.textContent = "Welcome! Let us know if you have any questions.";
+        } else {
+            const lastVisitDate = parseInt(lastVisit, 10);
+            const timeDifference = now - lastVisitDate;
+            const daysDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+
+            if (daysDifference < 1) {
+                visitorMessage.textContent = "Back so soon! Awesome!";
+            } else {
+                visitorMessage.textContent = `You last visited ${daysDifference} day${daysDifference > 1 ? 's' : ''} ago.`;
+            }
         }
+
+        localStorage.setItem("lastVisit", now);
     }
-
-    // Initial Display
-    displayMembers("grid");
-
-    // Toggle View Event Listeners
-    document.getElementById("gridView").addEventListener("click", () => displayMembers("grid"));
-    document.getElementById("listView").addEventListener("click", () => displayMembers("list"));
 });
