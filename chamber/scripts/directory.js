@@ -1,53 +1,57 @@
 document.addEventListener("DOMContentLoaded", () => {
-    fetch("data/discover.json")
-        .then(response => response.json())
-        .then(data => displayCards(data))
+    fetch("data/members.json")
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Network response was not ok");
+            }
+            return response.json();
+        })
+        .then(data => displayCards(data.members)) // <-- Access the "members" array inside the JSON
         .catch(error => console.error("Error loading JSON data:", error));
 
-    function displayCards(items) {
-        const container = document.getElementById("discover");
+    function displayCards(members) {
+        const container = document.getElementById("directory");
         container.innerHTML = "";
-        
-        items.forEach(item => {
+
+        members.forEach(member => {
             const card = document.createElement("div");
             card.classList.add("card");
-            
+
+            const websiteLink = member.website
+                ? `<a href="${member.website}" target="_blank" rel="noopener noreferrer">${member.website}</a>`
+                : `<span>No website available</span>`;
+
             card.innerHTML = `
                 <figure>
-                    <img src="${item.image}" alt="${item.name}" loading="lazy">
+                    <img src="${member.logoPath}" alt="${member.name} logo" loading="lazy" width="200">
                 </figure>
                 <div class="card-content">
-                    <h2>${item.name}</h2>
-                    <address>${item.address}</address>
-                    <p>${item.description}</p>
-                    <button onclick="window.location.href='${item.link}'">Learn More</button>
+                    <h2>${member.name}</h2>
+                    <p><strong>Address:</strong> ${member.address}</p>
+                    <p><strong>Phone:</strong> ${member.phone}</p>
+                    <p><strong>Website:</strong> ${websiteLink}</p>
+                    <p><strong>Membership Level:</strong> ${member.membershipLevel}</p>
                 </div>
             `;
-            
+
             container.appendChild(card);
         });
     }
 
-    // Visitor message using localStorage
-    const visitorMessage = document.getElementById("visitor-message");
-    if (visitorMessage) {
-        const lastVisit = localStorage.getItem("lastVisit");
-        const now = Date.now();
+    // View toggle logic (optional)
+    const gridViewBtn = document.getElementById("gridView");
+    const listViewBtn = document.getElementById("listView");
+    const directory = document.getElementById("directory");
 
-        if (!lastVisit) {
-            visitorMessage.textContent = "Welcome! Let us know if you have any questions.";
-        } else {
-            const lastVisitDate = parseInt(lastVisit, 10);
-            const timeDifference = now - lastVisitDate;
-            const daysDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+    if (gridViewBtn && listViewBtn && directory) {
+        gridViewBtn.addEventListener("click", () => {
+            directory.classList.add("grid-view");
+            directory.classList.remove("list-view");
+        });
 
-            if (daysDifference < 1) {
-                visitorMessage.textContent = "Back so soon! Awesome!";
-            } else {
-                visitorMessage.textContent = `You last visited ${daysDifference} day${daysDifference > 1 ? 's' : ''} ago.`;
-            }
-        }
-
-        localStorage.setItem("lastVisit", now);
+        listViewBtn.addEventListener("click", () => {
+            directory.classList.add("list-view");
+            directory.classList.remove("grid-view");
+        });
     }
 });

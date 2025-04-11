@@ -8,83 +8,105 @@
   <meta name="description" content="Business directory for Harare's thriving business community">
   <meta name="author" content="Munyaradzi Chiondegwa">
 
-  <!-- Facebook Open Graph Meta Tags -->
+  <!-- Open Graph -->
   <meta property="og:title" content="Harare Chamber Business Directory">
   <meta property="og:type" content="website">
   <meta property="og:image" content="images/harare-chamber-logo.webp">
   <meta property="og:url" content="https://munyaradzichiondegwa.github.io/wdd231/chamber/directory.html">
 
-  <link rel="stylesheet" href="styles/normalize.css">
-  <link rel="stylesheet" href="styles/directory-large.css">
-  <link rel="stylesheet" href="styles/directory-small.css">
-  <link rel="stylesheet" href="styles/base.css" />
-  <link rel="stylesheet" href="styles/medium.css" media="(min-width: 641px)" />
+  <!-- Preload and defer CSS -->
+  <link rel="preload" href="styles/base.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="styles/medium.css" as="style" onload="this.onload=null;this.rel='stylesheet'"
+    media="(min-width: 641px)">
+  <link rel="preload" href="styles/directory-large.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="styles/directory-small.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="styles/normalize.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+  <!-- Fallback for no JS -->
+  <noscript>
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/medium.css" media="(min-width: 641px)">
+    <link rel="stylesheet" href="styles/directory-large.css">
+    <link rel="stylesheet" href="styles/directory-small.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+  </noscript>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@300;400;700&display=swap"
     rel="stylesheet">
-  <link rel="icon" href="images/favicon.webp"> <!-- Corrected rel to favicon -->
-  <script src="scripts/nav.js" defer></script>
-  <script src="scripts/date.js" defer></script>
+
+  <link rel="icon" href="images/favicon.webp">
+
+  <!-- Scripts (deferred) -->
+  <script defer src="scripts/nav.js"></script>
+  <script defer src="scripts/date.js"></script>
   <script defer src="scripts/discover.js"></script>
   <script defer src="scripts/directory.js"></script>
-  <script src="https://kit.fontawesome.com/ed4ce25ef3.js" crossorigin="anonymous"></script>
+
+  <!-- Font Awesome -->
+  <script defer src="https://kit.fontawesome.com/ed4ce25ef3.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-<header>
-  <div class="logo-container">
-    <img src="images/harare-chamber-logo.webp" alt="Harare Chamber of Commerce Logo" width="200" height="100">
-    <!-- Added width and height -->
-    <span>Harare Chamber of Commerce</span>
-  </div>
-  <nav>
-    <button id="myButton" aria-expanded="false" aria-controls="menu" title="Open menu">☰</button>
-    <ul class="menuLinks" id="menu" hidden>
-      <li><a href="index.html" title="Home">Home</a></li>
-      <li><a href="directory.html" title="Directory">Directory</a></li>
-      <li><a href="join.html" title="Join">Join</a></li>
-      <li><a href="discover.html" title="Discover">Discover</a></li>
-      <li><a href="thankyou.html" title="Thank You">Thank You</a></li>
-    </ul>
-  </nav>
-</header>
+  <header>
+    <div class="logo-container">
+      <img src="images/harare-chamber-logo.webp" alt="Chamber Logo" width="100" height="100">
+      <span>Harare Chamber of Commerce</span>
+    </div>
+    <nav>
+      <button id="myButton" aria-expanded="false" aria-controls="menu" title="Open menu">☰</button>
+      <ul class="menuLinks" id="menu" hidden>
+        <li><a href="index.html" title="Home">Home</a></li>
+        <li><a href="directory.html" title="Directory">Directory</a></li>
+        <li><a href="join.html" title="Join">Join</a></li>
+        <li><a href="discover.html" title="Discover">Discover</a></li>
+        <li><a href="thankyou.html" title="Thank You">Thank You</a></li>
+      </ul>
+    </nav>
+  </header>
 
   <main>
     <aside id="visit-message" class="sidebar"></aside>
 
     <section class="cards" id="discover-cards">
-      <!-- Cards inserted by JS -->
+      <h2 class="sr-only">Discover Harare Highlights</h2>
+      <!-- Cards dynamically inserted by JS -->
     </section>
   </main>
 
-   <footer>
-        <div class="footer-content">
-            <div class="contact-info">
-                <h3>Harare Metropolitan Chamber of Commerce</h3>
-                <p>10 Enterprise Road, Harare, Zimbabwe</p>
-                <p><a href="mailto:inf@hararechamber.org">inf@hararechamber.org</a></p> <!-- Added email link -->
-                <p>+263 (4) 123-4567</p>
-            </div>
+  <footer>
+    <div class="footer-content">
+      <div class="contact-info">
+        <h3>Harare Metropolitan Chamber of Commerce</h3>
+        <p>10 Enterprise Road, Harare, Zimbabwe</p>
+        <p><a href="mailto:inf@hararechamber.org">inf@hararechamber.org</a></p>
+        <p>+263 (4) 123-4567</p>
+      </div>
 
-            <div class="social-icons">
-                <a href="https://www.linkedin.com/in/munyaradzi-chiondegwa" title="LinkedIn" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn Profile
-                </a>
-                <a href="https://web.facebook.com/nevanjimunya.chiondegwa" title="Facebook" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-facebook" aria-hidden="true"></i> Facebook Profile
-                </a>
-                <a href="https://x.com/NNehoreka" title="X" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-x-twitter" aria-hidden="true"></i> X (formerly Twitter) Profile
-                </a>
-            </div>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/munyaradzi-chiondegwa" title="LinkedIn" target="_blank"
+          rel="noopener noreferrer">
+          <i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn Profile
+        </a>
+        <a href="https://web.facebook.com/nevanjimunya.chiondegwa" title="Facebook" target="_blank"
+          rel="noopener noreferrer">
+          <i class="fab fa-facebook" aria-hidden="true"></i> Facebook Profile
+        </a>
+        <a href="https://x.com/NNehoreka" title="X" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-x-twitter" aria-hidden="true"></i> X (formerly Twitter) Profile
+        </a>
+      </div>
 
-            <div class="project-info">
-                <p>WDD231 Project | Munyaradzi Chiondegwa</p>
-                <p>© <span id="current-year"></span> Harare Chamber</p>
-                <p>Last Modified: <span id="last-modified"></span></p>
-            </div>
-        </div>
-    </footer>
-    
+      <div class="project-info">
+        <p>WDD231 Project | Munyaradzi Chiondegwa</p>
+        <p>© <span id="current-year"></span> Harare Chamber</p>
+        <p>Last Modified: <span id="last-modified"></span></p>
+      </div>
+    </div>
+  </footer>
 </body>
+
 </html>

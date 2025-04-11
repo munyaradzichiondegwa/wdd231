@@ -177,3 +177,16 @@ footer {
         justify-content: center;
     }
 }
+
+img {
+    height: auto;
+    max-width: 100%;
+    aspect-ratio: attr(width) / attr(height);
+}
+
+/* For modern browsers */
+@supports (aspect-ratio: 1) {
+    img {
+        aspect-ratio: var(--img-ratio);
+    }
+}

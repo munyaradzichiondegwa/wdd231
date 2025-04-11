@@ -72,3 +72,60 @@ main {
   height: auto;
   border-radius: 8px;
 }
+
+.sidebar {
+  background-color: #FFD700;
+  color: #333;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.sidebar {
+  background-color: #FFD700;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 12px;
+  font-weight: 600;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  max-width: 350px;
+}
+
+.cards {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  padding: 1rem;
+}
+
+.discover-card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.discover-card:hover {
+  transform: scale(1.02);
+}
+
+.discover-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.discover-card h3 {
+  margin: 0.75rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.discover-card p {
+  margin: 0 0.75rem 1rem;
+  font-family: 'Open Sans', sans-serif;
+}
