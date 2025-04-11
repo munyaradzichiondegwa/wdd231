@@ -1,48 +1,45 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const sidebar = document.getElementById('sidebar');
-    const gallery = document.getElementById('discover-gallery');
+document.addEventListener("DOMContentLoaded", () => {
+  const cardsContainer = document.getElementById("discover-cards");
+  const visitMsg = document.getElementById("visit-message");
 
-    // Last Visit Logic
-    function calculateVisitMessage() {
-        const currentVisit = Date.now();
-        const lastVisit = localStorage.getItem('lastVisit');
+  // Visitor message
+  const now = Date.now();
+  const lastVisit = localStorage.getItem("lastVisit");
 
-        if (!lastVisit) {
-            sidebar.innerHTML = "Welcome! Let us know if you have any questions.";
-        } else {
-            const daysDifference = Math.floor((currentVisit - parseInt(lastVisit)) / (1000 * 60 * 60 * 24));
-            
-            if (daysDifference < 1) {
-                sidebar.innerHTML = "Back so soon! Awesome!";
-            } else {
-                sidebar.innerHTML = `You last visited ${daysDifference} day${daysDifference !== 1 ? 's' : ''} ago.`;
-            }
-        }
-
-        localStorage.setItem('lastVisit', currentVisit.toString());
+  if (!lastVisit) {
+    visitMsg.textContent = "Welcome! Let us know if you have any questions.";
+  } else {
+    const days = Math.floor((now - lastVisit) / (1000 * 60 * 60 * 24));
+    if (days < 1) {
+      visitMsg.textContent = "Back so soon! Awesome!";
+    } else {
+      visitMsg.textContent = `You last visited ${days} day${days > 1 ? "s" : ""} ago.`;
     }
+  }
 
-    // Load Discover Items
-    async function loadDiscoverItems() {
-        const response = await fetch('data/discover-items.json');
-        const data = await response.json();
+  localStorage.setItem("lastVisit", now);
 
-        data.items.forEach(item => {
-            const card = document.createElement('div');
-            card.classList.add('discover-card');
-            card.innerHTML = `
-                <h2>${item.title}</h2>
-                <figure>
-                    <img src="images/${item.image}" alt="${item.title}">
-                </figure>
-                <address>${item.address}</address>
-                <p>${item.description}</p>
-                <button>Learn More</button>
-            `;
-            gallery.appendChild(card);
-        });
-    }
+  // Load JSON data
+  fetch("data/discover.json")
+    .then((res) => res.json())
+    .then((data) => {
+      data.forEach((item, index) => {
+        const card = document.createElement("div");
+        card.className = "card";
+        card.style.gridArea = `card${index + 1}`;
 
-    calculateVisitMessage();
-    loadDiscoverItems();
+        card.innerHTML = `
+          <h2>${item.name}</h2>
+          <figure><img src="${item.image}" alt="${item.name} image" loading="lazy" /></figure>
+          <address>${item.address}</address>
+          <p>${item.description}</p>
+          <button>Learn More</button>
+        `;
+        cardsContainer.appendChild(card);
+      });
+    })
+    .catch((err) => {
+      cardsContainer.innerHTML = "<p>Failed to load attractions.</p>";
+      console.error("Error loading JSON:", err);
+    });
 });

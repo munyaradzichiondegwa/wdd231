@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Mbare Musika",
+    "image": "images/mbare.webp",
+    "address": "Mbare, Harare",
+    "description": "A bustling market with produce, crafts, and culture."
+  },
+  {
+    "name": "Joina City",
+    "image": "images/joina.webp",
+    "address": "Jason Moyo Ave, Harare",
+    "description": "Modern shopping mall with food courts and office space."
+  },
+  {
+    "name": "National Gallery",
+    "image": "images/gallery.webp",
+    "address": "Park Lane, Harare",
+    "description": "Home to Zimbabwe's finest art and cultural exhibits."
+  },
+  {
+    "name": "Harare Gardens",
+    "image": "images/gardens.webp",
+    "address": "Herbert Chitepo Ave, Harare",
+    "description": "Scenic gardens perfect for walks and photography."
+  },
+  {
+    "name": "Sam Levy's Village",
+    "image": "images/samlevy.webp",
+    "address": "Borrowdale, Harare",
+    "description": "Premier shopping and entertainment complex."
+  },
+  {
+    "name": "Eastgate Market",
+    "image": "images/eastgate.webp",
+    "address": "Robert Mugabe Rd, Harare",
+    "description": "Iconic shopping complex with eco-architecture."
+  },
+  {
+    "name": "Avondale Flea Market",
+    "image": "images/avondale.webp",
+    "address": "Avondale, Harare",
+    "description": "Vibrant local market for crafts and collectibles."
+  },
+  {
+    "name": "Chapman Golf Club",
+    "image": "images/chapman.webp",
+    "address": "Eastlea, Harare",
+    "description": "One of the oldest golf clubs in Zimbabwe."
+  }
+]
