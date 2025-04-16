@@ -1,0 +1,752 @@
+/* styles/style.css */
+
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Typography */
+h1,
+h2,
+h3 {
+    color: #008000;
+    /* Green */
+    margin-bottom: 0.5rem;
+}
+
+h1 {
+    font-size: 2.5rem; /* Make H1 bigger */
+}
+
+a {
+    color: #008000;
+    /* Green */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Header and Navigation */
+header {
+    background-color: #008000;
+    /* Green */
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    margin-right: 15px;
+}
+
+.logo a {
+    display: block;
+}
+
+.logo img {
+    max-height: 50px;
+    display: block;
+}
+
+.header-text {
+    flex-grow: 1;
+    text-align: left;
+    color: yellow; /* Changed text color to yellow */
+}
+
+.header-text h1 {
+    font-size: 2rem; /* Adjusted header text h1 size */
+    margin: 0;
+    color: yellow; /* Ensure h1 is yellow */
+}
+
+.header-text p {
+    font-size: 1.2rem;
+    margin: 0;
+    color: yellow; /* Ensure p is yellow */
+}
+
+#menu-button {
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+#nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 128, 0, 0.9); /* Semi-transparent green */
+    z-index: 10;
+}
+
+#nav-list.open {
+    display: flex;
+}
+
+#nav-list li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 0.75rem 1rem;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    font-size: 1.2rem; /* Increased font size for nav links */
+}
+
+#nav-list li a:hover {
+    background-color: #D4AF37;
+    /* Gold */
+}
+
+/* Main Content */
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    background-color: #000;
+    /* Black */
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+footer a {
+    color: #D4AF37;
+    /* Gold */
+}
+
+/* Homepage Styles */
+#hero {
+    background-color: #f0f8ff;
+    /* Light Blue */
+    padding: 3rem;
+    text-align: center;
+    border-radius: 8px;
+}
+
+#hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #008000;
+    /* Ensure the title is visible */
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #D4AF37;
+    /* Gold */
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #008000;
+    /* Green */
+    text-decoration: none;
+}
+
+#key-programs {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.program-card {
+    width: 30%;
+    min-width: 250px;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.learn-more-button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #008000;
+    /* Green */
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.learn-more-button:hover {
+    background-color: #D4AF37;
+    /* Gold */
+    text-decoration: none;
+}
+
+#kpi-dashboards {
+    text-align: center;
+}
+
+.kpi-card {
+    margin-bottom: 1rem;
+}
+
+.progress-bar {
+    width: 80%;
+    height: 20px;
+    background-color: #ddd;
+    margin: 0.5rem auto;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background-color: #D4AF37;
+    /* Gold */
+}
+
+#latest-news ul {
+    list-style: none;
+    padding: 0;
+}
+
+#latest-news li {
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.5rem;
+}
+
+.news-date {
+    color: #777;
+    font-size: 0.8rem;
+}
+
+.view-all-news-button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #008000;
+    /* Green */
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.view-all-news-button:hover {
+    background-color: #D4AF37;
+    /* Gold */
+    text-decoration: none;
+}
+
+#development-timeline {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.timeline-item {
+    width: 30%;
+    min-width: 250px;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* Overview Page Styles */
+#vision-overview {
+    text-align: center;
+}
+
+#vision-mission ul {
+    list-style: none;
+    padding: 0;
+}
+
+#progress-tracker {
+    text-align: center;
+}
+
+.progress-stats {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.stat-card {
+    width: 20%;
+    min-width: 150px;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+#development-path {
+    text-align: center;
+}
+
+/* Programs Page Styles */
+#program-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Sectors Page Styles */
+#sector-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* News Page Styles */
+#news-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.news-item {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border: 1px solid #eee;
+    border-radius: 8px;
+}
+
+/* Resources Page Styles */
+#resource-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.resource-item {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border: 1px solid #eee;
+    border-radius: 8px;
+}
+
+/* Feedback Form Styles */
+#feedback-form {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+#feedback-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#feedback-form input[type="text"],
+#feedback-form input[type="email"],
+#feedback-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    /* Ensures padding and border are included in the element's total width and height */
+}
+
+#feedback-form textarea {
+    height: 150px;
+}
+
+#feedback-form button[type="submit"] {
+    background-color: #008000;
+    /* Green */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#feedback-form button[type="submit"]:hover {
+    background-color: #D4AF37;
+    /* Gold */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo {
+        margin-bottom: 1rem;
+    }
+
+    #menu-button {
+        display: block;
+    }
+
+    #nav-list {
+        position: static;
+        width: auto;
+        display: none;
+        flex-direction: column;
+    }
+
+    #nav-list.open {
+        display: flex;
+    }
+
+    #key-programs,
+    #development-timeline {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .program-card,
+    .timeline-item {
+        width: 80%;
+    }
+
+    .progress-stats {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stat-card {
+        width: 80%;
+    }
+}
+
+@media (min-width: 769px) {
+    #nav-list {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        width: auto;
+        background-color: transparent;
+    }
+
+    #menu-button {
+        display: none;
+    }
+}
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+/* The Close Button */
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+}
+
+/* styles/home.css */
+
+/* ... (Existing CSS) ... */
+
+/* Dynamic Projects Section */
+#dynamic-projects {
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+#project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.project {
+    width: 300px;
+    margin: 10px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.project img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Add Project Button */
+#add-project-button {
+    background-color: #008000;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#add-project-button:hover {
+    background-color: #D4AF37;
+}
+
+/* home.css */
+
+/* ... (Existing CSS) ... */
+
+/* Resource List Styles */
+#resource-list {
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+#resource-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.resource-item {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.resource-item img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* home.css */
+
+/* ... (Existing CSS) ... */
+
+/* Program List Styles */
+#program-list {
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+#program-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.program-card {
+    width: 300px;
+    margin: 10px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+/* Sector List Styles */
+#sector-list {
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+#sector-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.sector-card {
+    width: 300px;
+    margin: 10px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.sector-card ul {
+    list-style: disc;
+    margin-left: 20px;
+}
+
+/* News List Styles */
+#news-list {
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+#news-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.news-item {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Add Content Button */
+#add-program-button,
+#add-sector-button,
+#add-news-button {
+    background-color: #008000;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+#add-program-button:hover,
+#add-sector-button:hover,
+#add-news-button:hover {
+    background-color: #D4AF37;
+}

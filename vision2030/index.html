@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Munyaradzi Chiondegwa">
+    <meta name="description"
+        content="Zimbabwe Vision 2030 Portal - Towards an Upper Middle-Income Economy by 2030: Inclusive Growth, Innovation, and Resilience.">
+    <title>Zimbabwe Vision 2030 Portal</title>
+
+    <!-- Social Media Meta Tags -->
+    <meta property="og:title" content="Zimbabwe Vision 2030 Portal">
+    <meta property="og:description"
+        content="Towards an Upper Middle-Income Economy by 2030: Inclusive Growth, Innovation, and Resilience.">
+    <meta property="og:image" content="URL_TO_YOUR_IMAGE"> <!-- Replace with an actual image URL -->
+    <meta property="og:url" content="https://munyaradzichiondegwa.github.io/vision-2030/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Zimbabwe Vision 2030 Portal">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Zimbabwe Vision 2030 Portal">
+    <meta name="twitter:description"
+        content="Towards an Upper Middle-Income Economy by 2030: Inclusive Growth, Innovation, and Resilience.">
+    <meta name="twitter:image" content="URL_TO_YOUR_IMAGE"> <!-- Replace with an actual image URL -->
+    <meta name="twitter:site" content="@YourTwitterHandle"> <!-- Replace with your Twitter handle -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="styles/home.css">
+
+    <script src="scripts/mainapp.js" type="module"></script>
+    <script src="scripts/home.js" type="module"></script>
+    <script src="scripts/item-renderer.js" type="module"></script>
+    <script src="scripts/modal.js" type="module"></script>
+    <script src="scripts/data-service.js" type="module"></script>
+    <script src="scripts/storage.js" type="module"></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="images/logo.png" alt="Zimbabwe Vision 2030 Logo">
+                <!-- Removed unnecessary closing div -->
+                <div class="header-text">
+                    <h1>Zimbabwe Vision 2030</h1>
+                </div>
+                <nav>
+                <button id="menu-button">☰ Menu</button>
+                <ul id="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="programs.html">Programs</a></li>
+                    <li><a href="form.html">Feedback</a></li>
+                </ul>
+            </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h1>Zimbabwe Vision 2030</h1>
+            <p>Towards an Upper Middle-Income Economy by 2030: Inclusive Growth, Innovation, and Resilience</p>
+            <a href="overview.html" class="cta-button">Explore Zimbabwe's Journey to 2030</a>
+        </section>
+
+        <section id="key-programs">
+            <h2>Key Programs</h2>
+            <div class="program-card">
+                <h3>TSP 2018-2020</h3>
+                <p>Transitional Stabilisation Programme: The Foundation for Economic Recovery</p>
+                <a href="program-tsp.html" class="learn-more-button">Learn About TSP</a>
+            </div>
+            <div class="program-card">
+                <h3>NDS1 2021-2025</h3>
+                <p>National Development Strategy 1: Building Momentum for Growth</p>
+                <a href="program-nds1.html" class="learn-more-button">Explore NDS1</a>
+            </div>
+            <div class="program-card">
+                <h3>NDS2 2026-2030</h3>
+                <p>National Development Strategy 2: Realizing the Vision</p>
+                <a href="program-nds2.html" class="learn-more-button">Discover NDS2</a>
+            </div>
+        </section>
+
+        <section id="kpi-dashboards">
+            <h2>KPI Dashboards</h2>
+            <div class="kpi-card">
+                <h3>GDP Growth</h3>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 46%;"></div>
+                </div>
+                <p>4.6%</p>
+            </div>
+            <div class="kpi-card">
+                <h3>Job Creation</h3>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 82%;"></div>
+                </div>
+                <p>820,000</p>
+            </div>
+            <div class="kpi-card">
+                <h3>Poverty Reduction</h3>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 15%;"></div>
+                </div>
+                <p>15%</p>
+            </div>
+            <a href="#" class="view-dashboard-button">View Full Dashboard</a>
+
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <!-- Content will be dynamically inserted here -->
+                </div>
+            </div>
+        </section>
+
+        <section id="dynamic-projects">
+            <h2>Key Projects</h2>
+            <div id="project-container">
+                <!-- Projects will be dynamically added here -->
+            </div>
+            <button id="add-project-button">Add Project</button>
+        </section>
+
+        <section id="latest-news">
+            <h2>Latest News</h2>
+            <ul>
+                <li>
+                    <a href="#">Mining Sector Growth Exceeds Targets</a>
+                    <span class="news-date">June 15, 2023</span>
+                </li>
+                <li>
+                    <a href="#">New Infrastructure Projects Launched</a>
+                    <span class="news-date">May 28, 2023</span>
+                </li>
+                <li>
+                    <a href="#">Agricultural Productivity Rises</a>
+                    <span class="news-date">May 10, 2023</span>
+                </li>
+            </ul>
+            <a href="news.html" class="view-all-news-button">View All News</a>
+        </section>
+
+        <section id="development-timeline">
+            <h2>Development Timeline</h2>
+            <div class="timeline-item">
+                <h3>2018-2020</h3>
+                <h4>TSP</h4>
+                <p>Transitional Stabilisation Programme</p>
+            </div>
+            <div class="timeline-item">
+                <h3>2021-2025</h3>
+                <h4>NDS1</h4>
+                <p>National Development Strategy 1</p>
+            </div>
+            <div class="timeline-item">
+                <h3>2026-2030</h3>
+                <h4>NDS2</h4>
+                <p>National Development Strategy 2</p>
+            </div>
+            <a href="#" class="explore-timeline-button">Explore Timeline</a>
+        </section>
+
+        <section id="news-list">
+            <h2>News &amp; Updates</h2>
+
+            <article class="news-item">
+                <h3><a href="#">New Investment Laws to Boost Foreign Direct Investment</a></h3>
+                <p class="news-date">July 3, 2023</p>
+                <p>The government has introduced new investment laws to attract foreign direct investment and improve
+                    the ease of doing business in Zimbabwe...</p>
+                <a href="#">Read More</a>
+            </article>
+
+            <article class="news-item">
+                <h3><a href="#">Major Dam Project to Boost Agricultural Productivity</a></h3>
+                <p class="news-date">June 28, 2023</p>
+                <p>The completion of a major dam project is set to boost agricultural productivity and ensure water
+                    security for thousands of households...</p>
+                <a href="#">Read More</a>
+            </article>
+
+            <article class="news-item">
+                <h3><a href="#">Local Tech Startup Secures International Funding</a></h3>
+                <p class="news-date">June 15, 2023</p>
+                <p>A Zimbabwean tech startup has secured $2 million in international funding, showcasing the country's
+                    growing innovation ecosystem...</p>
+                <a href="#">Read More</a>
+            </article>
+
+            <article class="news-item">
+                <h3><a href="#">New Power Plant to Address Energy Challenges</a></h3>
+                <p class="news-date">June 10, 2023</p>
+                <p>A new power plant with a capacity of 200MW is set to address Zimbabwe's energy challenges and support
+                    industrial growth...</p>
+                <a href="#">Read More</a>
+            </article>
+
+            <article class="news-item">
+                <h3><a href="#">New Medical Centers Improve Healthcare Access</a></h3>
+                <p class="news-date">June 5, 2023</p>
+                <p>Five new medical centers have been opened across rural Zimbabwe, significantly improving access to
+                    healthcare services...</p>
+                <a href="#">Read More</a>
+            </article>
+
+            <article class="news-item">
+                <h3><a href="#">STEM Initiative Launched in 100 Schools</a></h3>
+                <p class="news-date">May 28, 2023</p>
+                <p>A new STEM initiative has been launched in 100 schools across Zimbabwe, equipping students with
+                    skills for the 21st century...</p>
+                <a href="#">Read More</a>
+            </article>
+
+            <a href="#" class="load-more-button">Load More News</a>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Zimbabwe Vision 2030 Portal</h3>
+                <p>30 Braemar Road, Mt Pleasant, Harare, Zimbabwe</p>
+                <p><a href="mailto:info@example.com">info@vision2030.co.zw</a></p>
+                <p>+263 2(42)2 123-4567</p>
+            </div>
+
+            <div class="social-icons">
+                <a href="#" title="Twitter" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-twitter" aria-hidden="true"></i> Twitter
+                </a>
+                <a href="#" title="Facebook" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-facebook" aria-hidden="true"></i> Facebook
+                </a>
+                <a href="#" title="LinkedIn" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn
+                </a>
+                <a href="#" title="Instagram" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-instagram" aria-hidden="true"></i> Instagram
+                </a>
+                <a href="#" title="TikTok" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-tiktok" aria-hidden="true"></i> TikTok
+                </a>
+            </div>
+
+            <div class="project-info">
+                <p>WDD231 Project | Munyaradzi Chiondegwa</p>
+                <p>© <span id="current-year"></span> Zimbabwe Vision 2030</p>
+                <p>Last Modified: <span id="last-modified"></span></p>
+                <p><a href="attributions.html">Attributions</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- The Modal -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Add New Project</h2>
+            <form id="project-form">
+                <label for="project-title">Title:</label>
+                <input type="text" id="project-title" name="project-title"><br><br>
+
+                <label for="project-description">Description:</label>
+                <textarea id="project-description" name="project-description"></textarea><br><br>
+
+                <label for="project-category">Category:</label>
+                <select id="project-category" name="project-category">
+                    <option value="road construction">Road Construction</option>
+                    <option value="dam construction">Dam Construction</option>
+                    <option value="clinics">Clinics</option>
+                    <option value="farming">Farming</option>
+                    <option value="irrigation">Irrigation</option>
+                    <option value="tourism">Tourism</option>
+                    <option value="mining">Mining</option>
+                    <option value="power plants">Power Plants</option>
+                    <option value="manufacturing">Manufacturing</option>
+                </select><br><br>
+
+                <label for="project-image">Image:</label>
+                <input type="file" id="project-image" name="project-image" accept="image/*"><br><br>
+
+                <label for="project-status">Status:</label>
+                <input type="text" id="project-status" name="project-status"><br><br>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>

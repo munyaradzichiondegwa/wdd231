@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Munyaradzi Chiondegwa">
+    <meta name="description"
+        content="Zimbabwe's strategic programs and key economic sectors for economic recovery and sustainable development.">
+    <title>Zimbabwe Vision 2030 - Programs &amp; Sectors</title>
+
+    <!-- Social Media Meta Tags -->
+    <meta property="og:title" content="Zimbabwe Vision 2030 Portal">
+    <meta property="og:description"
+        content="Towards an Upper Middle-Income Economy by 2030: Inclusive Growth, Innovation, and Resilience.">
+    <meta property="og:image" content="URL_TO_YOUR_IMAGE"> <!-- Replace with an actual image URL -->
+    <meta property="og:url" content="https://munyaradzichiondegwa.github.io/vision-2030/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Zimbabwe Vision 2030 Portal">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Zimbabwe Vision 2030 Portal">
+    <meta name="twitter:description"
+        content="Towards an Upper Middle-Income Economy by 2030: Inclusive Growth, Innovation, and Resilience.">
+    <meta name="twitter:image" content="URL_TO_YOUR_IMAGE"> <!-- Replace with an actual image URL -->
+    <meta name="twitter:site" content="@YourTwitterHandle"> <!-- Replace with your Twitter handle -->
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="styles/home.css">
+
+    <script src="scripts/mainapp.js" type="module"></script>
+    <script src="scripts/home.js" type="module"></script>
+    <script src="scripts/item-renderer.js" type="module"></script>
+    <script src="scripts/modal.js" type="module"></script>
+    <script src="scripts/data-service.js" type="module"></script>
+    <script src="scripts/storage.js" type="module"></script>
+    <script src="scripts/date.js" type="module"></script>
+    <script src="scripts/programs.js" type="module"></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="images/logo.png" alt="Zimbabwe Vision 2030 Logo">
+            </div>
+            <div class="header-text">
+                <h1>Zimbabwe Vision 2030</h1>
+                <p>Towards an Upper Middle-Income Economy</p>
+            </div>
+            <nav>
+                <button id="menu-button">☰ Menu</button>
+                <ul id="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="programs.html">Programs</a></li>
+                    <li><a href="form.html">Feedback</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="program-list">
+            <h2>Development Programs</h2>
+            <div id="program-container">
+                <!-- Programs will be dynamically loaded here -->
+            </div>
+            <button id="add-program-button">Add Program</button>
+        </section>
+
+        <section id="sector-list">
+            <h2>Economic Sectors</h2>
+            <div id="sector-container">
+                <!-- Sectors will be dynamically loaded here -->
+            </div>
+            <button id="add-sector-button">Add Sector</button>
+        </section>
+
+        <section id="news-list">
+            <h2>News &amp; Updates</h2>
+            <div id="news-container">
+                <!-- News items will be dynamically loaded here -->
+            </div>
+            <button id="add-news-button">Add News</button>
+            <a href="#" class="load-more-button">Load More News</a>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Zimbabwe Vision 2030 Portal</h3>
+                <p>30 Braemar Road, Mt Pleasant, Harare, Zimbabwe</p>
+                <p><a href="mailto:info@example.com">info@vision2030.co.zw</a></p>
+                <p>+263 2(42)2 123-4567</p>
+            </div>
+
+            <div class="social-icons">
+                <a href="#" title="Twitter" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-twitter" aria-hidden="true"></i> Twitter
+                </a>
+                <a href="#" title="Facebook" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-facebook" aria-hidden="true"></i> Facebook
+                </a>
+                <a href="#" title="LinkedIn" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn
+                </a>
+                <a href="#" title="Instagram" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-instagram" aria-hidden="true"></i> Instagram
+                </a>
+                <a href="#" title="TikTok" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-tiktok" aria-hidden="true"></i> TikTok
+                </a>
+            </div>
+
+            <div class="project-info">
+                <p>WDD231 Project | Munyaradzi Chiondegwa</p>
+                <p>© <span id="current-year"></span> Zimbabwe Vision 2030</p>
+                <p>Last Modified: <span id="last-modified"></span></p>
+                <p><a href="attributions.html">Attributions</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal for Adding Programs, Sectors, and News -->
+    <div id="contentModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 id="modal-title">Add Content</h2>
+            <form id="content-form">
+                <label for="content-type">Content Type:</label>
+                <select id="content-type" name="content-type">
+                    <option value="program">Program</option>
+                    <option value="sector">Sector</option>
+                    <option value="news">News</option>
+                </select><br><br>
+
+                <label for="title">Title:</label>
+                <input type="text" id="title" name="title"><br><br>
+
+                <label for="description">Description:</label>
+                <textarea id="description" name="description"></textarea><br><br>
+
+                <div id="news-link-field" style="display: none;">
+                    <label for="news-link">News Link:</label>
+                    <input type="url" id="news-link" name="news-link"><br><br>
+                </div>
+
+                <label for="image">Image:</label>
+                <input type="file" id="image" name="image" accept="image/*"><br><br>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>

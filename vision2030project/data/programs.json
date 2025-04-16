@@ -1,0 +1,15 @@
+
+{
+  "tsp": {
+    "title": "Transitional Stabilisation Programme (2018-2020)",
+    "content": "<div class='space-y-4'><div><h4>Introduction</h4><p>The Transitional Stabilisation Programme (TSP) was Zimbabwe's short-term economic recovery plan...</p></div><div><h4>Strategic Objectives</h4><ul><li>Macroeconomic Stability...</li></ul></div></div>"
+  },
+  "nds1": {
+    "title": "National Development Strategy 1 (2021-2025)",
+    "content": "<div class='space-y-4'><div><h4>Introduction</h4><p>NDS1 is a medium-term plan focused on accelerating economic growth...</p></div></div>"
+  },
+  "nds2": {
+    "title": "National Development Strategy 2 (2026-2030)",
+    "content": "<div class='space-y-4'><div><h4>Introduction</h4><p>NDS2 will be the final phase towards achieving Vision 2030...</p></div></div>"
+  }
+}

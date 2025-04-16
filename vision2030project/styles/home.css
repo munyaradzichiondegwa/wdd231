@@ -1,0 +1,119 @@
+/* ...existing code... */
+
+body { /* Basic body styling if needed */
+    font-family: 'Inter', sans-serif;
+    /* Add other base styles if required */
+}
+
+.timeline-container { position: relative; }
+.timeline-container::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: #5D5CDE;
+    top: 0;
+    bottom: 0;
+    left: 24px;
+    margin-left: -3px;
+}
+.timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 100%;
+}
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: 24px;
+    background-color: #FFFFFF;
+    border: 4px solid #5D5CDE;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+    transform: translateX(-50%);
+}
+.dark .timeline-item::after {
+    background-color: #181818;
+}
+.hero-slide { /* Basic slide visibility styling - transitions won't work without JS */
+    opacity: 0;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+.hero-slide:first-child {
+    opacity: 1;
+    position: relative; /* Show first slide */
+}
+.progress-bar {
+    height: 8px;
+    width: 100%;
+    background-color: #f3f4f6;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.progress-bar-fill {
+    height: 100%;
+    border-radius: 4px;
+}
+.dark .progress-bar {
+    background-color: #374151;
+}
+/* Add basic styles for layout elements previously handled by Tailwind if needed */
+/* Example: container, grid, flex - these would need manual CSS */
+.container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+/* Add more basic CSS as needed for structure */
+header, section, footer {
+    display: block;
+    margin-bottom: 1rem;
+} /* Basic structure */
+nav a {
+    margin-right: 1rem;
+    text-decoration: none;
+    color: #333;
+}
+nav a:hover {
+    color: #5D5CDE;
+}
+button {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+/* Add basic styling for dark/light mode if desired, but toggling won't work */
+body {
+    background-color: #FFFFFF;
+    color: #333333;
+}
+.dark body {
+    background-color: #181818;
+    color: #E5E5E5;
+}
+/* Add basic grid/flex fallbacks if needed */
+.grid {
+    display: grid;
+    gap: 1rem;
+}
+.grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+.md\:grid-cols-3 { /* Media query needed for responsiveness */}
+.flex {
+    display: flex;
+}
+.items-center {
+    align-items: center;
+}
+.justify-between {
+    justify-content: space-between;
+}
+/* ...existing code... */

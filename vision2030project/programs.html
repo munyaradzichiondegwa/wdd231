@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zimbabwe Vision 2030 Portal - Programs</title>
+    <meta name="description" content="Details on Zimbabwe's development programs: TSP, NDS1, and NDS2.">
+    <meta name="keywords" content="Vision2030, Zimbabwe, Programs, TSP, NDS1, NDS2, Development Strategy">
+    <meta name="author" content="Munyaradzi Chiondegwa">
+    <link rel="favicon" href="favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <style>
+    
+    </style>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <div>
+                        <span>Zimbabwe Vision 2030</span>
+                        <span>Towards an Upper Middle-Income Economy</span>
+                    </div>
+                </div>
+                <nav>
+                    <a href="index.html">Home</a>
+                    <a href="overview.html">Overview</a>
+                    <a href="programs.html">Programs</a> <!-- Active -->
+                    <a href="sectors.html">Sectors</a>
+                    <a href="news.html">News</a>
+                    <a href="resources.html">Resources</a>
+                </nav>
+                <div>
+                    <button id="theme-toggle" type="button" title="Toggle Theme (Static)"><i>Icon Sun</i></button>
+                    <button id="mobile-menu-button" type="button" title="Toggle Mobile Menu (Static)"><i>Icon
+                            Bars</i></button>
+                </div>
+            </div>
+            <div id="mobile-menu" style="display: none;">
+                <a href="index.html">Home</a>
+                <a href="overview.html">Overview</a>
+                <a href="programs.html">Programs</a>
+                <a href="sectors.html">Sectors</a>
+                <a href="news.html">News</a>
+                <a href="resources.html">Resources</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Programs Section -->
+    <section id="programs">
+        <div class="container">
+            <div>
+                <h2>Development Programs</h2>
+                <p>Zimbabwe's strategic programs for economic recovery...</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3">
+                <!-- TSP Card -->
+                <div>
+                    <div></div> <!-- Color bar -->
+                    <div>
+                        <div>
+                            <h3>TSP</h3><span>2018-2020</span>
+                        </div>
+                        <h4>Transitional Stabilisation Programme</h4>
+                        <p>A short-term economic recovery plan...</p>
+                        <div>
+                            <div><i></i>
+                                <div>
+                                    <h5>Key Achievements</h5>
+                                    <p>Reduced inflation...</p>
+                                </div>
+                            </div>
+                            <div><i></i>
+                                <div>
+                                    <h5>Focus Areas</h5>
+                                    <p>Fiscal consolidation...</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button">View Details</button> <!-- Button won't work without JS -->
+                    </div>
+                </div>
+                <!-- NDS1 Card -->
+                <div>
+                    <div></div> <!-- Color bar -->
+                    <div>
+                        <div>
+                            <h3>NDS1</h3><span>2021-2025</span>
+                        </div>
+                        <h4>National Development Strategy 1</h4>
+                        <p>A medium-term plan focused on accelerating growth...</p>
+                        <div>
+                            <div><i></i>
+                                <div>
+                                    <h5>Key Achievements</h5>
+                                    <p>GDP growth...</p>
+                                </div>
+                            </div>
+                            <div><i></i>
+                                <div>
+                                    <h5>Focus Areas</h5>
+                                    <p>13 thematic clusters...</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button">View Details</button> <!-- Button won't work without JS -->
+                    </div>
+                </div>
+                <!-- NDS2 Card -->
+                <div>
+                    <div></div> <!-- Color bar -->
+                    <div>
+                        <div>
+                            <h3>NDS2</h3><span>2026-2030</span>
+                        </div>
+                        <h4>National Development Strategy 2</h4>
+                        <p>The final phase of Zimbabwe's journey...</p>
+                        <div>
+                            <div><i></i>
+                                <div>
+                                    <h5>Expected Outcomes</h5>
+                                    <p>7% GDP growth...</p>
+                                </div>
+                            </div>
+                            <div><i></i>
+                                <div>
+                                    <h5>Focus Areas</h5>
+                                    <p>15 thematic clusters...</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button">View Details</button> <!-- Button won't work without JS -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Program Details Modal (Static HTML, initially hidden) -->
+    <div id="programDetailsModal">
+        <div>
+            <div>
+                <div>
+                    <h3 id="modalTitle">Program Details</h3> <!-- Static Title -->
+                    <button id="closeModal" type="button" title="Close Modal (Static)">
+                        <i>Icon Close</i>
+                    </button>
+                </div>
+                <div id="modalContent">
+                    <!-- Static content for one program, or placeholder -->
+                    <h4>Transitional Stabilisation Programme (2018-2020)</h4>
+                    <p>The Transitional Stabilisation Programme (TSP) was Zimbabwe's short-term economic recovery
+                        plan...</p>
+                    <!-- Add more static details or keep it as a placeholder -->
+                    <!-- To show details for others, you'd need separate modals or separate pages -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <!-- Copy the same <footer> block from index.html here -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+                <div>
+                    <h3>Zimbabwe Vision 2030</h3>
+                    <p>...</p>
+                    <div>...</div>
+                </div>
+                <div>
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="overview.html">Overview</a></li>
+                        <li><a href="programs.html">Programs</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Key Programs</h3>
+                    <ul>
+                        <li><a href="tsp.html">TSP</a></li>
+                        <li><a href="nds1.html">NDS1</a></li>
+                        <li><a href="nds2.html">NDS2</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Contact Information</h3>
+                    <ul>
+                        <li>Email: info@vision2030.zw</li>
+                        <li>Phone: +263 123 456 789</li>
+                        <li>Address: Harare, Zimbabwe</li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <p>&copy; 2025 | Munyaradzi Chiondegwa | Zimbabwe Vision 2030. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

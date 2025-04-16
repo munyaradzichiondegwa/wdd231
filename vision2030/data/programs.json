@@ -1,0 +1,83 @@
+{
+    "programs": [
+        {
+            "title": "TSP",
+            "period": "2018-2020",
+            "description": "Transitional Stabilisation Programme",
+            "achievements": "Reduced inflation and fiscal deficit, introduced currency reforms",
+            "focusAreas": "Fiscal consolidation, monetary reforms, structural changes",
+            "detailsLink": "program-tsp.html",
+            "image": "images/tsp.jpg"
+        },
+        {
+            "title": "NDS1",
+            "period": "2021-2025",
+            "description": "National Development Strategy 1",
+            "achievements": "GDP growth, infrastructure development, improved social services",
+            "focusAreas": "13 thematic clusters including economic growth, agriculture, and infrastructure",
+            "detailsLink": "program-nds1.html",
+            "image": "images/nds1.jpg"
+        },
+        {
+            "title": "NDS2",
+            "period": "2026-2030",
+            "description": "National Development Strategy 2",
+            "achievements": "Expected Outcomes: 7% GDP growth, 2 million jobs, halved poverty rate",
+            "focusAreas": "15 thematic clusters expanding on NDS1, with emphasis on innovation",
+            "detailsLink": "program-nds2.html",
+            "image": "images/nds2.jpg"
+        }
+    ],
+    "sectors": [
+        {
+            "title": "Agriculture",
+            "description": "Zimbabwe's agricultural sector is a cornerstone of the economy.",
+            "listItem1": "Food Security Initiatives",
+            "listItem2": "Irrigation Projects",
+            "listItem3": "Success Stories",
+            "detailsLink": "sector-agriculture.html",
+            "image": "images/agriculture.jpg"
+        },
+        {
+            "title": "Mining",
+            "description": "Zimbabwe is endowed with rich mineral resources.",
+            "listItem1": "Value Addition",
+            "listItem2": "Environmental Regulations",
+            "listItem3": "Investment Opportunities",
+            "detailsLink": "sector-mining.html",
+            "image": "images/mining.jpg"
+        },
+        {
+            "title": "Tourism",
+            "description": "Tourism is a vital sector for Zimbabwe.",
+            "listItem1": "Destination Highlights",
+            "listItem2": "Infrastructure Projects",
+            "listItem3": "Events & Expos",
+            "detailsLink": "sector-tourism.html",
+            "image": "images/tourism.jpg"
+        }
+    ],
+    "news": [
+        {
+            "title": "New Investment Laws to Boost Foreign Direct Investment",
+            "date": "July 3, 2023",
+            "description": "The government has introduced new investment laws to attract foreign direct investment.",
+            "newsLink": "#",
+            "image": "images/investment.jpg"
+        },
+        {
+            "title": "Major Dam Project to Boost Agricultural Productivity",
+            "date": "June 28, 2023",
+            "description": "The completion of a major dam project is set to boost agricultural productivity.",
+            "newsLink": "#",
+            "image": "images/dam.jpg"
+        },
+        {
+            "title": "Local Tech Startup Secures International Funding",
+            "date": "June 15, 2023",
+            "description": "A Zimbabwean tech startup has secured $2 million in international funding.",
+            "newsLink": "#",
+            "image": "images/tech.jpg"
+        }
+    ]
+}

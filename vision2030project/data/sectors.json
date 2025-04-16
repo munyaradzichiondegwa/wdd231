@@ -1,0 +1,44 @@
+{
+  "sectors": [
+    {
+      "title": "Agriculture",
+      "image": "images/agriculture.jpg",
+      "description": "Boosting food security and rural development through modern farming technologies."
+    },
+    {
+      "title": "Mining",
+      "image": "images/mining.jpg",
+      "description": "Sustainable exploitation of minerals to drive industrial growth and export earnings."
+    },
+    {
+      "title": "Tourism",
+      "image": "images/tourism.jpg",
+      "description": "Enhancing Zimbabwe as a global destination with rich natural and cultural heritage."
+    },
+    {
+      "title": "Infrastructure",
+      "image": "images/infrastructure.jpg",
+      "description": "Expanding roads, energy, and digital networks to improve connectivity and services."
+    },
+    {
+      "title": "Manufacturing",
+      "image": "images/manufacturing.jpg",
+      "description": "Driving local value addition, innovation, and job creation in industries."
+    },
+    {
+      "title": "ICT",
+      "image": "images/ict.jpg",
+      "description": "Leveraging digital transformation for inclusive and smart economic growth."
+    },
+    {
+      "title": "Education",
+      "image": "images/education.jpg",
+      "description": "Promoting access to quality education and skills development for all."
+    },
+    {
+      "title": "Health",
+      "image": "images/health.jpg",
+      "description": "Building a resilient health system with universal coverage and innovation."
+    }
+  ]
+}

@@ -1,0 +1,178 @@
+[
+    {
+        "title": "TSP Final Report",
+        "period": "2018-2020",
+        "description": "Comprehensive report on the Transitional Stabilisation Programme (TSP), including achievements, challenges, and lessons learned.",
+        "fileType": "PDF",
+        "fileSize": "4.2 MB",
+        "downloadLink": "resources/tsp_final_report.pdf",
+        "image": "images/tsp_report.jpg",
+        "width": 300,
+        "height": 200
+    },
+    {
+        "title": "NDS1 Mid-Term Review",
+        "period": "2021-2025",
+        "description": "Mid-term evaluation of the National Development Strategy 1 (NDS1), outlining progress, challenges, and adjustments for the remaining period.",
+        "fileType": "PDF",
+        "fileSize": "5.8 MB",
+        "downloadLink": "resources/nds1_midterm_review.pdf",
+        "image": "images/nds1_review.jpg",
+        "width": 300,
+        "height": 200
+    },
+    {
+        "title": "NDS2 Blueprint",
+        "period": "2026-2030",
+        "description": "Framework for the National Development Strategy 2 (NDS2), outlining key objectives, focus areas, and implementation strategies.",
+        "fileType": "PDF",
+        "fileSize": "6.1 MB",
+        "downloadLink": "resources/nds2_blueprint.pdf",
+        "image": "images/nds2_blueprint.jpg",
+        "width": 300,
+        "height": 200
+    },
+    {
+        "title": "Vision 2030 Strategy",
+        "period": "2018-2030",
+        "description": "Comprehensive document outlining Zimbabwe's Vision 2030, including strategic pillars, objectives, and implementation framework.",
+        "fileType": "PDF",
+        "fileSize": "7.5 MB",
+        "downloadLink": "resources/vision2030_strategy.pdf",
+        "image": "images/vision2030_strategy.jpg",
+        "width": 300,
+        "height": 200
+    },
+    {
+        "title": "NDS1 Communication Strategy",
+        "period": "2021-2025",
+        "description": "Strategy for communicating NDS1 to citizens, stakeholders, and the diaspora, including social media campaigns and engagement activities.",
+        "fileType": "PDF",
+        "fileSize": "3.9 MB",
+        "downloadLink": "resources/nds1_communication.pdf",
+        "image": "images/nds1_communication.jpg",
+        "width": 300,
+        "height": 200
+    },
+    {
+        "title": "Vision 2030 Citizen's Guide",
+        "period": "Simplified Version",
+        "description": "Simplified guide to Vision 2030, TSP, and NDS1 for citizens, including key objectives, achievements, and participation opportunities.",
+        "fileType": "PDF",
+        "fileSize": "2.3 MB",
+        "downloadLink": "resources/vision2030_citizens_guide.pdf",
+        "image": "images/vision2030_guide.jpg",
+        "width": 300,
+        "height": 200
+    },
+    {
+        "title": "Agricultural Policy Framework",
+        "period": "2020-2030",
+        "description": "Policy framework for the agricultural sector, outlining strategies to boost productivity and ensure food security.",
+        "fileType": "PDF",
+        "fileSize": "4.8 MB",
+        "downloadLink": "resources/agricultural_policy.pdf",
+        "image": "images/agricultural_policy.jpg",
+        "width": 300,
+        "height": 200
+    },
+    {
+        "title": "Mining Sector Development Plan",
+        "period": "2021-2025",
+        "description": "Development plan for the mining sector, outlining strategies to increase mineral exports and attract investment.",
+        "fileType": "PDF",
+        "fileSize": "5.2 MB",
+        "downloadLink": "resources/mining_sector_plan.pdf",
+        "image": "images/mining_plan.jpg",
+        "width": 300,
+        "height": 200
+    },
+    {
+        "title": "Tourism Development Strategy",
+        "period": "2023-2030",
+        "description": "Strategy for developing the tourism sector, outlining plans to attract more visitors and increase revenue.",
+        "fileType": "PDF",
+        "fileSize": "4.5 MB",
+        "downloadLink": "resources/tourism_strategy.pdf",
+        "image": "images/tourism_strategy.jpg",
+        "width": 300,
+        "height": 200
+    },
+    {
+        "title": "Infrastructure Development Plan",
+        "period": "2021-2025",
+        "description": "Plan for developing infrastructure, including roads, railways, and energy infrastructure.",
+        "fileType": "PDF",
+        "fileSize": "6.5 MB",
+        "downloadLink": "resources/infrastructure_plan.pdf",
+        "image": "images/infrastructure_plan.jpg",
+        "width": 300,
+        "height": 200
+    },
+    {
+        "title": "Health Sector Strategic Plan",
+        "period": "2020-2025",
+        "description": "Strategic plan for the health sector, outlining strategies to improve healthcare access and quality.",
+        "fileType": "PDF",
+        "fileSize": "5.9 MB",
+        "downloadLink": "resources/health_sector_plan.pdf",
+        "image": "images/health_plan.jpg",
+        "width": 300,
+        "height": 200
+    },
+    {
+        "title": "Education Sector Development Plan",
+        "period": "2021-2025",
+        "description": "Development plan for the education sector, outlining strategies to improve access to quality education.",
+        "fileType": "PDF",
+        "fileSize": "5.5 MB",
+        "downloadLink": "resources/education_plan.pdf",
+        "image": "images/education_plan.jpg",
+        "width": 300,
+        "height": 200
+    },
+    {
+        "title": "Renewable Energy Policy",
+        "period": "2022-2030",
+        "description": "Policy framework for promoting renewable energy sources, including solar, wind, and hydro power.",
+        "fileType": "PDF",
+        "fileSize": "4.1 MB",
+        "downloadLink": "resources/renewable_energy_policy.pdf",
+        "image": "images/renewable_policy.jpg",
+        "width": 300,
+        "height": 200
+    },
+    {
+        "title": "ICT Development Plan",
+        "period": "2021-2025",
+        "description": "Plan for developing the ICT sector, outlining strategies to improve internet access and digital literacy.",
+        "fileType": "PDF",
+        "fileSize": "4.7 MB",
+        "downloadLink": "resources/ict_development_plan.pdf",
+        "image": "images/ict_plan.jpg",
+        "width": 300,
+        "height": 200
+    },
+    {
+        "title": "SME Development Strategy",
+        "period": "2022-2027",
+        "description": "Strategy for supporting small and medium-sized enterprises (SMEs), outlining plans to improve access to finance and markets.",
+        "fileType": "PDF",
+        "fileSize": "4.3 MB",
+        "downloadLink": "resources/sme_development_strategy.pdf",
+        "image": "images/sme_strategy.jpg",
+        "width": 300,
+        "height": 200
+    },
+    {
+        "title": "Climate Change Policy",
+        "period": "2020-2030",
+        "description": "Policy framework for addressing climate change, outlining strategies to reduce emissions and adapt to climate impacts.",
+        "fileType": "PDF",
+        "fileSize": "3.8 MB",
+        "downloadLink": "resources/climate_change_policy.pdf",
+        "image": "images/climate_policy.jpg",
+        "width": 300,
+        "height": 200
+    }
+]

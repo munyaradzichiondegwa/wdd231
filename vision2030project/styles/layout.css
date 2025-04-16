@@ -1,0 +1,265 @@
+
+/* Header Layout */
+.header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: var(--spacing-medium);
+}
+
+.header-container h1 {
+    margin-bottom: var(--spacing-small);
+    font-size: 2.5rem;
+    color: var(--primary-color);
+}
+
+.header-container > p {
+    margin-bottom: var(--spacing-medium);
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+.site-nav {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-medium);
+    flex-wrap: wrap;
+}
+
+.site-nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    padding: var(--spacing-small) var(--spacing-medium);
+    transition: color var(--transition-speed), background-color var(--transition-speed);
+}
+
+.site-nav a:hover {
+    color: var(--primary-color);
+    background-color: rgba(93, 92, 222, 0.1);
+}
+
+/* Hero Section */
+.hero {
+    margin-bottom: var(--spacing-large);
+}
+
+.hero-slideshow {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
+.hero-slide {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+    background-color: var(--background-color);
+    border: 1px solid rgba(0,0,0,0.1);
+    margin-bottom: var(--spacing-medium);
+    padding: var(--spacing-large);
+    text-align: center;
+}
+
+/* Hero Section */
+.hero {
+    margin-bottom: var(--spacing-large);
+}
+
+.hero-slideshow {
+    display: flex;
+    overflow: hidden;  /* Changed from auto to hidden */
+    position: relative; /* Allow positioning for the slides */
+}
+
+.hero-slide {
+    flex: 0 0 100%;
+    transition: opacity var(--transition-speed) ease-in-out; /* Smooth transition for opacity */
+    opacity: 0; /* Start with hidden slides */
+}
+
+.hero-slide.active {
+    opacity: 1; /* Make the active slide visible */
+    transition: opacity var(--transition-speed) ease-in-out; /* Smooth transition for opacity */
+}
+
+.hero-slide .hero-content {
+    max-width: 800px;
+    margin: 0 auto; /* Center content within the slide */
+}
+
+.hero-slide h2 {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-medium);
+    color: var(--primary-color);
+}
+
+.hero-slide p {
+    font-size: 1.2rem;
+    margin-bottom: var(--spacing-medium);
+}
+
+/* Hero Section */
+.hero {
+    background-color: #f2f2f2; /* Overall background color */
+    padding: 20px; /* Add some padding */
+    margin-bottom: var(--spacing-large);
+}
+
+.hero-slideshow {
+    display: flex;
+    overflow: hidden;  /* Hide overflow */
+    position: relative; /* Necessary for absolute positioning of slides */
+}
+
+.hero-slide {
+    flex: 0 0 100%; /* Each slide takes full width */
+    transition: opacity var(--transition-speed) ease-in-out; /* Smooth transition */
+    opacity: 0; /* Start with hidden slides */
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    height: 400px; /* Set a height for each slide */
+    background-color: #ffffff; /* Change this to your desired slide color */
+}
+
+.hero-slide.active {
+    opacity: 1; /* Active slide becomes visible */
+    transition: opacity var(--transition-speed) ease-in-out; /* Smooth transition */
+}
+
+.hero-slide .hero-content {
+    max-width: 800px; /* Max width for content */
+    margin: 0 auto; /* Center content within the slide */
+}
+
+.hero-slide h2 {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-medium);
+    color: var(--primary-color);
+}
+
+.hero-slide p {
+    font-size: 1.2rem;
+    margin-bottom: var(--spacing-medium);
+}
+
+/* Quick Links Section */
+.quick-links {
+    margin-bottom: var(--spacing-large);
+}
+
+.quick-links .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-medium);
+}
+
+@media (max-width: 1024px) {
+    .quick-links .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .quick-links .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.quick-link-item {
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 8px;
+    padding: var(--spacing-medium);
+    transition: box-shadow var(--transition-speed);
+}
+
+.quick-link-item:hover {
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.quick-link-item h3 {
+    margin-bottom: var(--spacing-small);
+    color: var(--primary-color);
+}
+
+/* Progress Containers */
+.progress-container {
+    margin-bottom: var(--spacing-medium);
+}
+
+.progress-container label {
+    display: block;
+    margin-bottom: var(--spacing-small);
+    font-size: 0.9rem;
+}
+
+progress {
+    width: 100%;
+    height: 15px;
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+progress::-webkit-progress-bar {
+    background-color: #f0f0f0;
+}
+
+progress::-webkit-progress-value {
+    background-color: var(--primary-color);
+}
+
+progress::-moz-progress-bar {
+    background-color: var(--primary-color);
+}
+
+.progress-container span {
+    display: block;
+    text-align: right;
+    font-size: 0.8rem;
+    color: var(--text-color);
+    margin-top: var(--spacing-small);
+}
+
+.site-footer {
+    background-color: #f1f1f1; /* Light background for the footer */
+    padding: 20px 0; /* Padding for spacing */
+}
+
+.footer-grid {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between left, center, and right */
+    align-items: center; /* Center items vertically */
+    max-width: 1200px; /* Maximum width for the footer */
+    margin: 0 auto; /* Center the footer grid */
+    padding: 0 20px; /* Padding on the left and right */
+}
+
+.footer-column {
+    flex: 1; /* Each column takes equal space */
+    text-align: center; /* Center text within columns */
+}
+
+.footer-bottom {
+    display: flex; /* Use flexbox for the bottom section */
+    justify-content: space-between; /* Space between left and right */
+    align-items: center; /* Center items vertically */
+    margin-top: 20px; /* Space above the bottom row */
+    padding: 0 20px; /* Padding on left and right */
+}
+
+.footer-bottom p {
+    margin: 0; /* Remove default margin */
+}
+
+.footer-bottom a {
+    text-decoration: none; /* Remove underline from links */
+}

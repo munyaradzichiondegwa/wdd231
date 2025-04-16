@@ -1,0 +1,164 @@
+[
+    {
+        "title": "Highway Expansion Project",
+        "description": "Expanding the Harare-Bulawayo highway to improve transportation.",
+        "category": "road construction",
+        "image": "images/road_construction.jpg",
+        "status": "In Progress",
+        "width": 600,
+        "height": 400
+    },
+    {
+        "title": "Tokwe Mukosi Dam",
+        "description": "Construction of a major dam for irrigation and water supply.",
+        "category": "dam construction",
+        "image": "images/dam_construction.jpg",
+        "status": "Completed",
+        "width": 600,
+        "height": 400
+    },
+    {
+        "title": "Rural Clinic Upgrades",
+        "description": "Upgrading rural clinics to improve healthcare access.",
+        "category": "clinics",
+        "image": "images/rural_clinic.jpg",
+        "status": "Ongoing",
+        "width": 600,
+        "height": 400
+    },
+    {
+        "title": "Commercial Farming Initiative",
+        "description": "Supporting commercial farming to boost agricultural output.",
+        "category": "farming",
+        "image": "images/commercial_farming.jpg",
+        "status": "In Progress",
+        "width": 600,
+        "height": 400
+    },
+    {
+        "title": "Irrigation System Modernization",
+        "description": "Modernizing irrigation systems to improve water efficiency.",
+        "category": "irrigation",
+        "image": "images/irrigation_system.jpg",
+        "status": "Planned",
+        "width": 600,
+        "height": 400
+    },
+    {
+        "title": "Victoria Falls Tourism Project",
+        "description": "Developing tourism infrastructure at Victoria Falls.",
+        "category": "tourism",
+        "image": "images/victoria_falls.jpg",
+        "status": "In Progress",
+        "width": 600,
+        "height": 400
+    },
+    {
+        "title": "Mining Sector Expansion",
+        "description": "Expanding mining operations to increase mineral exports.",
+        "category": "mining",
+        "image": "images/mining_sector.jpg",
+        "status": "Ongoing",
+        "width": 600,
+        "height": 400
+    },
+    {
+        "title": "Hwange Power Plant Upgrade",
+        "description": "Upgrading the Hwange power plant to increase electricity generation.",
+        "category": "power plants",
+        "image": "images/hwange_power_plant.jpg",
+        "status": "In Progress",
+        "width": 600,
+        "height": 400
+    },
+    {
+        "title": "Manufacturing Sector Growth",
+        "description": "Supporting the manufacturing sector to boost local production.",
+        "category": "manufacturing",
+        "image": "images/manufacturing_sector.jpg",
+        "status": "Planned",
+        "width": 600,
+        "height": 400
+    },
+    {
+        "title": "Beitbridge Border Post Modernization",
+        "description": "Modernizing the Beitbridge border post to facilitate trade.",
+        "category": "road construction",
+        "image": "images/beitbridge_border.jpg",
+        "status": "In Progress",
+        "width": 600,
+        "height": 400
+    },
+    {
+        "title": "Lake Mutirikwi Dam Rehabilitation",
+        "description": "Rehabilitating Lake Mutirikwi Dam to ensure water security.",
+        "category": "dam construction",
+        "image": "images/lake_mutirikwi.jpg",
+        "status": "Ongoing",
+        "width": 600,
+        "height": 400
+    },
+    {
+        "title": "New Maternity Clinics",
+        "description": "Constructing new maternity clinics to reduce maternal mortality.",
+        "category": "clinics",
+        "image": "images/maternity_clinic.jpg",
+        "status": "Planned",
+        "width": 600,
+        "height": 400
+    },
+    {
+        "title": "Smallholder Farming Support",
+        "description": "Providing support to smallholder farmers to increase yields.",
+        "category": "farming",
+        "image": "images/smallholder_farming.jpg",
+        "status": "In Progress",
+        "width": 600,
+        "height": 400
+    },
+    {
+        "title": "Drip Irrigation Systems",
+        "description": "Implementing drip irrigation systems to conserve water.",
+        "category": "irrigation",
+        "image": "images/drip_irrigation.jpg",
+        "status": "Ongoing",
+        "width": 600,
+        "height": 400
+    },
+    {
+        "title": "Great Zimbabwe Tourism",
+        "description": "Promoting tourism at the Great Zimbabwe monuments.",
+        "category": "tourism",
+        "image": "images/great_zimbabwe.jpg",
+        "status": "In Progress",
+        "width": 600,
+        "height": 400
+    },
+    {
+        "title": "Gold Mining Expansion",
+        "description": "Expanding gold mining operations to increase revenue.",
+        "category": "mining",
+        "image": "images/gold_mining.jpg",
+        "status": "Ongoing",
+        "width": 600,
+        "height": 400
+    },
+    {
+        "title": "Solar Power Plant Construction",
+        "description": "Constructing new solar power plants to generate clean energy.",
+        "category": "power plants",
+        "image": "images/solar_power_plant.jpg",
+        "status": "Planned",
+        "width": 600,
+        "height": 400
+    },
+    {
+        "title": "Textile Industry Revival",
+        "description": "Reviving the textile industry to create jobs.",
+        "category": "manufacturing",
+        "image": "images/textile_industry.jpg",
+        "status": "In Progress",
+        "width": 600,
+        "height": 400
+    }
+]

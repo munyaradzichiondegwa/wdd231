@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Munyaradzi Chiondegwa">
+    <meta name="description"
+        content="Zimbabwe's roadmap to becoming an upper middle-income economy by 2030, focused on inclusive growth, innovation, and resilience.">
+    <title>Zimbabwe Vision 2030 - Feedback</title>
+
+    <!-- Social Media Meta Tags -->
+    <meta property="og:title" content="Zimbabwe Vision 2030 Portal">
+    <meta property="og:description"
+        content="Towards an Upper Middle-Income Economy by 2030: Inclusive Growth, Innovation, and Resilience.">
+    <meta property="og:image" content="URL_TO_YOUR_IMAGE"> <!-- Replace with an actual image URL -->
+    <meta property="og:url" content="https://munyaradzichiondegwa.github.io/vision-2030/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Zimbabwe Vision 2030 Portal">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Zimbabwe Vision 2030 Portal">
+    <meta name="twitter:description"
+        content="Towards an Upper Middle-Income Economy by 2030: Inclusive Growth, Innovation, and Resilience.">
+    <meta name="twitter:image" content="URL_TO_YOUR_IMAGE"> <!-- Replace with an actual image URL -->
+    <meta name="twitter:site" content="@YourTwitterHandle"> <!-- Replace with your Twitter handle -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="styles/home.css">
+
+    <script src="scripts/form-action.js" type="module"></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="images/logo.png" alt="Zimbabwe Vision 2030 Logo">
+            </div>
+            <div class="header-text">
+                <h1>Zimbabwe Vision 2030</h1>
+                <p>Towards an Upper Middle-Income Economy</p>
+            </div>
+            <nav>
+                <button id="menu-button">☰ Menu</button>
+                <ul id="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="programs.html">Programs</a></li>
+                    <li><a href="form.html">Feedback</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="feedback-form">
+            <h2>We Value Your Feedback</h2>
+            <p>Share your thoughts on Vision 2030, TSP, NDS1, and NDS2, or suggest improvements to this website.</p>
+            <form id="feedbackForm" action="form-action.html" method="GET">
+                <div class="form-group">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="subject">
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Your Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="subscribe">
+                        <input type="checkbox" id="subscribe" name="subscribe" value="yes">
+                        Subscribe to updates about Vision 2030 and related programs
+                    </label>
+                </div>
+
+                <button type="submit">Submit Feedback</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Zimbabwe Vision 2030 Portal</h3>
+                <p>30 Braemar Road, Mt Pleasant, Harare, Zimbabwe</p>
+                <p><a href="mailto:info@example.com">info@vision2030.co.zw</a></p>
+                <p>+263 2(42)2 123-4567</p>
+            </div>
+    
+            <div class="social-icons">
+                <a href="#" title="Twitter" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-twitter" aria-hidden="true"></i> Twitter
+                </a>
+                <a href="#" title="Facebook" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-facebook" aria-hidden="true"></i> Facebook
+                </a>
+                <a href="#" title="LinkedIn" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn
+                </a>
+                <a href="#" title="Instagram" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-instagram" aria-hidden="true"></i> Instagram
+                </a>
+                <a href="#" title="TikTok" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-tiktok" aria-hidden="true"></i> TikTok
+                </a>
+            </div>
+    
+            <div class="project-info">
+                <p>WDD231 Project | Munyaradzi Chiondegwa</p>
+                <p>© <span id="current-year"></span> Zimbabwe Vision 2030</p>
+                <p>Last Modified: <span id="last-modified"></span></p>
+                <p><a href="attributions.html">Attributions</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/app.js" type="module"></script>
+</body>
+
+</html>
