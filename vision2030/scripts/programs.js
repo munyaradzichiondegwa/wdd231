@@ -1,7 +1,7 @@
 // scripts/programs.js
 import { fetchData } from './data-service.js';
 import { saveToLocalStorage, getFromLocalStorage } from './storage.js';
-import { renderPrograms, renderSectors, renderNews } from './item-renderer.js';
+import { renderPrograms, renderSectors, renderNews, renderProjects } from './item-renderer.js';
 import { setupModal } from './modal.js';
 
 async function initializePrograms() {
@@ -9,6 +9,7 @@ async function initializePrograms() {
         let programs = getFromLocalStorage('programs') || [];
         let sectors = getFromLocalStorage('sectors') || [];
         let news = getFromLocalStorage('news') || [];
+        let projects = getFromLocalStorage('projects') || [];
 
         if (!programs.length) {
             const data = await fetchData('data/programs.json');
@@ -23,15 +24,18 @@ async function initializePrograms() {
         renderPrograms(programs);
         renderSectors(sectors);
         renderNews(news);
+        renderProjects(projects)
 
         setupModal({
             programs: programs,
             sectors: sectors,
-            news: news
+            news: news,
+            projects:projects
         }, {
             renderPrograms: renderPrograms,
             renderSectors: renderSectors,
-            renderNews: renderNews
+            renderNews: renderNews,
+            renderProjects: renderProjects
         });
 
         // Add event listeners for the "Add" buttons

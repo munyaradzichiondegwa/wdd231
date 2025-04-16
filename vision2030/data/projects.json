@@ -1,7 +1,7 @@
 [
     {
         "title": "Highway Expansion Project",
-        "description": "Expanding the Harare-Bulawayo highway to improve transportation.",
+        "description": "Expanding the Harare-Bulawayo highway to improve transportation efficiency and facilitate economic activity.",
         "category": "road construction",
         "image": "images/road_construction.jpg",
         "status": "In Progress",
@@ -10,7 +10,7 @@
     },
     {
         "title": "Tokwe Mukosi Dam",
-        "description": "Construction of a major dam for irrigation and water supply.",
+        "description": "Construction of a major dam for irrigation, water supply, and promoting climate-resilient agriculture in surrounding communities.",
         "category": "dam construction",
         "image": "images/dam_construction.jpg",
         "status": "Completed",
@@ -19,7 +19,7 @@
     },
     {
         "title": "Rural Clinic Upgrades",
-        "description": "Upgrading rural clinics to improve healthcare access.",
+        "description": "Upgrading rural clinics to improve access to quality healthcare services, including maternal and child health, and addressing gender-based violence.",
         "category": "clinics",
         "image": "images/rural_clinic.jpg",
         "status": "Ongoing",
@@ -28,7 +28,7 @@
     },
     {
         "title": "Commercial Farming Initiative",
-        "description": "Supporting commercial farming to boost agricultural output.",
+        "description": "Supporting commercial farming to boost agricultural output, enhance food security, and create employment opportunities in rural areas.",
         "category": "farming",
         "image": "images/commercial_farming.jpg",
         "status": "In Progress",
@@ -37,7 +37,7 @@
     },
     {
         "title": "Irrigation System Modernization",
-        "description": "Modernizing irrigation systems to improve water efficiency.",
+        "description": "Modernizing irrigation systems to improve water efficiency, enhance agricultural productivity, and promote sustainable water management practices.",
         "category": "irrigation",
         "image": "images/irrigation_system.jpg",
         "status": "Planned",
@@ -46,7 +46,7 @@
     },
     {
         "title": "Victoria Falls Tourism Project",
-        "description": "Developing tourism infrastructure at Victoria Falls.",
+        "description": "Developing tourism infrastructure at Victoria Falls to attract more visitors, generate revenue, and create employment opportunities in the tourism sector.",
         "category": "tourism",
         "image": "images/victoria_falls.jpg",
         "status": "In Progress",
@@ -55,7 +55,7 @@
     },
     {
         "title": "Mining Sector Expansion",
-        "description": "Expanding mining operations to increase mineral exports.",
+        "description": "Expanding mining operations to increase mineral exports, generate revenue, and contribute to economic growth, while ensuring responsible mining practices.",
         "category": "mining",
         "image": "images/mining_sector.jpg",
         "status": "Ongoing",
@@ -64,7 +64,7 @@
     },
     {
         "title": "Hwange Power Plant Upgrade",
-        "description": "Upgrading the Hwange power plant to increase electricity generation.",
+        "description": "Upgrading the Hwange power plant to increase electricity generation capacity, address energy shortages, and support industrial growth.",
         "category": "power plants",
         "image": "images/hwange_power_plant.jpg",
         "status": "In Progress",
@@ -73,7 +73,7 @@
     },
     {
         "title": "Manufacturing Sector Growth",
-        "description": "Supporting the manufacturing sector to boost local production.",
+        "description": "Supporting the manufacturing sector to boost local production, create jobs, and reduce reliance on imports, promoting economic diversification.",
         "category": "manufacturing",
         "image": "images/manufacturing_sector.jpg",
         "status": "Planned",
@@ -82,7 +82,7 @@
     },
     {
         "title": "Beitbridge Border Post Modernization",
-        "description": "Modernizing the Beitbridge border post to facilitate trade.",
+        "description": "Modernizing the Beitbridge border post to facilitate trade, reduce congestion, and improve efficiency in cross-border movement of goods and people.",
         "category": "road construction",
         "image": "images/beitbridge_border.jpg",
         "status": "In Progress",
@@ -91,7 +91,7 @@
     },
     {
         "title": "Lake Mutirikwi Dam Rehabilitation",
-        "description": "Rehabilitating Lake Mutirikwi Dam to ensure water security.",
+        "description": "Rehabilitating Lake Mutirikwi Dam to ensure water security for irrigation, domestic use, and industrial purposes, supporting livelihoods in the region.",
         "category": "dam construction",
         "image": "images/lake_mutirikwi.jpg",
         "status": "Ongoing",
@@ -100,7 +100,7 @@
     },
     {
         "title": "New Maternity Clinics",
-        "description": "Constructing new maternity clinics to reduce maternal mortality.",
+        "description": "Constructing new maternity clinics and providing essential equipment to reduce maternal mortality rates and improve access to safe delivery services, aligning with the Spotlight Initiative's goals.",
         "category": "clinics",
         "image": "images/maternity_clinic.jpg",
         "status": "Planned",
@@ -109,7 +109,7 @@
     },
     {
         "title": "Smallholder Farming Support",
-        "description": "Providing support to smallholder farmers to increase yields.",
+        "description": "Providing support to smallholder farmers through training, access to inputs, and market linkages to increase yields, improve livelihoods, and enhance food security at the household level.",
         "category": "farming",
         "image": "images/smallholder_farming.jpg",
         "status": "In Progress",
@@ -118,7 +118,7 @@
     },
     {
         "title": "Drip Irrigation Systems",
-        "description": "Implementing drip irrigation systems to conserve water.",
+        "description": "Implementing drip irrigation systems to conserve water, improve irrigation efficiency, and increase crop yields, promoting sustainable agricultural practices.",
         "category": "irrigation",
         "image": "images/drip_irrigation.jpg",
         "status": "Ongoing",
@@ -127,7 +127,7 @@
     },
     {
         "title": "Great Zimbabwe Tourism",
-        "description": "Promoting tourism at the Great Zimbabwe monuments.",
+        "description": "Promoting tourism at the Great Zimbabwe monuments to attract more visitors, generate revenue, and preserve cultural heritage, contributing to local economic development.",
         "category": "tourism",
         "image": "images/great_zimbabwe.jpg",
         "status": "In Progress",
@@ -136,7 +136,7 @@
     },
     {
         "title": "Gold Mining Expansion",
-        "description": "Expanding gold mining operations to increase revenue.",
+        "description": "Expanding gold mining operations to increase revenue, generate employment, and contribute to economic growth, while adhering to environmental regulations and promoting responsible mining practices.",
         "category": "mining",
         "image": "images/gold_mining.jpg",
         "status": "Ongoing",
@@ -145,7 +145,7 @@
     },
     {
         "title": "Solar Power Plant Construction",
-        "description": "Constructing new solar power plants to generate clean energy.",
+        "description": "Constructing new solar power plants to generate clean energy, reduce reliance on fossil fuels, and contribute to a sustainable energy mix, promoting environmental sustainability.",
         "category": "power plants",
         "image": "images/solar_power_plant.jpg",
         "status": "Planned",
@@ -154,10 +154,28 @@
     },
     {
         "title": "Textile Industry Revival",
-        "description": "Reviving the textile industry to create jobs.",
+        "description": "Reviving the textile industry to create jobs, boost local production, and reduce reliance on imports, promoting industrial growth and economic diversification.",
         "category": "manufacturing",
         "image": "images/textile_industry.jpg",
         "status": "In Progress",
+        "width": 600,
+        "height": 400
+    },
+    {
+        "title": "Addressing Gender-Based Violence",
+        "description": "Implementing community-based programs to prevent and respond to gender-based violence, aligning with the Spotlight Initiative's focus on creating safe and equitable communities.",
+        "category": "social services",
+        "image": "images/gbv_awareness.jpg",
+        "status": "Ongoing",
+        "width": 600,
+        "height": 400
+    },
+    {
+        "title": "Empowering Women and Girls",
+        "description": "Providing education, skills training, and economic empowerment opportunities for women and girls, enabling them to participate fully in society and contribute to economic development, as emphasized by the Spotlight Initiative.",
+        "category": "social services",
+        "image": "images/women_empowerment.jpg",
+        "status": "Ongoing",
         "width": 600,
         "height": 400
     }

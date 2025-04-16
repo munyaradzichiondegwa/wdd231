@@ -1,6 +1,41 @@
 // scripts/item-renderer.js
+
+// Render Projects
+export function renderProjects(projects) {
+    const container = document.getElementById('project-container');
+    if (!container) {
+        console.error('Project container not found!');  // Debugging line
+        return;
+    }
+
+    container.innerHTML = '';
+
+    if (!projects || !Array.isArray(projects)) {
+        console.error('Invalid projects data:', projects);  // Debugging line
+        container.innerHTML = '<p>No projects to display.</p>';
+        return;
+    }
+
+    projects.forEach(project => {
+        const projectElement = document.createElement('div');
+        projectElement.classList.add('project');
+
+        projectElement.innerHTML = `
+            <h3>${project.title}</h3>
+            <p>${project.description}</p>
+            <img src="${project.image}" alt="${project.title}" loading="lazy" width="${project.width}" height="${project.height}">
+            <p>Category: ${project.category}</p>
+            <p>Status: ${project.status}</p>
+        `;
+        container.appendChild(projectElement);
+    });
+}
+
+// Render Programs
 export function renderPrograms(programs) {
     const container = document.getElementById('program-container');
+    if (!container) return; // Check if container exists
+
     container.innerHTML = '';
 
     programs.forEach(program => {
@@ -20,8 +55,10 @@ export function renderPrograms(programs) {
     });
 }
 
+// Render Sectors
 export function renderSectors(sectors) {
     const container = document.getElementById('sector-container');
+    if (!container) return;  // Check if container exists
     container.innerHTML = '';
 
     sectors.forEach(sector => {
@@ -43,8 +80,11 @@ export function renderSectors(sectors) {
     });
 }
 
+// Render News
 export function renderNews(news) {
     const container = document.getElementById('news-container');
+    if (!container) return; // Check if container exists
+
     container.innerHTML = '';
 
     news.forEach(newsItem => {

@@ -1,12 +1,19 @@
 // scripts/modal.js
 import { saveToLocalStorage } from './storage.js';
+import { renderProjects } from './item-renderer.js'; // Import renderProjects
 
 export function setupModal(data, renderFunctions) {
     const modal = document.getElementById('contentModal');
-    const closeButton = document.querySelector('.close-button');
-    const form = document.getElementById('content-form');
-    const contentTypeSelect = document.getElementById('content-type');
-    const newsLinkField = document.getElementById('news-link-field');
+    if (!modal) return; // Exit if modal doesn't exist
+    const closeButton = modal.querySelector('.close-button');
+    const form = modal.querySelector('form');
+    const contentTypeSelect = modal.querySelector('#content-type');
+    const newsLinkField = modal.querySelector('#news-link-field');
+
+    if (!closeButton || !form || !contentTypeSelect || !newsLinkField) {
+        console.warn("Modal elements not found.  Check your HTML.");
+        return;
+    }
 
     closeButton.addEventListener('click', () => {
         modal.style.display = 'none';
@@ -29,13 +36,13 @@ export function setupModal(data, renderFunctions) {
     form.addEventListener('submit', (event) => {
         event.preventDefault();
 
-        const contentType = document.getElementById('content-type').value;
-        const title = document.getElementById('title').value;
-        const description = document.getElementById('description').value;
-        const imageFile = document.getElementById('image').files[0];
-        const newsLink = document.getElementById('news-link').value;
+        const contentType = contentTypeSelect.value;
+        const title = form.querySelector('#title').value;
+        const description = form.querySelector('#description').value;
+        const imageFile = form.querySelector('#image').files[0];
+        const newsLink = form.querySelector('#news-link')?.value || ''; // Optional chaining
 
-        let imageURL = 'images/default.png'; // Default image
+        let imageURL = 'images/default.png';
         if (imageFile) {
             imageURL = URL.createObjectURL(imageFile);
         }
@@ -43,6 +50,24 @@ export function setupModal(data, renderFunctions) {
         let newItem;
 
         switch (contentType) {
+            case 'project':  // Handle project submission
+                newItem = {
+                    title: title,
+                    description: description,
+                    category: 'To be added', // You might want to add a category field to the modal
+                    status: 'To be added',  // You might want to add a status field to the modal
+                    image: imageURL,
+                    width: 400,  // Or get these from user input
+                    height: 300
+                };
+                data.projects = data.projects || [];  // Initialize if it doesn't exist
+                data.projects.push(newItem);
+                saveToLocalStorage('projects', data.projects);
+                if (renderFunctions.renderProjects) {
+                    renderFunctions.renderProjects(data.projects);
+                }
+                break;
+
             case 'program':
                 newItem = {
                     title: title,
