@@ -25,8 +25,8 @@ async function initializeApp() {
 
     } catch (error) {
         console.error('Error initializing app:', error);
-        document.getElementById('project-container').innerHTML = `<p>Failed to load data. Please try again later.</p>`;
+        document.getElementById('project-container').innerHTML = <p>Failed to load data. Please try again later.</p>;
     }
 }
 
-initializeApp();
+initializeApp()

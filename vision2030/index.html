@@ -30,14 +30,20 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
     <!-- CSS Stylesheet -->
     <link rel="stylesheet" href="styles/home.css">
-    <script src="scripts/mainapp.js" type="module"></script>
-    <script src="scripts/home.js" type="module"></script>
-    <script src="scripts/item-renderer.js" type="module"></script>
-    <script src="scripts/modal.js" type="module"></script>
-    <script src="scripts/data-service.js" type="module"></script>
-    <script src="scripts/storage.js" type="module"></script>
+    <!-- Js Scripts -->
+<script src="scripts/mainapp.js" type="module"></script>
+<script src="scripts/home.js" type="module"></script>
+<script src="scripts/date.js" type="module"></script>
+<script src="scripts/item-renderer.js" type="module"></script>
+<script src="scripts/modal.js" type="module"></script>
+<script src="scripts/data-service.js" type="module"></script>
+<script src="scripts/storage.js" type="module"></script>
+   
 </head>
 
 <body>
@@ -62,6 +68,8 @@
     </header>
 
     <main>
+        <!--Hero section with a brief description-->
+      
         <section id="hero">
             <h1>Zimbabwe Vision 2030</h1>
             <p>Towards an Upper Middle-Income Economy by 2030: Inclusive Growth, Innovation, and Resilience</p>
@@ -75,6 +83,7 @@
             <a href="resources.html" class="explore-button">Explore Zimbabwe's Journey to 2030</a>
         </section>
 
+        <!-- Key Programs Section -->
         <section id="key-programs">
             <h2>Key Programs</h2>
         <div class="program-card">
@@ -101,6 +110,7 @@
         </div>
         </section>
 
+        <!-- Dashboard section -->
         <section id="kpi-dashboards">
             <h2>KPI Dashboards</h2>
             <div class="kpi-card">
@@ -134,7 +144,8 @@
             </div>
             <button id="add-project-button" type="button">Add Project</button>
         </section>
-
+       
+        <!-- News linked with main sectors -->
         <section id="latest-news">
             <h2>Latest News</h2>
             <ul>
@@ -180,10 +191,79 @@
             <a href="#" class="explore-timeline-button">Explore Timeline</a>
         </section>
 
-       
-
+        <section id="news-list">
+            <h2>News &amp; Updates</h2>
+        
+            <article class="news-item">
+                <h3><a href="#">Economic transformation: From philosophy to practice</a></h3>
+                <p class="news-date">July 26, 2024</p>
+                <p>Nyika Inovakwa Nevene Vayo: new development policy for Zimbabwe"s economic transformation. The policy aims to
+                    create a sustainable and inclusive economy...</p>
+                <p>Zimbabwe is on a path to economic transformation, with a focus on sustainable development and inclusive
+                    growth. The government is committed to creating an environment that fosters innovation and
+                    entrepreneurship...</p>
+                <a href="https://www.herald.co.zw/economic-transformation-from-philosophy-to-practice/">Read More</a>
+            </article>
+        
+            <article class="news-item">
+                <h3><a href="#">Mega dam projects set to transform the region</a></h3>
+                <p class="news-date">April 17, 2025</p>
+                <p>Zimbabwe is set to transform its agricultural landscape with the completion of a major dam project...</p>
+                <p>The completion of a major dam project is set to boost agricultural productivity and ensure water
+                    security for thousands of households...</p>
+                <a href="https://www.manicapost.co.zw/mega-dam-project-set-to-transform-region/"
+                    title="Mega dam projects set to transform the region">Read about mega dam projects</a>
+            </article>
+        
+            <article class="news-item">
+                <h3><a href="#">Is Zimbabwe's ecosystem ideal for tech startups?</a></h3>
+                <p class="news-date">March 5, 2025</p>
+                <p>Zimbabwe's ecosystem is evolving, but is it ready to support the growth of tech startups? Explore the
+                    challenges and opportunities...</p>
+                <a href="https://www.chronicle.co.zw/is-zimbabwes-ecosystem-ideal-for-tech-start-ups/">
+                    Read More
+                </a>
+            </article>
+        
+            <article class="news-item">
+                <h3><a href="#">Zambia and Zimbabwe restart coal-fired power plants despite ...</a></h3>
+                <p class="news-date">April 7, 2025</p>
+                <p>Despite global divestment trends, Zambia and Zimbabwe are reviving coal-fired power projects with Chinese
+                    funding...</p>
+                <p>Zambia and Zimbabwe are reviving coal-fired power projects with Chinese funding, against the backdrop of
+                    global
+                    divestment trends.</p>
+                <a href="https://energynews.pro/en/zambia-and-zimbabwe-restart-coal-fired-power-plants-despite-global-decline/"
+                    title="New Power Plant to Address Energy Challenges">
+                    Read about the new power plant
+                </a>
+            </article>
+        
+            <article class="news-item">
+                <h3><a href="#">Zim bids to connect health facilities - Harare</a></h3>
+                <p class="news-date">Jan 20, 2025</p>
+                <p>Zimbabwe is ramping up efforts to connect all health facilities to the internet to support the rollout of the
+                    Impilo, an
+                    electronic health record system.</p>
+                <a href="https://www.herald.co.zw/zim-bids-to-connect-health-facilities/"
+                    title="Zimbabwe connects health facilities">Read about Zimbabwe's health facilities</a>
+            </article>
+        
+            <article class="news-item">
+                <h3><a href="#">Government introduces STEM for teachers</a></h3>
+                <p class="news-date">March 21, 2025</p>
+                <p>GOVERNMENT has introduced a teacher capacity development programme for Science, Technology, Engineering and
+                    Mathematics
+                    (STEM) teachers to ...</p>
+                <a href="https://www.chronicle.co.zw/government-introduces-stem-for-teachers/"
+                    title="Government introduces STEM for teachers">Read about STEM for teachers</a>
+            </article>
+        
+            <a href="#" class="load-more-button">Load More News</a>
+        </section>
     </main>
 
+    <!-- footer with contact information and social media links -->
     <footer>
         <div class="footer-content">
             <div class="contact-info">

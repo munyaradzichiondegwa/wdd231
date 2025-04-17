@@ -1,178 +1,86 @@
-[
+{
+  "programs": [
     {
-        "title": "TSP Final Report",
-        "period": "2018-2020",
-        "description": "Comprehensive report on the Transitional Stabilisation Programme (TSP), including achievements, challenges, and lessons learned.",
-        "fileType": "PDF",
-        "fileSize": "4.2 MB",
-        "downloadLink": "resources/https://zimbabwe.un.org/sites/default/files/2020-06/Transitional-Stabilisation-Programme-Final.pdf",
-        "image": "images/tsp_report.jpg",
-        "width": 300,
-        "height": 200
+      "title": "TSP",
+      "period": "2018-2020",
+      "description": "Transitional Stabilisation Programme",
+      "achievements": "Reduced inflation and fiscal deficit, introduced currency reforms",
+      "focusAreas": "Fiscal consolidation, monetary reforms, structural changes",
+      "detailsLink": "programs.html",
+      "downloadLink": "https://zimbabwe.un.org/sites/default/files/2020-06/Transitional-Stabilisation-Programme-Final.pdf",
+      "image": "images/tsp.jpg"
     },
     {
-        "title": "NDS1 Mid-Term Review",
-        "period": "2021-2025",
-        "description": "Mid-term evaluation of the National Development Strategy 1 (NDS1), outlining progress, challenges, and adjustments for the remaining period.",
-        "fileType": "PDF",
-        "fileSize": "5.8 MB",
-        "downloadLink": "resources/https://zimtreasury.co.zw/wp-content/uploads/2023/12/Mid-Term-Review.pdf",
-        "image": "images/nds1_review.jpg",
-        "width": 300,
-        "height": 200
+      "title": "NDS1",
+      "period": "2021-2025",
+      "description": "National Development Strategy 1: A 5-year Medium Term Plan aimed at realising the country’s Vision 2030, while simultaneously addressing the global aspirations of the Sustainable Development Goals (SDGs) and Africa Agenda 2063.",
+      "achievements": "To be added",
+      "focusAreas": "Premised on bold and transformative measures, intentional mobilisation of domestic growth vectors, development and capacitation of key national institutions, leveraging Zimbabwe's competitive advantages (natural resources, ecological endowment, skills base)",
+      "detailsLink": "programs.html",
+      "downloadLink": "https://www.zim.gov.zw/index.php/en/government-documents/category/1-vision-2030?download=1:vision-2030",
+      "image": "images/nds1.jpg"
     },
     {
-        "title": "NDS2 Blueprint",
-        "period": "2026-2030",
-        "description": "Framework for the National Development Strategy 2 (NDS2), outlining key objectives, focus areas, and implementation strategies.",
-        "fileType": "PDF",
-        "fileSize": "6.1 MB",
-        "downloadLink": "resources/http://www.mic.gov.zw/wp-content/uploads/2024/12/Reviewed-2025-Latest-04-Dec-MIC-Strategic-Plan-.pdf",
-        "image": "images/nds2_blueprint.jpg",
-        "width": 300,
-        "height": 200
-    },
-    {
-        "title": "Vision 2030 Strategy",
-        "period": "2018-2030",
-        "description": "Comprehensive document outlining Zimbabwe's Vision 2030, including strategic pillars, objectives, and implementation framework.",
-        "fileType": "PDF",
-        "fileSize": "7.5 MB",
-        "downloadLink": "resources/https://www.zim.gov.zw/index.php/en/government-documents/category/1-vision-2030?download=1:vision-2030",
-        "image": "images/vision2030_strategy.jpg",
-        "width": 300,
-        "height": 200
-    },
-    {
-        "title": "NDS1 Communication Strategy",
-        "period": "2021-2025",
-        "description": "Strategy for communicating NDS1 to citizens, stakeholders, and the diaspora, including social media campaigns and engagement activities.",
-        "fileType": "PDF",
-        "fileSize": "3.9 MB",
-        "downloadLink": "resources/https://www.veritaszim.net/node/4583",
-        "image": "images/nds1_communication.jpg",
-        "width": 300,
-        "height": 200
-    },
-    {
-        "title": "Vision 2030 Citizen's Guide",
-        "period": "Simplified Version",
-        "description": "Simplified guide to Vision 2030, TSP, and NDS1 for citizens, including key objectives, achievements, and participation opportunities.",
-        "fileType": "PDF",
-        "fileSize": "2.3 MB",
-        "downloadLink": "resources/https://www.zim.gov.zw/index.php/en/government-documents/category/1-vision-2030",
-        "image": "images/vision2030_guide.jpg",
-        "width": 300,
-        "height": 200
-    },
-    {
-        "title": "Agricultural Policy Framework",
-        "period": "2020-2030",
-        "description": "Policy framework for the agricultural sector, outlining strategies to boost productivity and ensure food security.",
-        "fileType": "PDF",
-        "fileSize": "4.8 MB",
-        "downloadLink": "resources/https://www.fao.org/faolex/results/details/en/c/LEX-FAOC211964/",
-        "image": "images/agricultural_policy.jpg",
-        "width": 300,
-        "height": 200
-    },
-    {
-        "title": "Mining Sector Development Plan",
-        "period": "2021-2025",
-        "description": "Development plan for the mining sector, outlining strategies to increase mineral exports and attract investment.",
-        "fileType": "PDF",
-        "fileSize": "5.2 MB",
-        "downloadLink": "resources/https://ammz.co.zw/wp-content/uploads/2023/10/E_Nerwande_Conference_Speech_2020.pdf",
-        "image": "images/mining_plan.jpg",
-        "width": 300,
-        "height": 200
-    },
-    {
-        "title": "Tourism Development Strategy",
-        "period": "2023-2030",
-        "description": "Strategy for developing the tourism sector, outlining plans to attract more visitors and increase revenue.",
-        "fileType": "PDF",
-        "fileSize": "4.5 MB",
-        "downloadLink": "resources/http://www.envirotourism.org.zw/download/zimbabwe-national-tourism-policy/",
-        "image": "images/tourism_strategy.jpg",
-        "width": 300,
-        "height": 200
-    },
-    {
-        "title": "Infrastructure Development Plan",
-        "period": "2021-2025",
-        "description": "Plan for developing infrastructure, including roads, railways, and energy infrastructure.",
-        "fileType": "PDF",
-        "fileSize": "6.5 MB",
-        "downloadLink": "resources/https://zimtreasury.co.zw/wp-content/uploads/2024/11/2025-INFRASTRUCTURE-Development-Programme.pdf",
-        "image": "images/infrastructure_plan.jpg",
-        "width": 300,
-        "height": 200
-    },
-    {
-        "title": "Health Sector Strategic Plan",
-        "period": "2020-2025",
-        "description": "Strategic plan for the health sector, outlining strategies to improve healthcare access and quality.",
-        "fileType": "PDF",
-        "fileSize": "5.9 MB",
-        "downloadLink": "resources/https://www.zhi.co.zw/assets/media/2021/12/ZHI-Strategic-Plan-2021-2026.pdf",
-        "image": "images/health_plan.jpg",
-        "width": 300,
-        "height": 200
-    },
-    {
-        "title": "Education Sector Development Plan",
-        "period": "2021-2025",
-        "description": "Development plan for the education sector, outlining strategies to improve access to quality education.",
-        "fileType": "PDF",
-        "fileSize": "5.5 MB",
-        "downloadLink": "resources/https://mhtestd.gov.zw/download/strategic-plan-2021-2025/",
-        "image": "images/education_plan.jpg",
-        "width": 300,
-        "height": 200
-    },
-    {
-        "title": "Renewable Energy Policy",
-        "period": "2022-2030",
-        "description": "Policy framework for promoting renewable energy sources, including solar, wind, and hydro power.",
-        "fileType": "PDF",
-        "fileSize": "4.1 MB",
-        "downloadLink": "resources/https://www.fao.org/wood-energy/search/detail/en/c/1448448/",
-        "image": "images/renewable_policy.jpg",
-        "width": 300,
-        "height": 200
-    },
-    {
-        "title": "ICT Development Plan",
-        "period": "2021-2025",
-        "description": "Plan for developing the ICT sector, outlining strategies to improve internet access and digital literacy.",
-        "fileType": "PDF",
-        "fileSize": "4.7 MB",
-        "downloadLink": "resources/https://www.ictministry.gov.zw/wp-content/uploads/2024/01/National%20ICT%20Policy%202022-2027.pdf",
-        "image": "images/ict_plan.jpg",
-        "width": 300,
-        "height": 200
-    },
-    {
-        "title": "SME Development Strategy",
-        "period": "2022-2027",
-        "description": "Strategy for supporting small and medium-sized enterprises (SMEs), outlining plans to improve access to finance and markets.",
-        "fileType": "PDF",
-        "fileSize": "4.3 MB",
-        "downloadLink": "resources/https://www.ncc-zim.co.zw/wp-content/uploads/2023/10/Promoting-SME-Competitiveness-in-ZImbabwe.pdf",
-        "image": "images/sme_strategy.jpg",
-        "width": 300,
-        "height": 200
-    },
-    {
-        "title": "Climate Change Policy",
-        "period": "2020-2030",
-        "description": "Policy framework for addressing climate change, outlining strategies to reduce emissions and adapt to climate impacts.",
-        "fileType": "PDF",
-        "fileSize": "3.8 MB",
-        "downloadLink": "resources/https://faolex.fao.org/docs/pdf/zim169511.pdf",
-        "image": "images/climate_policy.jpg",
-        "width": 300,
-        "height": 200
+      "title": "NDS2",
+      "period": "2026-2030",
+      "description": "National Development Strategy 2",
+      "achievements": "Expected Outcomes: 7% GDP growth, 2 million jobs, halved poverty rate",
+      "focusAreas": "15 thematic clusters expanding on NDS1, with emphasis on innovation",
+      "detailsLink": "programs.html",
+      "downloadLink": "http://www.mic.gov.zw/wp-content/uploads/2024/12/Reviewed-2025-Latest-04-Dec-MIC-Strategic-Plan-.pdf",
+      "image": "images/nds2.jpg"
     }
-]
+  ],
+  "sectors": [
+    {
+      "title": "Agriculture",
+      "description": "Zimbabwe's agricultural sector is a cornerstone of the economy.",
+      "listItem1": "Food Security Initiatives",
+      "listItem2": "Irrigation Projects",
+      "listItem3": "Success Stories",
+      "detailsLink": "resources.html",
+      "image": "images/agriculture.jpg"
+    },
+    {
+      "title": "Mining",
+      "description": "Zimbabwe is endowed with rich mineral resources.",
+      "listItem1": "Value Addition",
+      "listItem2": "Environmental Regulations",
+      "listItem3": "Investment Opportunities",
+      "detailsLink": "resources.html",
+      "image": "images/mining.jpg"
+    },
+    {
+      "title": "Tourism",
+      "description": "Tourism is a vital sector for Zimbabwe.",
+      "listItem1": "Destination Highlights",
+      "listItem2": "Infrastructure Projects",
+      "listItem3": "Events & Expos",
+      "detailsLink": "resources.html",
+      "image": "images/tourism.jpg"
+    }
+  ],
+  "news": [
+    {
+      "title": "Economic transformation: From philosophy to practice",
+      "date": "July 26, 2024",
+      "description": "Nyika Inovakwa Nevene Vayo: new development policy for Zimbabwe",
+      "newsLink": "https://www.herald.co.zw/economic-transformation-from-philosophy-to-practice/",
+      "image": "images/investment.jpg"
+    },
+    {
+      "title": "Mega dam projects set to transform the region",
+      "date": "April 17, 2025",
+      "description": "The completion of a major dam project is set to boost agricultural productivity.",
+      "newsLink": "https://www.manicapost.co.zw/mega-dam-project-set-to-transform-region/",
+      "image": "images/dam.jpg"
+    },
+    {
+      "title": "is Zimbabwe's ecosystem ideal for tech start-ups?",
+      "date": "March 5, 2025",
+      "description": "A Zimbabwean tech startup has secured $2 million in international funding.",
+      "newsLink": "https://www.chronicle.co.zw/is-zimbabwes-ecosystem-ideal-for-tech-start-ups/",
+      "image": "images/tech.jpg"
+    }
+  ]
+}
