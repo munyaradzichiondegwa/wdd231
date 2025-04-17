@@ -160,23 +160,5 @@
         "status": "In Progress",
         "width": 600,
         "height": 400
-    },
-    {
-        "title": "Addressing Gender-Based Violence",
-        "description": "Implementing community-based programs to prevent and respond to gender-based violence, aligning with the Spotlight Initiative's focus on creating safe and equitable communities.",
-        "category": "social services",
-        "image": "images/gbv_awareness.jpg",
-        "status": "Ongoing",
-        "width": 600,
-        "height": 400
-    },
-    {
-        "title": "Empowering Women and Girls",
-        "description": "Providing education, skills training, and economic empowerment opportunities for women and girls, enabling them to participate fully in society and contribute to economic development, as emphasized by the Spotlight Initiative.",
-        "category": "social services",
-        "image": "images/women_empowerment.jpg",
-        "status": "Ongoing",
-        "width": 600,
-        "height": 400
-    }
+    }  
 ]

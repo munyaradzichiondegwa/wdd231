@@ -6,7 +6,8 @@
             "description": "Transitional Stabilisation Programme",
             "achievements": "Reduced inflation and fiscal deficit, introduced currency reforms",
             "focusAreas": "Fiscal consolidation, monetary reforms, structural changes",
-            "detailsLink": "program-tsp.html",
+            "detailsLink": "programs.html",
+            "downloadLink": "resources/https://zimbabwe.un.org/sites/default/files/2020-06/Transitional-Stabilisation-Programme-Final.pdf",
             "image": "images/tsp.jpg"
         },
         {
@@ -15,7 +16,8 @@
             "description": "National Development Strategy 1: A 5-year Medium Term Plan aimed at realising the country’s Vision 2030, while simultaneously addressing the global aspirations of the Sustainable Development Goals (SDGs) and Africa Agenda 2063.",
             "achievements": "To be added",
             "focusAreas": "Premised on bold and transformative measures, intentional mobilisation of domestic growth vectors, development and capacitation of key national institutions, leveraging Zimbabwe's competitive advantages (natural resources, ecological endowment, skills base)",
-            "detailsLink": "program-nds1.html",
+            "detailsLink": "programs.html",
+            "downloadLink": "resources/https://www.zim.gov.zw/index.php/en/government-documents/category/1-vision-2030?download=1:vision-2030",
             "image": "images/nds1.jpg"
         },
         {
@@ -24,7 +26,8 @@
             "description": "National Development Strategy 2",
             "achievements": "Expected Outcomes: 7% GDP growth, 2 million jobs, halved poverty rate",
             "focusAreas": "15 thematic clusters expanding on NDS1, with emphasis on innovation",
-            "detailsLink": "program-nds2.html",
+            "detailsLink": "programs.html",
+            "downloadLink": "resources/http://www.mic.gov.zw/wp-content/uploads/2024/12/Reviewed-2025-Latest-04-Dec-MIC-Strategic-Plan-.pdf",
             "image": "images/nds2.jpg"
         }
     ],
@@ -35,7 +38,7 @@
             "listItem1": "Food Security Initiatives",
             "listItem2": "Irrigation Projects",
             "listItem3": "Success Stories",
-            "detailsLink": "sector-agriculture.html",
+            "detailsLink": "resources.html",
             "image": "images/agriculture.jpg"
         },
         {
@@ -44,7 +47,7 @@
             "listItem1": "Value Addition",
             "listItem2": "Environmental Regulations",
             "listItem3": "Investment Opportunities",
-            "detailsLink": "sector-mining.html",
+            "detailsLink": "resources.html",
             "image": "images/mining.jpg"
         },
         {
@@ -53,30 +56,30 @@
             "listItem1": "Destination Highlights",
             "listItem2": "Infrastructure Projects",
             "listItem3": "Events & Expos",
-            "detailsLink": "sector-tourism.html",
+            "detailsLink": "resources.html",
             "image": "images/tourism.jpg"
         }
     ],
     "news": [
         {
-            "title": "New Investment Laws to Boost Foreign Direct Investment",
-            "date": "July 3, 2023",
-            "description": "The government has introduced new investment laws to attract foreign direct investment.",
-            "newsLink": "#",
+            "title": "Economic transformation: From philosophy to practice",
+            "date": "July 26, 2024",
+            "description": "Nyika Inovakwa Nevene Vayo: new development policy for Zimbabwe",
+            "newsLink": "https://www.herald.co.zw/economic-transformation-from-philosophy-to-practice/",
             "image": "images/investment.jpg"
         },
         {
-            "title": "Major Dam Project to Boost Agricultural Productivity",
-            "date": "June 28, 2023",
+            "title": "Mega dam projects set to transform the region",
+            "date": "April 17, 2025",
             "description": "The completion of a major dam project is set to boost agricultural productivity.",
-            "newsLink": "#",
+            "newsLink": "https://www.manicapost.co.zw/mega-dam-project-set-to-transform-region/",
             "image": "images/dam.jpg"
         },
         {
-            "title": "Local Tech Startup Secures International Funding",
-            "date": "June 15, 2023",
+            "title": "is Zimbabwe's ecosystem ideal for tecj start-ups?",
+            "date": "March 1. 2025",
             "description": "A Zimbabwean tech startup has secured $2 million in international funding.",
-            "newsLink": "#",
+            "newsLink": "https://www.chronicle.co.zw/is-zimbabwes-ecosystem-ideal-for-tech-start-ups/",
             "image": "images/tech.jpg"
         }
     ]
