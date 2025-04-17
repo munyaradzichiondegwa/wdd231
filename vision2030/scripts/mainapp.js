@@ -29,4 +29,4 @@ async function initializeApp() {
     }
 }
 
-initializeApp()
+initializeApp();
